@@ -10,6 +10,9 @@ export default function Home() {
                 quas consequuntur ab, ipsa voluptate aliquam ipsum omnis maxime,
                 vel quae sequi voluptatum eum, nihil expedita eveniet.
                 Consequuntur omnis quidem reiciendis.
+                <p>{process.env.MONGO_DB}</p>
+
+                <p>{process.env.MONGO_DB11}</p>
             </p>
         </>
     );
