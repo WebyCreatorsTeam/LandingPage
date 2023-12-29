@@ -1,11 +1,10 @@
-import React from 'react';
-
 import './App.css';
+import UserForm from './View/Components/Form/Form';
 
 function App() {
   return (
     <div className="App">
-      qwe
+      <UserForm/>
     </div>
   );
 }
