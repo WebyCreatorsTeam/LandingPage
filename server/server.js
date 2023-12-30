@@ -1,7 +1,9 @@
-const express = require("express")
-const app = express()
-const PORT = process.env.PORT || 8080
+const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, ()=>{
-    console.log(`listen on http://localhost:${PORT}`)
-})
+app.use("/users", require("./router/user"));
+
+app.listen(PORT, () => {
+    console.log(`listen on http://localhost:${PORT}`);
+});
