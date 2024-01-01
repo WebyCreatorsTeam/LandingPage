@@ -1,8 +1,7 @@
 import { FC, useState } from 'react'
-import { inputs } from './inputsList'
+import { inputs, options } from './inputsList'
 import Input from '../../UI/Input/Input'
-import { OptionOfHelp } from './types'
-import { Form, useActionData } from "react-router-dom";
+import { Form } from "react-router-dom";
 import axios from 'axios';
 
 const UserForm: FC = () => {
@@ -14,15 +13,21 @@ const UserForm: FC = () => {
             userName: { value: string }
             userEmail: { value: string }
             userPhone: { value: string }
+            userHelp: { value: string }
         };
 
         const userName = target.userName.value;
         const userEmail = target.userName.value;
         const userPhone = target.userName.value;
+        const userHelp = target.userHelp.value;
 
-        const {data: {continueWork, message}} = await axios.post("/users/user-send-details/", {userName, userEmail, userPhone})
+        console.log(userName, userEmail, userPhone, userHelp)
 
-        return setMessage(message)
+        if(userHelp.length == 0) return setMessage("נא לבחור במה אנחנו יכולים לעזור")
+
+        const {data: {continueWork, message}} = await axios.post("/users/user-send-details/", {userName, userEmail, userPhone, userHelp})
+
+        if (continueWork) return setMessage(message)
     }
 
     return (
@@ -31,6 +36,11 @@ const UserForm: FC = () => {
             {inputs.map((int, index) => (
                 <Input key={index} {...int} />
             ))}
+            <select name="userHelp" defaultValue="">
+                {options.map((opt, index)=> (
+                    <option key={index} defaultValue={opt.value} disabled={opt.value == "" ? true: false} >{opt.text}</option>
+                ))}
+            </select>
             <button type="submit">שלח</button>
         </Form>
     )
@@ -46,17 +56,19 @@ export default UserForm
 
 
 
-
-
-
-
-
+// selected={opt.value == "" ? true: false}
 
 
 
 
 
 // <Form onSubmit={sendData}>
+{/* <option defaultValue="" disabled={true} selected={true}>   </option>
+<option value="dev">פיתוח אתר</option>
+<option value="uxui"> UX/UI </option>
+<option value="dev_uxui">UX/UI ופיתוח אתר</option>
+<option value="support">תחזוקה של אתר</option>
+<option value="other"> אחר </option> */}
 //     {inputs.map((int, index) => (
 //         <Input key={index} {...int} />
 //     ))}
