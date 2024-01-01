@@ -6,11 +6,10 @@ import { Route,
 /* PAGES & COMPONENTS */
 import Layout from '../View/Components/Layout/Layout'
 import App from '../App'
-import { formAction } from '../View/Components/Form/formAction'
 
 const RouterPage = () => {
     const router = createBrowserRouter(createRoutesFromElements(
-        <Route path="/" element={<Layout />} action={formAction}>
+        <Route path="/" element={<Layout />}>
             <Route index element={<App />} />
 
         </Route>
