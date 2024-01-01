@@ -1,8 +1,8 @@
 exports.sendDetails = async (req, res) => {
     try {
-        const aa = req;
-        console.log(aa);
-        return "seccsess";
+        const { userName, userEmail, userPhone, userHelp } = req.body;
+        console.log(userName, userEmail, userPhone, userHelp);
+        return res.send("get it");
     } catch (error) {
         console.error(error);
         // return res
