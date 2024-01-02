@@ -4,7 +4,7 @@ exports.httpCodes = {
     // NOT_FOUND: 404,
     // INTERNAL_SERVER: 500,
     // UNAUTHORIZED: 401,
-    // FORBIDDEN: 403,
+    FORBIDDEN: 403,
     // REQUEST_CONFLICT: 409,
-    SERVER_ERROR: 500
-}
+    SERVER_ERROR: 500,
+};
