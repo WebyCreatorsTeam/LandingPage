@@ -1,19 +1,18 @@
-import { FC, useState } from 'react'
-import { inputs, options } from './inputsList'
-import Input from '../../UI/Input/Input'
+import { FC, useState } from "react";
+import { inputs, options } from "./inputsList";
+import Input from "../../UI/Input/Input";
 import { Form } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
 
 const UserForm: FC = () => {
-    const [message, setMessage] = useState<string>("")
+    const [message, setMessage] = useState<string>("");
 
     const sendUserDetails = async (ev: React.SyntheticEvent) => {
-        
         const target = ev.target as typeof ev.target & {
-            userName: { value: string }
-            userEmail: { value: string }
-            userPhone: { value: string }
-            userHelp: { value: string }
+            userName: { value: string };
+            userEmail: { value: string };
+            userPhone: { value: string };
+            userHelp: { value: string };
         };
 
         const userName = target.userName.value;
@@ -21,54 +20,64 @@ const UserForm: FC = () => {
         const userPhone = target.userName.value;
         const userHelp = target.userHelp.value;
 
-        console.log(userName, userEmail, userPhone, userHelp)
+        console.log(userName, userEmail, userPhone, userHelp);
 
-        if(userHelp.length == 0) return setMessage("נא לבחור במה אנחנו יכולים לעזור")
+        if (userHelp.length === 0)
+            return setMessage("נא לבחור במה אנחנו יכולים לעזור");
 
-        const {data: {continueWork, message}} = await axios.post("/users/user-send-details/", {userName, userEmail, userPhone, userHelp})
+        const {
+            data: { continueWork, message },
+        } = await axios.post("/users/user-send-details/", {
+            userName,
+            userEmail,
+            userPhone,
+            userHelp,
+        });
 
-        if (continueWork) return setMessage(message)
-    }
+        if (continueWork) return setMessage(message);
+    };
 
     return (
         <Form onSubmit={sendUserDetails}>
-            <p>{message.length > 0? message : null}</p>
+            <p>{message.length > 0 ? message : null}</p>
             {inputs.map((int, index) => (
-                <Input key={index} {...int} />
+                <Input
+                    key={index}
+                    {...int}
+                />
             ))}
-            <select name="userHelp" defaultValue="">
-                {options.map((opt, index)=> (
-                    <option key={index} defaultValue={opt.value} disabled={opt.value == "" ? true: false} >{opt.text}</option>
+            <select
+                name="userHelp"
+                defaultValue=""
+            >
+                {options.map((opt, index) => (
+                    <option
+                        key={index}
+                        defaultValue={opt.value}
+                        disabled={opt.value == "" ? true : false}
+                    >
+                        {opt.text}
+                    </option>
                 ))}
             </select>
             <button type="submit">שלח</button>
         </Form>
-    )
-}
+    );
+};
 
-export default UserForm
-
-
-
-
-
-
-
-
+export default UserForm;
 
 // selected={opt.value == "" ? true: false}
 
-
-
-
-
 // <Form onSubmit={sendData}>
-{/* <option defaultValue="" disabled={true} selected={true}>   </option>
+{
+    /* <option defaultValue="" disabled={true} selected={true}>   </option>
 <option value="dev">פיתוח אתר</option>
 <option value="uxui"> UX/UI </option>
 <option value="dev_uxui">UX/UI ופיתוח אתר</option>
 <option value="support">תחזוקה של אתר</option>
-<option value="other"> אחר </option> */}
+<option value="other"> אחר </option> */
+}
 //     {inputs.map((int, index) => (
 //         <Input key={index} {...int} />
 //     ))}

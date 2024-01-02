@@ -1,10 +1,15 @@
-import { FC } from 'react'
-import { InputPorps } from './inputType'
+import { FC } from "react";
+import { InputPorps } from "./inputType";
 
 const Input: FC<InputPorps> = ({ type, name, placeholder }) => {
-  return (
-    <input type={type} name={name} placeholder={placeholder}/>
-  )
-}
+    return (
+        <input
+            type={type}
+            name={name}
+            placeholder={placeholder}
+            required
+        />
+    );
+};
 
-export default Input
+export default Input;
