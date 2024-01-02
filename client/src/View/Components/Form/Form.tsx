@@ -54,7 +54,7 @@ const UserForm: FC = () => {
                     <option
                         key={index}
                         defaultValue={opt.value}
-                        disabled={opt.value == "" ? true : false}
+                        disabled={opt.value === "" ? true : false}
                     >
                         {opt.text}
                     </option>
@@ -66,29 +66,3 @@ const UserForm: FC = () => {
 };
 
 export default UserForm;
-
-// selected={opt.value == "" ? true: false}
-
-// <Form onSubmit={sendData}>
-{
-    /* <option defaultValue="" disabled={true} selected={true}>   </option>
-<option value="dev">פיתוח אתר</option>
-<option value="uxui"> UX/UI </option>
-<option value="dev_uxui">UX/UI ופיתוח אתר</option>
-<option value="support">תחזוקה של אתר</option>
-<option value="other"> אחר </option> */
-}
-//     {inputs.map((int, index) => (
-//         <Input key={index} {...int} />
-//     ))}
-
-//     <select>
-
-//         {/* {OptionOfHelp.map(opt=>(
-//         <option value={}>{}</option>
-//     ))} */}
-//         {/* <option value=""></option> */}
-//     </select>
-
-//     <button type="submit">Send</button>
-// </Form>

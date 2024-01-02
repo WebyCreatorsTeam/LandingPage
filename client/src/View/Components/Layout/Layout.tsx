@@ -1,16 +1,15 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Outlet } from 'react-router-dom'
+import NavBar from '../NavBar/NavBar'
 
-const Layout = () => {
+const Layout: FC = () => {
   return (
-    <div>
-            <nav>
-                navnav
-            </nav>
-            <main>
-                <Outlet />
-            </main>
-        </div>
+    <>
+      <NavBar />
+      <main>
+        <Outlet />
+      </main>
+    </>
   )
 }
 
