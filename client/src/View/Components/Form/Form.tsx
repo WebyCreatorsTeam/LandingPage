@@ -6,6 +6,7 @@ import axios from "axios";
 
 const UserForm: FC = () => {
     const [message, setMessage] = useState<string>("");
+    const [green, setGreen] = useState<boolean>();
 
     const sendUserDetails = async (ev: React.SyntheticEvent) => {
         const target = ev.target as typeof ev.target & {
@@ -34,14 +35,18 @@ const UserForm: FC = () => {
             userHelp,
         });
 
-        if (continueWork) return setMessage(message);
+        console.log(message);
+        setGreen(continueWork);
+        return setMessage(message);
     };
 
     return (
         <Form onSubmit={sendUserDetails}>
             <p className="form-text">השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
+            <p style={{ color: green ? "green" : "red" }}>
+                {message.length > 0 ? message : null}
+            </p>
             <div className="form-container">
-                <p>{message.length > 0 ? message : null}</p>
                 {inputs.map((int, index) => (
                     <Input
                         key={index}

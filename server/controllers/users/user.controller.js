@@ -19,9 +19,11 @@ exports.sendDetails = async (req, res) => {
                 "user validation error of sendDetails: ",
                 error.message
             );
-            return res
-                .status(httpCodes.FORBIDDEN)
-                .send({ continueWork: false, message: error.message });
+            return (
+                res
+                    // .status(httpCodes.FORBIDDEN)
+                    .send({ continueWork: false, message: error.message })
+            );
         }
 
         const newDetails = new User({
@@ -39,8 +41,10 @@ exports.sendDetails = async (req, res) => {
         });
     } catch (error) {
         console.error(error);
-        return res
-            .send({ continueWork: false, message: "שגיאה בשרת, נסה שנית" })
-            .status(httpCodes.SERVER_ERROR);
+        return res.send({
+            continueWork: false,
+            message: "שגיאה בשרת, נסה שנית",
+        });
+        // .status(httpCodes.SERVER_ERROR);
     }
 };
