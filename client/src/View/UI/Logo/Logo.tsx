@@ -1,10 +1,14 @@
-import React, { FC } from 'react'
-import Weby from '../../../images/logo.png'
+import { FC } from "react";
+import Weby from "../../../images/logo.png";
 
 const Logo: FC = () => {
-  return (
-    <img src={Weby} alt="Weby Logo"/>
-  )
-}
+    return (
+        <img
+            className="logoWeby"
+            src={Weby}
+            alt="Weby Logo"
+        />
+    );
+};
 
-export default Logo
+export default Logo;

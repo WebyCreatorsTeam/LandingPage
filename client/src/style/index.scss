@@ -1,32 +1,15 @@
-@import './vars/_index';
-@import './mixin/index';
+@import "./vars/_index";
+@import "./mixin/index";
 
-*{
-margin: 0;
-padding: 0;
-
-
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
-
-body{
-   width: 100%;
-   //background-color: $body-background-color;
-   font-family: 'Poppins', sans-serif;
-}
-
-
-
+@import "./body/body";
 @import "./components/navBar/_navBar";
-@import './components/header/_header';
-@import './components/ContactInfo/ContactInfo';
-@import './components/form/from';
-@import './components/offer/offer'
-
-
-
-
-
-
-
-
+@import "./components/header/_header";
+@import "./components/ContactInfo/ContactInfo";
+@import "./components/form/from";
+@import "./components/offer/offer";
