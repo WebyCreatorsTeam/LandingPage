@@ -40,30 +40,35 @@ const UserForm: FC = () => {
     return (
         <Form onSubmit={sendUserDetails}>
             <p className="form-text">השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
-           <div className="form-container">
-            <p >{message.length > 0 ? message : null}</p>
-            {inputs.map((int, index) => (
-                <Input
-                    key={index}
-                    {...int}
-                />
-            ))}
-            <select
-            className="form-select"
-                name="userHelp"
-                defaultValue=""
-            >
-                {options.map((opt, index) => (
-                    <option
+            <div className="form-container">
+                <p>{message.length > 0 ? message : null}</p>
+                {inputs.map((int, index) => (
+                    <Input
                         key={index}
-                        defaultValue={opt.value}
-                        disabled={opt.value === "" ? true : false}
-                    >
-                        {opt.text}
-                    </option>
+                        {...int}
+                    />
                 ))}
-            </select>
-            <button className="form-button" type="submit">שלח</button>
+                <select
+                    className="form-select"
+                    name="userHelp"
+                    defaultValue=""
+                >
+                    {options.map((opt, index) => (
+                        <option
+                            key={index}
+                            defaultValue={opt.value}
+                            disabled={opt.value === "" ? true : false}
+                        >
+                            {opt.text}
+                        </option>
+                    ))}
+                </select>
+                <button
+                    className="form-button"
+                    type="submit"
+                >
+                    שלח
+                </button>
             </div>
         </Form>
     );
