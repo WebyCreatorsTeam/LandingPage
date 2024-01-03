@@ -17,8 +17,8 @@ const UserForm: FC = () => {
         };
 
         const userName = target.userName.value;
-        const userEmail = target.userName.value;
-        const userPhone = target.userName.value;
+        const userEmail = target.userEmail.value;
+        const userPhone = target.userPhone.value;
         const userHelp = target.userHelp.value;
 
         console.log(userName, userEmail, userPhone, userHelp);
@@ -56,13 +56,14 @@ const UserForm: FC = () => {
                 <select
                     className="form-select"
                     name="userHelp"
-                    defaultValue=""
+                    // defaultValue="none"
                 >
                     {options.map((opt, index) => (
                         <option
                             key={index}
                             defaultValue={opt.value}
-                            disabled={opt.value === "" ? true : false}
+                            disabled={opt.value === "none" ? true : false}
+                            selected={opt.value === "none" ? true : false}
                         >
                             {opt.text}
                         </option>
