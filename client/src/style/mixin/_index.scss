@@ -30,6 +30,24 @@
       width: 100%;
       background-color: bisque;
 
+      .header-M-text{
+        font-size: $global-S-font-size;
+      } .header-L-text{
+        font-size: $global-M-font-size;
+      } .header-S-text{
+        font-size: 7px;
+      }
+      .header-container{
+        align-items: center ;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px;
+        margin: 10%;
+      }
+      .header-text-container,.header-image{
+        width: 80%;
+      } 
+
       .form-container{
         flex-direction: column;
       }
@@ -41,6 +59,14 @@
       .offer-bold-text, .offer-text{
       margin-right: 50px;
       }
+
+      .info-container{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 70%;
+        padding: 10px;
+      }
     }
   
     @include respond-to(tablet) {
@@ -48,8 +74,20 @@
       margin: auto;
       background-color:blueviolet;
 
+      .header-M-text{
+        font-size: $global-S-font-size;
+      } .header-L-text{
+        font-size: $global-M-font-size;
+      } .header-S-text{
+        font-size: 7px;
+      }
+
       .form-input, .form-select,.form-button{
         height: 33px;
+      }
+
+      .info-container{
+        width: 65%;
       }
     }
   
@@ -57,13 +95,17 @@
       width: 60%;
       margin: auto;
       background-color: aqua;
+
+
+      .info-container{
+        width: 40%;
+      }
     }
 
     @include respond-to(LDesktop) {
         width: 1440px;
         margin: auto;
         
-       
       }
   }
   
