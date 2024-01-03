@@ -4,14 +4,15 @@ import IconEmail from '../../../images/contact/icon-mail.png'
 
 const ContactInfo: FC = () => {
     return (
-        <div> {/* display: flex */} {/*, חשבתי לשים את האלמנטים בפלקס על מנת שיהיו אחד ליד השני */}
-            <div> {/* display: flex */} {/*, חשבתי לשים את האלמנטים בפלקס על מנת שיהיו אחד ליד השני */}
-                <img src={IconPhone} alt="אייקון של טלפון" />
-                <p>054-799-1963</p>
+        <div className='info-container'> {/* display: flex */} {/*, חשבתי לשים את האלמנטים בפלקס על מנת שיהיו אחד ליד השני */}
+           <div className='info-icon-container'>
+           <p className='info-text'>webycreatorsteam@gmail.com</p>
+                <img className='info-icon' src={IconEmail} alt="אייקון של מכתב" />
             </div>
-            <div>
-                <img src={IconEmail} alt="אייקון של מכתב" />
-                <p>webycreatorsteam@gmail.com</p>
+
+            <div className='info-icon-container'> {/* display: flex */} {/*, חשבתי לשים את האלמנטים בפלקס על מנת שיהיו אחד ליד השני */}
+            <p className='info-text'>054-799-1963</p>
+                <img className='info-icon' src={IconPhone} alt="אייקון של טלפון" />
             </div>
         </div>
     )

@@ -8,19 +8,23 @@ import { OfferList } from './OfferList'
 const Offer: FC = () => {
     return (
         <div>
-            <h1></h1>
-            <p></p>
-            <div> {/* להשתמש פה בגריד */} {/* display: grid */}
+            <h1 className='offer-bold-text'>
+           מה אנחנו מציעים?
+            </h1>
+            <p className='offer-text'>
+         אנחנו מכירים את הדרך שתוביל לתוצאות מדויקות
+            </p>
+            <div className='offer-grid-container'> {/* להשתמש פה בגריד */} {/* display: grid */}
             <ol>
                 {OfferList.map(ofr => (
-                    <li> {/* להשתמש פה בגריד */} {/* display: grid */}
+                    <li className='offer-grid-il-container'> {/* להשתמש פה בגריד */} {/* display: grid */}
                         <img src={ofr.img} alt="עיצוב" />
                         <h4>{ofr.head}</h4>
                         <p>{ofr.text}</p>
                     </li>
                 ))}
             </ol>
-                <img src={OfferImg} alt="בן אדם יושב"/>
+                <img className='offer-image' src={OfferImg} alt="בן אדם יושב"/>
             </div>
         </div>
     )

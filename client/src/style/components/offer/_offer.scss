@@ -1,0 +1,16 @@
+@import '../../vars/_index.scss';
+
+.offer-bold-text{
+    color:$bold-text-color ;
+    font-size: $global-L-font-size ;
+    margin:50px 150px 0 0;
+}
+
+.offer-text{
+    color: $text-color ;
+    font-size: $global-M-font-size ;
+    margin-right: 150px;
+}
+
+
+

@@ -39,7 +39,9 @@ const UserForm: FC = () => {
 
     return (
         <Form onSubmit={sendUserDetails}>
-            <p>{message.length > 0 ? message : null}</p>
+            <p className="form-text">השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
+           <div className="form-container">
+            <p >{message.length > 0 ? message : null}</p>
             {inputs.map((int, index) => (
                 <Input
                     key={index}
@@ -47,6 +49,7 @@ const UserForm: FC = () => {
                 />
             ))}
             <select
+            className="form-select"
                 name="userHelp"
                 defaultValue=""
             >
@@ -60,7 +63,8 @@ const UserForm: FC = () => {
                     </option>
                 ))}
             </select>
-            <button type="submit">שלח</button>
+            <button className="form-button" type="submit">שלח</button>
+            </div>
         </Form>
     );
 };

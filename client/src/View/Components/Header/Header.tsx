@@ -3,17 +3,24 @@ import HeaderImage from '../../../images/header/header-image.png'
 
 const Header: FC = () => {
     return (
-        <div>  {/* display: flex */} {/*חשבתי לשים את האלמנטים בפלקס על מנת שיהיו אחד ליד השני */}
-            <div>
-                <p>יש לכם עסק? מיזם? סטארטפ?</p>
-                <h1>בואו לבנות את האתר שלכם, שיקח אותכם צד אחד קדימה</h1>
-                <p>
-                    אנחנו יודעים שהתחלות יכולות להיות מאתגרות לכן השירות שלנו כרגע בחינם
+        <div className='header-container'>  {/* display: flex */} {/*חשבתי לשים את האלמנטים בפלקס על מנת שיהיו אחד ליד השני */}
+            <div className='header-text-container'>
+                <p className='header-M-text'>יש לכם עסק? מיזם? סטארטפ?</p>
+                <h1 className='header-L-text'>
+                    בואו לבנות את האתר שלכם,
+                    <br/>
+                     שיקח אותכם צד אחד
+                    <span>קדימה</span>                 </h1>
+                <p className='header-M-text'>
+                     אנחנו יודעים שהתחלות יכולות להיות מאתגרות
+                     <br/>
+                      לכן השירות שלנו כרגע 
+                    <span>בחינם</span>
                 </p>
-                <p>*השירות לא כולל תשלומים נוספים (כגון דומיין,בסיס ונתונים וכדומה)</p>
+                <p className='header-S-text'>*השירות לא כולל תשלומים נוספים (כגון דומיין,בסיס ונתונים וכדומה)</p>
             </div>
             <div>
-                <img src={HeaderImage} alt="אנשים עומדים" />   {/*  בנתיים נשים תשמונה שיש בפיגמה, אחר כך נשנה לעדכנית */}
+                <img className='header-image' src={HeaderImage} alt="אנשים עומדים" />   {/*  בנתיים נשים תשמונה שיש בפיגמה, אחר כך נשנה לעדכנית */}
             </div>
         </div>
     )

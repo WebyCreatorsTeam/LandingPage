@@ -3,7 +3,7 @@ import { InputPorps } from "./inputType";
 
 const Input: FC<InputPorps> = ({ type, name, placeholder }) => {
     return (
-        <input
+        <input className="form-input"
             type={type}
             name={name}
             placeholder={placeholder}

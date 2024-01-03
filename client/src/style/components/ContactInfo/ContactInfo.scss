@@ -1,0 +1,29 @@
+@import '../../vars/_index.scss';
+
+.info-container{
+    width: 35%;
+    height: 3%;
+    background-color: $info-background-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 8px;
+    margin-right: 11%;
+}
+
+.info-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info-icon{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+.info-text {
+    color: $info-text-color;
+    margin: 5px;
+}
