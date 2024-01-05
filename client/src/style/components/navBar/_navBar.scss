@@ -3,10 +3,11 @@
 nav {
     background-color: $navar-background-color;
     width: 100%;
+
+    &>img{
+        padding: 20px;
+
+    }
 }
 
-nav > img {
-    // width: 192px;
-    // height: 50px;
-    // padding: 20px;
-}
+

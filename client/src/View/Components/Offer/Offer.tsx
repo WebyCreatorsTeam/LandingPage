@@ -15,22 +15,24 @@ const Offer: FC = () => {
             <div className="offer-grid-container">
                 {" "}
                 {/* להשתמש פה בגריד */} {/* display: grid */}
-                <ol>
+                <ol className="offer-grid-container__ol">
                     {OfferList.map((ofr) => (
-                        <li className="offer-grid-il-container">
-                            {" "}
+                        <li className="offer-grid-container__ol--li">
+                         <div>   {" "}
                             {/* להשתמש פה בגריד */} {/* display: grid */}
                             <img
+                            className="offer-grid-container__ol--li--img"
                                 src={ofr.img}
                                 alt="עיצוב"
                             />
-                            <h4>{ofr.head}</h4>
-                            <p>{ofr.text}</p>
+                            <h4 className="offer-grid-container__ol--li--img--h4" >{ofr.head}</h4>
+                            <p className="offer-grid-container__ol--li--img--h4--p">{ofr.text}</p>
+                       </div>
                         </li>
                     ))}
                 </ol>
                 <img
-                    className="offer-image"
+                    className="offer-grid-container__img"
                     src={OfferImg}
                     alt="בן אדם יושב"
                 />

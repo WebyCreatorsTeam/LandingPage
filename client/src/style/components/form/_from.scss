@@ -1,58 +1,54 @@
 @import '../../vars/_index.scss';
 
-form{
+.form-container{
     width: 100%;
     height: 10%;
     background-color: $form-background-color;
-    margin-top: 5%;
+    margin-top: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    &__text{
+        font-size: $global-M-font-size;
+        padding-top: 2.5%;
+
+        &--inputs{
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            &--input, &--select{
+                width:20%;
+                height: 53px;
+                background-color:$form-input-background-color ;
+                text-align: center;
+                border: none;
+                border-radius: 8px;
+                margin:2.5% 0;
+            }
+
+            &--select:hover{
+                cursor: pointer;
+            }
+
+            &--button{
+                width: 15%;
+                height: 53px;
+               background-color: $form-button-background-color; 
+               border: none;
+               border-radius: 8px;
+               margin:2.5% 0;
+            }
+
+            &--button:hover{
+                background-color: $form-button-background-hover-color;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
-.form-text{
-    font-size: $global-M-font-size;
-    padding-top: 2.5%;
-}
-
-.form-container{
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    
-}
-
-.form-input, .form-select{
-    width:20%;
-    height: 53px;
-    background-color:$form-input-background-color ;
-    text-align: center;
-    border: none;
-    border-radius: 8px;
-    margin:2.5% 0;
-    
-}
-
-
-.form-select:hover{
-    cursor: pointer;
-
-}
-
-.form-button{
-    width: 15%;
-    height: 53px;
-   background-color: $form-button-background-color; 
-   border: none;
-   border-radius: 8px;
-   margin:2.5% 0;
-}
-
-   .form-button:hover{
-    background-color: $form-button-background-hover-color;
-    cursor: pointer;
-   }
 

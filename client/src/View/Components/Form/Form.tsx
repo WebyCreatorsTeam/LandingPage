@@ -41,12 +41,12 @@ const UserForm: FC = () => {
     };
 
     return (
-        <Form onSubmit={sendUserDetails}>
-            <p className="form-text">השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
+        <Form className="form-container" onSubmit={sendUserDetails}>
+            <p className="form-container__text">השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
             <p style={{ color: green ? "green" : "red" }}>
                 {message.length > 0 ? message : null}
             </p>
-            <div className="form-container">
+            <div className="form-container__text--inputs">
                 {inputs.map((int, index) => (
                     <Input
                         key={index}
@@ -54,7 +54,7 @@ const UserForm: FC = () => {
                     />
                 ))}
                 <select
-                    className="form-select"
+                    className="form-container__text--inputs--select"
                     name="userHelp"
                     // defaultValue="none"
                 >
@@ -70,7 +70,7 @@ const UserForm: FC = () => {
                     ))}
                 </select>
                 <button
-                    className="form-button"
+                    className="form-container__text--inputs--button"
                     type="submit"
                 >
                     שלח

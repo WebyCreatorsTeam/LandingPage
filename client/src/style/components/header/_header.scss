@@ -1,38 +1,49 @@
 @import "../../vars/_index.scss";
 
 .header-container {
-    width: 80%;
-    height: 10%;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 50px;
+
+    &__text{
+        color: $text-color;
+        width: 50%;
+        
+        &--p{
+            font-size: $global-M-font-size;
+
+            &--h1{
+                font-size: $global-L-font-size;
+
+                & >span{
+                    margin-right: 10px;
+                    color: $bold-text-color;
+                }
+
+                &--p{
+                    font-size: $global-M-font-size;
+
+                    & >span{
+                        margin-right: 10px;
+                        color: $bold-text-color;
+                    }
+
+                    &--p{
+                        font-size: $global-S-font-size;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__img{
+        width: 100%;
+    }
+  
 }
 
-.header-text-container {
-    color: $text-color;
-    width: 40%;
-}
-
-.header-S-text {
-    font-size: $global-S-font-size;
-    margin-top: 10px;
-}
-
-.header-M-text {
-    font-size: $global-M-font-size;
-}
-
-.header-L-text {
-    font-size: $global-L-font-size;
-}
-
-.header-image {
-    width: 60%;
-}
-
-.header-L-text > span,
-.header-M-text > span {
-    margin-right: 10px;
-    color: $bold-text-color;
-}

@@ -1,29 +1,34 @@
-@import '../../vars/_index.scss';
+@import '../../vars/_index';
 
 .info-container{
-    width: 35%;
-    height: 3%;
+    width: 580px;
     background-color: $info-background-color;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    letter-spacing: 0.2em;
     border-radius: 8px;
-    margin-right: 11%;
+    padding-right: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+
+    &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--link{
+            color: $info-text-color;
+
+            &--img{
+                width: 40px;
+                height: 40px;
+                padding: 5px;
+            }
+        }
+
+    }
 }
 
-.info-icon-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.info-icon{
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-}
-
-.info-text {
-    color: $info-text-color;
-    margin: 5px;
-}
