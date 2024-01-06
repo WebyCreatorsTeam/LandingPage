@@ -1,32 +1,23 @@
 import { FC, useEffect, useState } from "react";
+import axios from "axios";
+import { User } from "./types";
 import { inputs, options } from "./inputsList";
 import Input from "../../UI/Input/Input";
-import { Form } from "react-router-dom";
-import axios from "axios";
 import { validateValues } from "./fornValidation";
-
-export interface User {
-    userName: string;
-    userEmail: string;
-    userPhone: string;
-    userHelp: string;
-}
 
 const UserForm: FC = () => {
     const [message, setMessage] = useState<string>("");
     const [green, setGreen] = useState<boolean>();
     const [submitting, setSubmitting] = useState<boolean>();
-    const [inputError, setInputError] = useState<string>("");
     const [inputsError, setInputsError] = useState<User>({ userName: "none", userEmail: "none", userPhone: "none", userHelp: "none" });
     const [inputFields, setInputFields] = useState<User>({ userName: "", userEmail: "", userPhone: "", userHelp: "" });
 
     const handleChangeInput = (ev: React.SyntheticEvent) => {
         let target = ev.target as HTMLInputElement;
 
-        const { message, input, continueWork } = validateValues({ [target.name]: target.value });
+        const { message, continueWork } = validateValues({ [target.name]: target.value });
 
         setMessage(message);
-        setInputError(input);
         setGreen(continueWork);
         setInputsError({ ...inputsError, [target.name]: message });
 
@@ -40,20 +31,23 @@ const UserForm: FC = () => {
     }, [inputFields, inputsError]);
 
     const sendUserDetails = async (ev: React.SyntheticEvent) => {
-        let target = ev.target as HTMLFormElement;
+        ev.preventDefault()
         const { data: { continueWork, message } } = await axios.post("/users/user-send-details/", { inputFields });
         setGreen(continueWork);
 
-        console.log(target)
+        const formInputs = document.querySelectorAll(".form-container__text--inputs--input") as NodeList
+        const formSelect = document.querySelector(".form-container__text--inputs--select") as HTMLSelectElement
+
+
+        formInputs.forEach((aaaaa: any) => { aaaaa.value = "" })
+        formSelect.value = "פיתוח אתר"
+        setSubmitting(true)
+        setInputsError({ userName: "none", userEmail: "none", userPhone: "none", userHelp: "none" })
         return setMessage(message);
-        // target.reset()
-        // return setInputFields({
-        //     userName: "", userEmail: "", userPhone: "", userHelp: "",
-        // });
     };
 
     return (
-        <Form
+        <form
             className="form-container"
             onSubmit={sendUserDetails}
         >
@@ -70,7 +64,6 @@ const UserForm: FC = () => {
                         {...int}
                         inputsValue={inputFields}
                         checkFunction={handleChangeInput}
-                        inputError={inputError}
                         inputsError={inputsError}
                     />
                 ))}
@@ -98,7 +91,7 @@ const UserForm: FC = () => {
                     שלח
                 </button>
             </div>
-        </Form>
+        </form>
     );
 };
 

@@ -1,4 +1,4 @@
-import { User } from "../../Components/Form/Form";
+import { User } from "../../Components/Form/types";
 
 export interface InputPorps {
     type: string;
@@ -6,6 +6,5 @@ export interface InputPorps {
     placeholder: string;
     inputsValue: User;
     checkFunction: (ev: React.SyntheticEvent) => void;
-    inputError: string;
     inputsError: User
 }

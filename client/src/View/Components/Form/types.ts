@@ -14,3 +14,10 @@ export interface OptionsList {
     value: string
     text: string
 }
+
+export interface User {
+    userName: string;
+    userEmail: string;
+    userPhone: string;
+    userHelp: string;
+}
