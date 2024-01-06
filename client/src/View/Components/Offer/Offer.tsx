@@ -16,18 +16,26 @@ const Offer: FC = () => {
                 {" "}
                 {/* להשתמש פה בגריד */} {/* display: grid */}
                 <ol className="offer-grid-container__ol">
-                    {OfferList.map((ofr) => (
-                        <li className="offer-grid-container__ol--li">
-                         <div>   {" "}
-                            {/* להשתמש פה בגריד */} {/* display: grid */}
-                            <img
-                            className="offer-grid-container__ol--li--img"
-                                src={ofr.img}
-                                alt="עיצוב"
-                            />
-                            <h4 className="offer-grid-container__ol--li--img--h4" >{ofr.head}</h4>
-                            <p className="offer-grid-container__ol--li--img--h4--p">{ofr.text}</p>
-                       </div>
+                    {OfferList.map((ofr, index) => (
+                        <li
+                            key={index}
+                            className="offer-grid-container__ol--li"
+                        >
+                            <div>
+                                {" "}
+                                {/* להשתמש פה בגריד */} {/* display: grid */}
+                                <img
+                                    className="offer-grid-container__ol--li--img"
+                                    src={ofr.img}
+                                    alt="עיצוב"
+                                />
+                                <h4 className="offer-grid-container__ol--li--img--h4">
+                                    {ofr.head}
+                                </h4>
+                                <p className="offer-grid-container__ol--li--img--h4--p">
+                                    {ofr.text}
+                                </p>
+                            </div>
                         </li>
                     ))}
                 </ol>

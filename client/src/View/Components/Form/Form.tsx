@@ -1,48 +1,62 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { inputs, options } from "./inputsList";
 import Input from "../../UI/Input/Input";
 import { Form } from "react-router-dom";
 import axios from "axios";
+import { validateValues } from "./fornValidation";
+
+export interface User {
+    userName: string;
+    userEmail: string;
+    userPhone: string;
+    userHelp: string;
+}
 
 const UserForm: FC = () => {
     const [message, setMessage] = useState<string>("");
     const [green, setGreen] = useState<boolean>();
+    const [submitting, setSubmitting] = useState<boolean>();
+    const [inputError, setInputError] = useState<string>();
+    const [inputsError, setInputsError] = useState<User>({ userName: "none", userEmail: "none", userPhone: "none", userHelp: "none" });
+    const [inputFields, setInputFields] = useState<User>({ userName: "", userEmail: "", userPhone: "", userHelp: "" });
 
-    const sendUserDetails = async (ev: React.SyntheticEvent) => {
-        const target = ev.target as typeof ev.target & {
-            userName: { value: string };
-            userEmail: { value: string };
-            userPhone: { value: string };
-            userHelp: { value: string };
-        };
+    const handleChangeInput = (e: React.SyntheticEvent) => {
+        let target = e.target as HTMLInputElement;
 
-        const userName = target.userName.value;
-        const userEmail = target.userEmail.value;
-        const userPhone = target.userPhone.value;
-        const userHelp = target.userHelp.value;
+        const { message, input, continueWork } = validateValues({ [target.name]: target.value });
 
-        console.log(userName, userEmail, userPhone, userHelp);
+        setMessage(message);
+        setInputError(input);
+        setGreen(continueWork);
+        setInputsError({ ...inputsError, [target.name]: message });
 
-        if (userHelp.length === 0)
-            return setMessage("נא לבחור במה אנחנו יכולים לעזור");
+        return setInputFields({ ...inputFields, [target.name]: target.value });
+    };
 
-        const {
-            data: { continueWork, message },
-        } = await axios.post("/users/user-send-details/", {
-            userName,
-            userEmail,
-            userPhone,
-            userHelp,
-        });
+    useEffect(() => {
+        (() => {
+            return setSubmitting(Object.values(inputsError).some((a) => a !== ""));
+        })()
+    }, [inputFields, inputsError]);
 
-        console.log(message);
+
+    const sendUserDetails = async () => {
+        const { data: { continueWork, message } } = await axios.post("/users/user-send-details/", { inputFields });
         setGreen(continueWork);
         return setMessage(message);
+        // return setInputFields({
+        //     userName: "", userEmail: "", userPhone: "", userHelp: "",
+        // });
     };
 
     return (
-        <Form className="form-container" onSubmit={sendUserDetails}>
-            <p className="form-container__text">השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
+        <Form
+            className="form-container"
+            onSubmit={sendUserDetails}
+        >
+            <p className="form-container__text">
+                השאירו פרטים ונחזור אליכם הכי מהר שאפשר
+            </p>
             <p style={{ color: green ? "green" : "red" }}>
                 {message.length > 0 ? message : null}
             </p>
@@ -51,19 +65,22 @@ const UserForm: FC = () => {
                     <Input
                         key={index}
                         {...int}
+                        inputsValue={inputFields}
+                        checkFunction={handleChangeInput}
+                        inputError={inputError}
                     />
                 ))}
                 <select
                     className="form-container__text--inputs--select"
                     name="userHelp"
-                    // defaultValue="none"
+                    defaultValue={inputFields.userHelp}
+                    onChange={handleChangeInput}
                 >
                     {options.map((opt, index) => (
                         <option
                             key={index}
                             defaultValue={opt.value}
-                            disabled={opt.value === "none" ? true : false}
-                            selected={opt.value === "none" ? true : false}
+                            disabled={opt.value === "" ? true : false}
                         >
                             {opt.text}
                         </option>
@@ -72,6 +89,7 @@ const UserForm: FC = () => {
                 <button
                     className="form-container__text--inputs--button"
                     type="submit"
+                    disabled={submitting}
                 >
                     שלח
                 </button>

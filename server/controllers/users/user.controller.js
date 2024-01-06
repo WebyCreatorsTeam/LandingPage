@@ -4,7 +4,11 @@ const { userValidation } = require("../../utils/validation/user.validation");
 
 exports.sendDetails = async (req, res) => {
     try {
-        const { userName, userEmail, userPhone, userHelp } = req.body;
+        console.log(req.body);
+
+        const {
+            inputFields: { userName, userEmail, userPhone, userHelp },
+        } = req.body;
         console.log(userName, userEmail, userPhone, userHelp);
 
         const { error } = userValidation.validate({
