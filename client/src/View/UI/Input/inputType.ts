@@ -6,5 +6,6 @@ export interface InputPorps {
     placeholder: string;
     inputsValue: User;
     checkFunction: (ev: React.SyntheticEvent) => void;
-    inputError: any;
+    inputError: string;
+    inputsError: User
 }

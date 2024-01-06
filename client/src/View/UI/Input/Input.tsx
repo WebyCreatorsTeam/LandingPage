@@ -7,11 +7,15 @@ const Input: FC<InputPorps> = ({
     placeholder,
     inputsValue,
     checkFunction,
-    inputError,
+    inputsError,
 }) => {
     return (
         <input
-            style={{ border: inputError === name ? "1px solid red" : "none" }}
+            style={{
+                border: inputsError[name as keyof typeof inputsError] === 'none' ? "none"
+                    :
+                    inputsError[name as keyof typeof inputsError].length === 0 ? "none" : "1px solid red"
+            }}
             className="form-container__text--inputs--input"
             type={type}
             name={name}

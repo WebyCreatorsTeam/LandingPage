@@ -16,12 +16,12 @@ const UserForm: FC = () => {
     const [message, setMessage] = useState<string>("");
     const [green, setGreen] = useState<boolean>();
     const [submitting, setSubmitting] = useState<boolean>();
-    const [inputError, setInputError] = useState<string>();
+    const [inputError, setInputError] = useState<string>("");
     const [inputsError, setInputsError] = useState<User>({ userName: "none", userEmail: "none", userPhone: "none", userHelp: "none" });
     const [inputFields, setInputFields] = useState<User>({ userName: "", userEmail: "", userPhone: "", userHelp: "" });
 
-    const handleChangeInput = (e: React.SyntheticEvent) => {
-        let target = e.target as HTMLInputElement;
+    const handleChangeInput = (ev: React.SyntheticEvent) => {
+        let target = ev.target as HTMLInputElement;
 
         const { message, input, continueWork } = validateValues({ [target.name]: target.value });
 
@@ -35,15 +35,18 @@ const UserForm: FC = () => {
 
     useEffect(() => {
         (() => {
-            return setSubmitting(Object.values(inputsError).some((a) => a !== ""));
+            return setSubmitting(Object.values(inputsError).some((a) => a.length !== 0));
         })()
     }, [inputFields, inputsError]);
 
-
-    const sendUserDetails = async () => {
+    const sendUserDetails = async (ev: React.SyntheticEvent) => {
+        let target = ev.target as HTMLFormElement;
         const { data: { continueWork, message } } = await axios.post("/users/user-send-details/", { inputFields });
         setGreen(continueWork);
+
+        console.log(target)
         return setMessage(message);
+        // target.reset()
         // return setInputFields({
         //     userName: "", userEmail: "", userPhone: "", userHelp: "",
         // });
@@ -68,6 +71,7 @@ const UserForm: FC = () => {
                         inputsValue={inputFields}
                         checkFunction={handleChangeInput}
                         inputError={inputError}
+                        inputsError={inputsError}
                     />
                 ))}
                 <select
