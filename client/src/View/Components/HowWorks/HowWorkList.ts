@@ -1,6 +1,6 @@
-import Meeting from '../../../images/howWorks/meet.png'
-import UXUI from '../../../images/howWorks/uxui.png'
-import Dev from '../../../images/howWorks/dev.png'
+import Meeting from '../../../images/howworks/meet.png'
+import UXUI from '../../../images/howworks/uxui.png'
+import Dev from '../../../images/howworks/dev.png'
 import Support from '../../../images/offer/support.png'
 import { HowWork } from './types'
 
