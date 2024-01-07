@@ -1,24 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto:ital,wght@1,300&family=Zilla+Slab:wght@500&display=swap');
 
+$white-color: #FFFFFF;
+$black-color:#000000;
+$green-bold-color: #8902FF;
+//$green-regular-color:background: #8902FF;
+
+
 $body-background-color:#fcfafa;
 
-$text-color:#000000;
+$text-color: $black-color;
+$bold-text-color:$green-bold-color;
 
-$bold-text-color:#9747FF;
+$navar-background-color: $white-color; 
 
-$navar-background-color: #FFFFFF; 
-
-$info-background-color: #8902FF;
-
-$info-text-color: #ffffff;
+$info-background-color: $green-bold-color;
+$info-text-color: $white-color;
 
 $form-background-color:#E2D2F7;
-
-$form-input-background-color:#FFFFFF;
-
-$form-button-background-color:#8902FF;
-
+$form-input-background-color: $white-color;
+$form-button-background-color: $green-bold-color;
 $form-button-background-hover-color:#6b0ac0;
+
+$offer-li-border: $green-bold-color;
+
+
 
 
 
