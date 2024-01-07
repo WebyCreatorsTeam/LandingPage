@@ -4,7 +4,7 @@ import Support from '../../../images/offer/support.png'
 import { Offer } from './types'
 
 export const OfferList: Array<Offer> = [
-   { img: Style, head:"עיצוב אתרים" ,text:"UX/UI"},
-   { img: Dev, head:"בניה אתרים" ,text:"Web develop"},
-   { img: Support, head:"תחזוקת אתרים" ,text:"Web Support"}
+   { img: Style, head:"1. עיצוב אתרים" ,text:"UX/UI"},
+   { img: Dev, head:"2. בנית אתרים" ,text:"Web develop"},
+   { img: Support, head:"3. תחזוקת אתרים" ,text:"Web Support"}
 ]
