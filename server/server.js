@@ -13,8 +13,6 @@ dbconnect()
 const whitelist = [process.env.CORS1, process.env.CORS2]
 const corsOptions = {
     origin: function (origin, callback) {
-
-        console.log(origin)
         if (whitelist.indexOf(origin) !== -1 || !origin) {
             callback(null, true)
         } else {
