@@ -4,7 +4,7 @@ import Weby from "../../../images/logo.png";
 const Logo: FC = () => {
     return (
         <img
-            className="logoWeby"
+            className="logo-img"
             src={Weby}
             alt="Weby Logo"
         />

@@ -5,23 +5,30 @@ import { footerlinks } from "./footerLinks";
 const Footer: FC = () => {
     return (
         <footer
-        // className="footer-base"
+        className="footer-container"
         >
-            <Logo />
+
+            <div>
             {footerlinks.map((lnk, index) => (
                 <a
+                    className="footer-container__link"
                     href={lnk.url}
                     key={index}
-                    // className="footer-base__link"
+                   
                 >
                     <img
+                        className="footer-container__link--img"
                         src={lnk.img}
                         alt={lnk.alt}
-                        // className="footer-base__link--img"
                     />
                 </a>
             ))}
+
+             <Logo /> 
+             
+        </div>
         </footer>
+
     );
 };
 
