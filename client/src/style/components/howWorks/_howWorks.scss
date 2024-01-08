@@ -60,23 +60,26 @@
     &__img{
         grid-column-start: 1 ;
         grid-column-end: 2;
-        grid-row-start: 2;
+        grid-row-start: 3;
         grid-row-end: 4;
-        background-color: bisque;
+        width: 100px;
+        height: 100px;
+        border-right: 5PX solid $green-bold-color ;
+        padding-right: 30px;
 
         &--h4{
             grid-column-start: 2 ;
-            grid-column-end: 4;
-            grid-row-start: 2;
-            grid-row-end: 4;
-            background-color: aquamarine;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            color: $green-bold-color;
 
             &--p{
                 grid-column-start: 2 ;
-                grid-column-end: 4;
-                grid-row-start: 2;
-                grid-row-end: 4;
-                background-color: aqua;
+                grid-column-end: 3;
+                grid-row-start: 3;
+                grid-row-end: 5;
+                color: $black-color;
             }
         }
     }
