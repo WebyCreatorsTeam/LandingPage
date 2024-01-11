@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.506272b8.css",
+    "main.css": "/static/css/main.a8f86e85.css",
     "main.js": "/static/js/main.e1941fa7.js",
+    "static/media/VarelaRound-Regular.ttf": "/static/media/VarelaRound-Regular.e67ccd4a92677fdf8719.ttf",
     "static/media/logo-big.png": "/static/media/logo-big.a8b614c489d5537f8f61.png",
     "static/media/Like-da.png": "/static/media/Like-da.2814194093e1e84d1c8e.png",
     "static/media/offer-image.png": "/static/media/offer-image.9f4b86209781c8030209.png",
@@ -9,11 +10,11 @@
     "static/media/header-image.png": "/static/media/header-image.5f7c4c0e92a687f75102.png",
     "static/media/logo.png": "/static/media/logo.9b479485382195e684fe.png",
     "index.html": "/index.html",
-    "main.506272b8.css.map": "/static/css/main.506272b8.css.map",
+    "main.a8f86e85.css.map": "/static/css/main.a8f86e85.css.map",
     "main.e1941fa7.js.map": "/static/js/main.e1941fa7.js.map"
   },
   "entrypoints": [
-    "static/css/main.506272b8.css",
+    "static/css/main.a8f86e85.css",
     "static/js/main.e1941fa7.js"
   ]
 }
