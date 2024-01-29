@@ -6,6 +6,7 @@
     grid-template-columns: 16% 16% 20% 10% 16% 16% ;
     grid-template-rows: 20% 20% 20% 20% 20%;
     margin-bottom: 100px;
+   // background-color: $white-color;
 
     &__text{
             grid-column-start: 1 ;
@@ -18,12 +19,12 @@
         &--bold{
             grid-column-start: 1 ;
             grid-column-end: 4;
-            grid-row-start: 2;
-            grid-row-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
       //      background-color: bisque;
             color:$bold-text-color ;
             font-size: $global-L-font-size ;
-            margin:50px 150px 0 0;
+            margin:50px 120px 60px 0;
 
       
 
@@ -35,19 +36,20 @@
             //    background-color: brown;
                 color: $text-color ;
                 font-size: $global-M-font-size ;
-                margin-right: 150px;
+                margin-right: 120px;
             }
         }
         
     }
 
     &__img{
-        grid-column-start:4;
+        grid-column-start:5;
         grid-column-end:6 ;
         grid-row-start:3 ;
         grid-row-end: 5;
-        height: 120px;
-        width: 500px;
+        height:224.34px;
+        width:300.95px;
+        margin-right: 100PX;
 
 
 

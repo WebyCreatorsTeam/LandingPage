@@ -1,4 +1,3 @@
-import CallUs from './View/Components/CallUs/CallUs';
 import Footer from './View/Components/Footer/Footer';
 import UserForm from './View/Components/Form/Form';
 import Header from './View/Components/Header/Header';
@@ -17,7 +16,7 @@ function App() {
       <HowWorks/>
       <WhyUs/>
       <ContactInfo/>
-      <CallUs/>
+     {/*<CallUs/>*/} 
       <UserForm />
       <Footer/>
     </>

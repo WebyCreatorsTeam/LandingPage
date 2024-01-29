@@ -26,10 +26,10 @@ const Offer: FC = () => {
                                 src={ofr.img}
                                 alt="עיצוב"
                             />
+                          
                             <h4 className="offer-grid-container__ol--li--img--h4" >{ofr.head}</h4>
                             <p className="offer-grid-container__ol--li--img--h4--p">{ofr.text}</p>
-                     
-
+                           
                         </li>
                     ))}
                 </ol>

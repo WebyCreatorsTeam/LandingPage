@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import HowWorkImage from '../../../images/howWorks/how-work-image.png'
+import HowWorkImage from '../../../images/howworks/how-work-image.png'
 
 const WorksHead: FC = () => {
     return (

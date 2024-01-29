@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Logo from "../../UI/Logo/Logo";
 import { footerlinks } from "./footerLinks";
+import LogoImage from '../../../style/../images/footer/logo.png'
 
 const Footer: FC = () => {
     return (
@@ -23,10 +23,10 @@ const Footer: FC = () => {
                     />
                 </a>
             ))}
-
-             <Logo /> 
+ </div>
+            <img src={LogoImage} alt="footer- logo"></img>
              
-        </div>
+       
         </footer>
 
     );
