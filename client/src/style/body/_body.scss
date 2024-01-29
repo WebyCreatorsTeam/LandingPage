@@ -1,8 +1,11 @@
+@import '../vars/index';
+
 body {
-    font-family: myFirstFont;
+    background-color: $body-background-color;
+    font-family: 'Roboto', sans-serif;
 
     @include respond-to(mobile) {
-       // background-color: bisque;
+    //    background-color: bisque;
 
         //nav
 
@@ -29,14 +32,14 @@ body {
                 text-align: center;
                  
                  &--p{
-                     font-size: $global-S-font-size;
+                     font-size: $global-XS-font-size;
                      
          
                      &--h1{
                          font-size: $global-M-font-size;
          
                          &--p{
-                             font-size: $global-S-font-size;
+                             font-size: $global-XS-font-size;
      
                              &--p{
                                  font-size: 7px;
@@ -263,10 +266,10 @@ body {
         height:35px ;
         padding: 30px;
         }
-    }
+    };
 
     @include respond-to(tablet) {
-      //  background-color: blueviolet;
+     //  background-color: blueviolet;
 
         //nav
 
@@ -291,13 +294,13 @@ body {
             width: 50%;
             
             &--p{
-                font-size: $global-S-font-size;
+                font-size: $global-XS-font-size;
     
                 &--h1{
                     font-size: $global-M-font-size;
     
                     &--p{
-                        font-size: $global-S-font-size;
+                        font-size: $global-XS-font-size;
 
                         &--p{
                             font-size: 7px;
@@ -465,17 +468,61 @@ body {
        // margin-right: 100px;
         padding: 30px;
         }
-}
+};
 
     @include respond-to(desktop) {
       //  background-color: aqua;
 
+      //header
+
+      .header-container{
+
+        &__text{
+            width: 70%;
+            
+            &--p{
+                &--h1{
+                    font-size: $global-L-font-size;
+                }
+            }
+
+        }
+
+        &__img{
+        height: 80%;
+        width: 80%;
+        margin-right: 50px
+      }
     }
+
+      //form
+
+.form-container{
+    &__text{
+        &--p{
+        &--inputs{
+            &--input{
+                width:130px;
+            }
+             &--select{
+                width:200px;
+             }
+             &--button{
+                width:200px;
+            }
+
+        }
+    }
+}
+
+}
+}
 
     @include respond-to(LDesktop) {
         max-width: 1440px;
         margin: 0 auto;
 
       
-    }
+    };
 }
+

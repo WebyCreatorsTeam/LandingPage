@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Logo_Big from "../../../images/logo-big.png";
+import Jet from "../../../images/whyus/why-us.png";
 
 const WhyUs: FC = () => {
     return (
@@ -19,7 +19,7 @@ const WhyUs: FC = () => {
                 </div>
                 <img
                 className="whyUs-container__img"
-                    src={Logo_Big}
+                    src={Jet}
                     alt="Big Weby Logo"
                 />
         </div>

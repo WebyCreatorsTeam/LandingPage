@@ -1,54 +1,170 @@
 @import '../../vars/_index.scss';
 
+
 .form-container{
     width: 100%;
-    height: 10%;
+    height: 250px;
     background-color: $form-background-color;
-    margin-top: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    margin-top: 40px;
 
     &__text{
-        font-size: $global-M-font-size;
-        padding-top: 2.5%;
+        margin: 0 120px 0 0;
+        color: $green-bold-color;
+        font-size: $global-L-font-size;
+        padding-top: 30px;
+
+        &--p{
+            margin: 5px 120px 0 0;
+            font-size: 18px;
+            color: $black-color;
+                   
 
         &--inputs{
-            width: 80%;
+            width: 85%;
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
+            margin-right: 120px;
 
             &--input, &--select{
-                width:20%;
                 height: 53px;
+                color: $gray-color;
                 background-color:$form-input-background-color ;
-                text-align: center;
+                padding-right: 15px;
+                font-size: $global-S-font-size;
                 border: none;
                 border-radius: 8px;
-                margin:2.5% 0;
+                //margin:2.5% 0;
             }
+
+            &--input{
+                width:183px;
+            }
+
+            &--select{
+                width: 250px;
+               display: inline-block;
+              position: relative;
+              appearance:none;
+              padding: 0 10px;
+              //width: 100%;
+              color: $gray-color;
+              background-color: $white-color;
+            }
+
+           /* &--select-selected {
+              background-color: DodgerBlue;
+            }*/
+            
+
+
+            &--select>option{
+                margin: 10px;
+                text-align: right;
+                font-size: $global-S-font-size;
+          }
 
             &--select:hover{
                 cursor: pointer;
             }
 
-            &--button{
-                width: 15%;
-                height: 53px;
-               background-color: $form-button-background-color; 
-               border: none;
-               border-radius: 8px;
-               margin:2.5% 0;
+            &--select>option::before{
+                cursor: pointer;
+                background-color: aqua;
+
             }
 
-            &--button:hover{
-                background-color: $form-button-background-hover-color;
+            &--button{
+               width: 280px;
+               height: 53px;
+               background-color: $form-background-color;
+               color: #6b0ac0;
+               border: 2.5px solid $green-bold-color;
+               font-size: $global-M-font-size;
+               border-radius: 8px;
+               margin:2.5% 0;
+            
+
+            &--bold{
+                background-color: $form-button-background-color; 
+                color: $white-color;
                 cursor: pointer;
-            }
+                width: 280px;
+                height: 53px;
+               // background-color: $form-background-color;
+               // color: #6b0ac0;
+               // border: 2.5px solid $green-bold-color;
+                font-size: $global-M-font-size;
+                border-radius: 8px;
+                margin:2.5% 0;
+                border: none;
+            }}
         }
     }
 }
 
+}
+
+.input-container{
+position: relative;
+margin: 20px 0;
+}
+
+
+.form-container__text--p--inputs--input{
+font-size: $global-S-font-size;
+color: $black-color;
+padding: 0 10px;
+//background: transparent;
+//border: 2px solid $black-color ;
+outline: none;
+background-color: $white-color;
+
+}
+
+.labelLine{
+position: absolute;
+top: 50%;
+right: 5px;
+transform: translateY(-50%);
+font-size: $global-S-font-size;
+color: $gray-color  ;
+padding: 0 5px;
+pointer-events: none;
+transition: .5s;
+}
+
+.input-container input:focus~label,
+.input-container input:valid~label{
+  top: -10px;
+  font-size: $global-XS-font-size;
+  background-color: $form-background-color;
+  color: $black-color;
+  font-weight: lighter;
+}
+
+.input-container input:focus{
+  border: 2px solid $black-color ;
+}
+
+.select-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.icon-container{
+  position: absolute;
+  left: 20px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-container > img{
+  width: 20px;
+  height: 20px;
+}
 
