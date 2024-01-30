@@ -35,75 +35,18 @@ const UserForm: FC = () => {
     const sendUserDetails = async (ev: React.SyntheticEvent) => {
         ev.preventDefault()
         const { data: { continueWork, message } } = await axios.post("/users/user-send-details/", { inputFields });
-        console.log(continueWork)
-        console.log(message)
         setGreen(continueWork);
 
-        // const formInputs = document.querySelectorAll(".form-container__text--inputs--input") as NodeList
-        // const formSelect = document.querySelector(".form-container__text--inputs--select") as HTMLSelectElement
+        const formInputs = document.querySelectorAll(".form-container__text--p--inputs--input") as NodeList
+        const formSelect = document.querySelector(".form-container__text--p--inputs--select") as HTMLSelectElement
 
+        formInputs.forEach((aaaaa: any) => { aaaaa.value = "" })
+        formSelect.value = "פיתוח אתר"
 
-        // formInputs.forEach((aaaaa: any) => { aaaaa.value = "" })
-        // formSelect.value = "פיתוח אתר"
-        // setSubmitting(true)
         setInputsError({ userName: "none", userEmail: "none", userPhone: "none", userHelp: "none" })
-        // setInputFields({ userName: "", userEmail: "", userPhone: "", userHelp: "" })
-        // console.log(inputFields)
-        // ev.target.reset();
         return setMessage(message);
-
-
-
-        // const target = ev.target as typeof ev.target & {
-        //     userName: { value: string };
-        //     userEmail: { value: string };
-        //     userPhone: { value: string };
-        //     userHelp: { value: string };
-        // };
-
-        // const userName = target.userName.value;
-        // const userEmail = target.userEmail.value;
-        // const userPhone = target.userPhone.value;
-        // const userHelp = target.userHelp.value;
-
-
-        // // console.log(userName, userEmail, userPhone, userHelp);
-        // // console.log(userHelp.length, isUserFull)
-
-        // // if (userHelp.length === 0)
-        // //     return setMessage("נא לבחור במה אנחנו יכולים לעזור");
-
-        // // if (userName.length > 0
-        // //     && userEmail.length > 0
-        // //     && userPhone.length > 0
-        // //     && userHelp.length > 0)
-        // //     getIsUserFull(prev => !prev)
-
-        // const {
-        //     data: { continueWork, message },
-        // } = await axios.post("/users/user-send-details/", {
-        //     userName,
-        //     userEmail,
-        //     userPhone,
-        //     userHelp,
-        // });
-
-        // console.log(message);
-        // // console.log(isUserFull)
-        // setGreen(continueWork);
-
-        // // const formInputs = document.querySelectorAll(".form-container__text--inputs--input") as NodeList
-        // // const formSelect = document.querySelector(".form-container__text--inputs--select") as HTMLSelectElement
-
-
-        // // formInputs.forEach((aaaaa: any) => { aaaaa.value = "" })
-        // // formSelect.value = "פיתוח אתר"
-        // // setSubmitting(true)
-        // // setInputsError({ userName: "none", userEmail: "none", userPhone: "none", userHelp: "none" })
-        // return setMessage(message);
     };
 
-    console.log(submitting)
     return (
         <Form className="form-container" onSubmit={sendUserDetails}>
             <h1 className='form-container__text'>מוכנים לקדם את העסק שלכם?</h1>
