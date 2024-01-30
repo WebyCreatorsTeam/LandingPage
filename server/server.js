@@ -10,16 +10,16 @@ app.use(express.static('../client/build'))
 
 dbconnect()
 
-const whitelist = [process.env.CORS1, process.env.CORS2]
-const corsOptions = {
-    origin: function (origin, callback) {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true)
-        } else {
-            callback(new Error('Not allowed by CORS'))
-        }
-    }
-}
+// const whitelist = [process.env.CORS1, process.env.CORS2]
+// const corsOptions = {
+//     origin: function (origin, callback) {
+//         if (whitelist.indexOf(origin) !== -1 || !origin) {
+//             callback(null, true)
+//         } else {
+//             callback(new Error('Not allowed by CORS'))
+//         }
+//     }
+// }
 
 // var corsOptions = {
 //     origin: 'http://localhost:5173/',
