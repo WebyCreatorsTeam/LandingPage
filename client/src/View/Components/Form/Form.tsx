@@ -9,9 +9,7 @@ import ArrowIcon from "../../../images/arrow-icon.png"
 const UserForm: FC = () => {
     const [message, setMessage] = useState<string>("");
     const [green, setGreen] = useState<boolean>();
-    const [isUserFull, getIsUserFull] = useState<boolean>(false);
-
-
+    // const [isUserFull, getIsUserFull] = useState<boolean>(false);
 
     const sendUserDetails = async (ev: React.SyntheticEvent) => {
         const target = ev.target as typeof ev.target & {
@@ -27,17 +25,17 @@ const UserForm: FC = () => {
         const userHelp = target.userHelp.value;
 
 
-        console.log(userName, userEmail, userPhone, userHelp);
-        console.log(userHelp.length, isUserFull)
+        // console.log(userName, userEmail, userPhone, userHelp);
+        // console.log(userHelp.length, isUserFull)
 
-        if (userHelp.length === 0)
-            return setMessage("נא לבחור במה אנחנו יכולים לעזור");
+        // if (userHelp.length === 0)
+        //     return setMessage("נא לבחור במה אנחנו יכולים לעזור");
 
-        if (userName.length > 0
-            && userEmail.length > 0
-            && userPhone.length > 0
-            && userHelp.length > 0)
-            getIsUserFull(prev => !prev)
+        // if (userName.length > 0
+        //     && userEmail.length > 0
+        //     && userPhone.length > 0
+        //     && userHelp.length > 0)
+        //     getIsUserFull(prev => !prev)
 
         const {
             data: { continueWork, message },
@@ -49,17 +47,17 @@ const UserForm: FC = () => {
         });
 
         console.log(message);
-        console.log(isUserFull)
+        // console.log(isUserFull)
         setGreen(continueWork);
 
-        const formInputs = document.querySelectorAll(".form-container__text--inputs--input") as NodeList
-        const formSelect = document.querySelector(".form-container__text--inputs--select") as HTMLSelectElement
+        // const formInputs = document.querySelectorAll(".form-container__text--inputs--input") as NodeList
+        // const formSelect = document.querySelector(".form-container__text--inputs--select") as HTMLSelectElement
 
 
-        formInputs.forEach((aaaaa: any) => { aaaaa.value = "" })
-        formSelect.value = "פיתוח אתר"
-        setSubmitting(true)
-        setInputsError({ userName: "none", userEmail: "none", userPhone: "none", userHelp: "none" })
+        // formInputs.forEach((aaaaa: any) => { aaaaa.value = "" })
+        // formSelect.value = "פיתוח אתר"
+        // setSubmitting(true)
+        // setInputsError({ userName: "none", userEmail: "none", userPhone: "none", userHelp: "none" })
         return setMessage(message);
     };
 
@@ -71,15 +69,15 @@ const UserForm: FC = () => {
                 {message.length > 0 ? message : null}
             </p>
             <div className="form-container__text--p--inputs">
-                {inputs.map((int, index) => (
+                {/* {inputs.map((int, index) => (
                     <Input
                         key={index}
                         {...int}
-                        inputsValue={inputFields}
-                        checkFunction={handleChangeInput}
-                        inputsError={inputsError}
+                        // inputsValue={inputFields}
+                        // checkFunction={handleChangeInput}
+                        // inputsError={inputsError}
                     />
-                ))}
+                ))} */}
                 <div className="select-container">
                     <select
                         className="form-container__text--p--inputs--select"
@@ -101,12 +99,12 @@ const UserForm: FC = () => {
                         <img src={ArrowIcon} alt="arrow"></img>
                     </div>
                 </div>
-                <button
+                {/* <button
                     className={isUserFull ? "form-container__text--p--inputs--button--bold" : "form-container__text--p--inputs--button"}>
                     שלח {isUserFull}
-                </button>
+                </button> */}
             </div>
-        </form>
+        </Form>
     );
 };
 
