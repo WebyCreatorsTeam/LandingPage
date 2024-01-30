@@ -1,19 +1,13 @@
-// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto:ital,wght@1,300&family=Zilla+Slab:wght@500&display=swap');
-@font-face {
-    font-family: myFirstFont;
-    src: url("../fonts/VarelaRound-Regular.ttf");
-  }
-  
-
-// @import url("../fonts/VarelaRound-Regular.ttf");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 $white-color: #FFFFFF;
 $black-color:#000000;
 $green-bold-color: #8902FF;
+$gray-color:#878080;
 //$green-regular-color:background: #8902FF;
 
 
-$body-background-color:#fcfafa;
+$body-background-color:#FAFAFA;
 
 $text-color: $black-color;
 $bold-text-color:$green-bold-color;
@@ -34,10 +28,12 @@ $offer-li-border: $green-bold-color;
 
 
 
-
+$global-XL-font-size: 48px; 
 
 $global-L-font-size: 40px; 
 
 $global-M-font-size: 24px; 
 
-$global-S-font-size: 14px; 
+$global-S-font-size: 18px;
+
+$global-XS-font-size: 14px; 

@@ -3,36 +3,54 @@ import axios from "axios";
 import { User } from "./types";
 import { inputs, options } from "./inputsList";
 import Input from "../../UI/Input/Input";
-import { validateValues } from "./fornValidation";
+import { Form } from "react-router-dom";
+import axios from "axios";
+import ArrowIcon from "../../../images/arrow-icon.png"
 
 const UserForm: FC = () => {
     const [message, setMessage] = useState<string>("");
     const [green, setGreen] = useState<boolean>();
-    const [submitting, setSubmitting] = useState<boolean>();
-    const [inputsError, setInputsError] = useState<User>({ userName: "none", userEmail: "none", userPhone: "none", userHelp: "none" });
-    const [inputFields, setInputFields] = useState<User>({ userName: "", userEmail: "", userPhone: "", userHelp: "" });
-
-    const handleChangeInput = (ev: React.SyntheticEvent) => {
-        let target = ev.target as HTMLInputElement;
-
-        const { message, continueWork } = validateValues({ [target.name]: target.value });
-
-        setMessage(message);
-        setGreen(continueWork);
-        setInputsError({ ...inputsError, [target.name]: message });
-
-        return setInputFields({ ...inputFields, [target.name]: target.value });
-    };
-
-    useEffect(() => {
-        (() => {
-            return setSubmitting(Object.values(inputsError).some((a) => a.length !== 0));
-        })()
-    }, [inputFields, inputsError]);
+    const [isUserFull, getIsUserFull] = useState<boolean>(false);
+   
+    
 
     const sendUserDetails = async (ev: React.SyntheticEvent) => {
-        ev.preventDefault()
-        const { data: { continueWork, message } } = await axios.post("/users/user-send-details/", { inputFields });
+        const target = ev.target as typeof ev.target & {
+            userName: { value: string };
+            userEmail: { value: string };
+            userPhone: { value: string };
+            userHelp: { value: string };
+        };
+
+        const userName = target.userName.value;
+        const userEmail = target.userEmail.value;
+        const userPhone = target.userPhone.value;
+        const userHelp = target.userHelp.value;
+
+
+        console.log(userName, userEmail, userPhone, userHelp);
+        console.log(userHelp.length, isUserFull)
+
+        if (userHelp.length === 0)
+            return setMessage("נא לבחור במה אנחנו יכולים לעזור");
+          
+            if( userName.length>0
+                && userEmail.length>0
+                && userPhone.length>0 
+                && userHelp.length>0) 
+           getIsUserFull(prev => !prev)
+
+        const {
+            data: { continueWork, message },
+        } = await axios.post("/users/user-send-details/", {
+            userName,
+            userEmail,
+            userPhone,
+            userHelp,
+        });
+
+        console.log(message);
+        console.log(isUserFull)
         setGreen(continueWork);
 
         const formInputs = document.querySelectorAll(".form-container__text--inputs--input") as NodeList
@@ -47,17 +65,13 @@ const UserForm: FC = () => {
     };
 
     return (
-        <form
-            className="form-container"
-            onSubmit={sendUserDetails}
-        >
-            <p className="form-container__text">
-                השאירו פרטים ונחזור אליכם הכי מהר שאפשר
-            </p>
+        <Form className="form-container" onSubmit={sendUserDetails}>
+            <h1 className='form-container__text'>מוכנים לקדם את העסק שלכם?</h1>
+            <p className="form-container__text--p">השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
             <p style={{ color: green ? "green" : "red" }}>
                 {message.length > 0 ? message : null}
             </p>
-            <div className="form-container__text--inputs">
+            <div className="form-container__text--p--inputs">
                 {inputs.map((int, index) => (
                     <Input
                         key={index}
@@ -67,11 +81,11 @@ const UserForm: FC = () => {
                         inputsError={inputsError}
                     />
                 ))}
+                <div className="select-container">
                 <select
-                    className="form-container__text--inputs--select"
+                    className="form-container__text--p--inputs--select"
                     name="userHelp"
-                    defaultValue={inputFields.userHelp}
-                    onChange={handleChangeInput}
+                     defaultValue="none"
                 >
                     {options.map((opt, index) => (
                         <option
@@ -82,13 +96,15 @@ const UserForm: FC = () => {
                             {opt.text}
                         </option>
                     ))}
+                  
                 </select>
-                <button
-                    className="form-container__text--inputs--button"
-                    type="submit"
-                    disabled={submitting}
-                >
-                    שלח
+               <div className="icon-container">
+                <img src={ArrowIcon} alt="arrow"></img>
+               </div>
+                </div>
+                <button  
+                  className = {isUserFull?"form-container__text--p--inputs--button--bold": "form-container__text--p--inputs--button"}>
+                    שלח {isUserFull}
                 </button>
             </div>
         </form>
@@ -96,3 +112,5 @@ const UserForm: FC = () => {
 };
 
 export default UserForm;
+
+

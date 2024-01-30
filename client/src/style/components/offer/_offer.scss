@@ -1,23 +1,28 @@
 @import '../../vars/_index.scss';
 
+ 
+  
+
 .offer-bold-text{
     color:$bold-text-color ;
     font-size: $global-L-font-size ;
-    margin:50px 150px 0 0;
+    margin:50px 120px 0 0;
 }
 
 .offer-text{
     color: $text-color ;
     font-size: $global-M-font-size ;
-    margin-right: 150px;
+    margin-right: 120px;
 }
+
+
 
 .offer-grid-container{
     width: 100%;
     display: grid;
     grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% ;
     grid-template-rows: 11% 11% 11% 11% 11% 11% 11% 11% 11% ;
-
+   // background-color: $white-color;
     &__ol{
         grid-column-start: 1;
         grid-column-end: 6;
@@ -27,9 +32,10 @@
         &--li{
             margin: 10%;
             display: grid;
-            grid-template-columns: 30% 10% 20% 20% 20%;
+            grid-template-columns: 30% 20% 10%  20% 20%;
             grid-template-rows: 25% 25% 25% 25%;
             
+         
             &--img{
                 grid-column-start: 1;
                 grid-column-end: 2;
@@ -40,20 +46,24 @@
 
 
                 &--h4{
-                    grid-column-start: 2;
-                    grid-column-end: 5;
-                    grid-row-start:1;
-                    grid-row-end: 2;
+                  margin: 0;
                     color: $text-color;
-                    font-weight: bolder;
+                    font-size: $global-M-font-size;
+                    grid-row-start:2;
+                    grid-row-end: 3;
+                    grid-column-start: 2;
+                    grid-column-end: 4;
+                    text-align: center;
 
                     &--p{
+                        margin-top: 10px;
+                        grid-row-start:3;
+                        grid-row-end: 4 ;
                         grid-column-start: 2;
-                        grid-column-end: 5;
-                        grid-row-start:2;
-                        grid-row-end: 4;
+                        grid-column-end:4;
                         color: $bold-text-color;
-                        font-weight: bolder;
+                        font-size: $global-S-font-size;
+                        text-align: center;
  
 
                     }
@@ -69,8 +79,8 @@
         grid-column-end: 9;
         grid-row-start:2;
         grid-row-end: 9;
-        width: 70%;
-        height: 100%;
+        width: 404px;
+        height: 562px;
     }
 }
 
