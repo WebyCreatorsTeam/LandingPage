@@ -4,15 +4,14 @@ import { User } from "./types";
 import { inputs, options } from "./inputsList";
 import Input from "../../UI/Input/Input";
 import { Form } from "react-router-dom";
-import axios from "axios";
 import ArrowIcon from "../../../images/arrow-icon.png"
 
 const UserForm: FC = () => {
     const [message, setMessage] = useState<string>("");
     const [green, setGreen] = useState<boolean>();
     const [isUserFull, getIsUserFull] = useState<boolean>(false);
-   
-    
+
+
 
     const sendUserDetails = async (ev: React.SyntheticEvent) => {
         const target = ev.target as typeof ev.target & {
@@ -33,12 +32,12 @@ const UserForm: FC = () => {
 
         if (userHelp.length === 0)
             return setMessage("נא לבחור במה אנחנו יכולים לעזור");
-          
-            if( userName.length>0
-                && userEmail.length>0
-                && userPhone.length>0 
-                && userHelp.length>0) 
-           getIsUserFull(prev => !prev)
+
+        if (userName.length > 0
+            && userEmail.length > 0
+            && userPhone.length > 0
+            && userHelp.length > 0)
+            getIsUserFull(prev => !prev)
 
         const {
             data: { continueWork, message },
@@ -82,28 +81,28 @@ const UserForm: FC = () => {
                     />
                 ))}
                 <div className="select-container">
-                <select
-                    className="form-container__text--p--inputs--select"
-                    name="userHelp"
-                     defaultValue="none"
-                >
-                    {options.map((opt, index) => (
-                        <option
-                            key={index}
-                            defaultValue={opt.value}
-                            disabled={opt.value === "" ? true : false}
-                        >
-                            {opt.text}
-                        </option>
-                    ))}
-                  
-                </select>
-               <div className="icon-container">
-                <img src={ArrowIcon} alt="arrow"></img>
-               </div>
+                    <select
+                        className="form-container__text--p--inputs--select"
+                        name="userHelp"
+                        defaultValue="none"
+                    >
+                        {options.map((opt, index) => (
+                            <option
+                                key={index}
+                                defaultValue={opt.value}
+                                disabled={opt.value === "" ? true : false}
+                            >
+                                {opt.text}
+                            </option>
+                        ))}
+
+                    </select>
+                    <div className="icon-container">
+                        <img src={ArrowIcon} alt="arrow"></img>
+                    </div>
                 </div>
-                <button  
-                  className = {isUserFull?"form-container__text--p--inputs--button--bold": "form-container__text--p--inputs--button"}>
+                <button
+                    className={isUserFull ? "form-container__text--p--inputs--button--bold" : "form-container__text--p--inputs--button"}>
                     שלח {isUserFull}
                 </button>
             </div>
