@@ -1,20 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.a8f86e85.css",
-    "main.js": "/static/js/main.e1941fa7.js",
-    "static/media/VarelaRound-Regular.ttf": "/static/media/VarelaRound-Regular.e67ccd4a92677fdf8719.ttf",
-    "static/media/logo-big.png": "/static/media/logo-big.a8b614c489d5537f8f61.png",
-    "static/media/Like-da.png": "/static/media/Like-da.2814194093e1e84d1c8e.png",
-    "static/media/offer-image.png": "/static/media/offer-image.9f4b86209781c8030209.png",
-    "static/media/how-work-image.png": "/static/media/how-work-image.dccf57333ae84035c58e.png",
-    "static/media/header-image.png": "/static/media/header-image.5f7c4c0e92a687f75102.png",
-    "static/media/logo.png": "/static/media/logo.9b479485382195e684fe.png",
+    "main.css": "/static/css/main.64ab9dd1.css",
+    "main.js": "/static/js/main.39551535.js",
+    "static/media/offer-image.png": "/static/media/offer-image.9d349895853eaa275c6a.png",
+    "static/media/header-image.png": "/static/media/header-image.f78f09fa739d4bae2c8b.png",
+    "static/media/how-work-image.png": "/static/media/how-work-image.68152e5e313163251761.png",
+    "static/media/why-us.png": "/static/media/why-us.2913a9d246264c203686.png",
+    "static/media/logo.png": "/static/media/logo.1d9e93a3017fb27b16f1.png",
     "index.html": "/index.html",
-    "main.a8f86e85.css.map": "/static/css/main.a8f86e85.css.map",
-    "main.e1941fa7.js.map": "/static/js/main.e1941fa7.js.map"
+    "main.64ab9dd1.css.map": "/static/css/main.64ab9dd1.css.map",
+    "main.39551535.js.map": "/static/js/main.39551535.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8f86e85.css",
-    "static/js/main.e1941fa7.js"
+    "static/css/main.64ab9dd1.css",
+    "static/js/main.39551535.js"
   ]
 }

@@ -1,13 +1,13 @@
 @import '../../vars/_index';
 
-.callUs-container{
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-margin-top: 250px;
+.callUs-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 250px;
 
-&__text{
-    color: $green-bold-color;
-}
+    &__text {
+        color: $green-bold-color;
+    }
 
 }

@@ -10,15 +10,14 @@ function App() {
   return (
     <>
       <Header />
-      <ContactInfo/>
+      <ContactInfo />
       <UserForm />
-      <Offer/>
-      <HowWorks/>
-      <WhyUs/>
-      <ContactInfo/>
-     {/*<CallUs/>*/} 
+      <Offer />
+      <HowWorks />
+      <WhyUs />
+      <ContactInfo />
       <UserForm />
-      <Footer/>
+      <Footer />
     </>
   );
 }

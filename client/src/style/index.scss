@@ -7,23 +7,6 @@ body {
     padding: 0;
 }
 
-// .footer-base {
-//     background-color: aqua;
-
-//     &__link {
-//         //footer-base__link
-//         font-weight: bold;
-
-//         & > img {
-//         }
-
-//         &--img {
-//             //footer-base__link--img
-//             width: 50%;
-//         }
-//     }
-// }
-
 @import "./body/body";
 @import "./components/navBar/_navBar";
 @import "./components/header/_header";
