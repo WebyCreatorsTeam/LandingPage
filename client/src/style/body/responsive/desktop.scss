@@ -1,49 +1,197 @@
 @import '../../vars/index';
+body{
 
 
 @include respond-to(desktop) {
 
+//nav
+
+nav>img{
+    margin-right: 40px;
+
+}
+
+
     //header
+
     .header-container {
+        justify-content: center;
+       // background-color: aqua;
+       margin-right: 80px;
 
-        &__text {
-            width: 70%;
-
-            &--p {
-                &--h1 {
+        &__text{
+     width: 80%;
+            &--p{
+                font-size: $global-S-font-size;
+    
+                &--h1{
                     font-size: $global-L-font-size;
+    
+                    &--p{
+                        font-size: $global-S-font-size;
+    
+                        &--p{
+                            font-size: $global-XS-font-size;
+                            margin: 10px;
+                        }
+                    }
                 }
             }
+    
         }
-
-        &__img {
-            height: 80%;
-            width: 80%;
-            margin-right: 50px
+    
+        &__img{
+            width: 312px;
+            height: 252px;
+          //  background-color: aqua;
         }
+      
     }
+   
+    //
 
+    .info-container{
+        margin-right: 80px;
+    }
     //form
     .form-container {
+
         &__text {
+            margin-right: 80px;
             &--p {
+                margin-right: 80px;
                 &--inputs {
+                    margin-right: 80px;
                     &--input {
                         width: 130px;
                     }
 
                     &--select {
-                        width: 200px;
+                        width: 195px;
                     }
 
                     &--button {
-                        width: 200px;
+                        width: 170px;
                     }
 
                 }
             }
         }
     }
+
+    //offer
+
+    .offer-bold-text, .offer-text{
+        margin-right: 80px;
+
+    }
+
+    .offer-grid-container{
+
+        &__ol{
+      
+            &--li{
+            
+                &--img{
+            
+                    &--h4{
+                        grid-column-end: 5;
+    
+                        &--p{
+                            grid-column-end: 5;
+     
+    
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+        &__img{
+            width: 304px;
+            height: 462px;
+        }
+    }
+    //howWork
+
+    .worksHead-container{
+    
+        grid-template-rows: 20% 20% 20% ;
+        padding-top: 0;
+
+        &__text{
+
+            &--bold{
+                margin-right: 80px;
+            }
+                &--p{
+                    margin-right: 80px;
+                }
+            
+        }
+    
+        &__img{
+            grid-row-start:2 ;
+            width: 312px;
+            height: 252px;
+        }
 }
+    
+    .howWork-grid-container{
+   
+        &__img{
+            width:90px;
+            height: 90px;
+    
+            &--h4{
+                margin-right: 30px;
+                font-size: $global-S-font-size;
+    
+                &--p{
+                  margin-right: 30px;
+                  font-size: $global-S-font-size;
+    
+                }
+            }
+        }
+    }
+    
+ 
+    .howWork-grid-container>li{
+        margin: 0 10% 5% 10%;
+    
+    }
+
+
+    //whyUs
+    .whyUs-container{
+        &__text{
+
+            &--bold{
+                margin-right: 80px;
+
+                &--p{
+                    margin-right: 80px;
+                }
+            }   
+        }
+    
+        &__img{
+            grid-column-start:4;
+            grid-row-start:2 ;
+            height:224.34px;
+            width:300.95px;
+            margin-right: 100PX;
+    
+    
+    
+        }
+    
+    }
+    
+}
+}
+
 
 ;

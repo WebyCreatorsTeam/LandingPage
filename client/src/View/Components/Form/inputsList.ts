@@ -7,7 +7,7 @@ export const inputs: Array<InputsList> = [
 ];
 
 export const options: Array<OptionsList> = [
-    { value: "none", text: " במה נוכל לעזור לכם" },
+    { value: "none", text: " במה נוכל לעזור " },
     { value: "dev", text: "פיתוח אתר" },
     { value: "uxui", text: "UX/UI ופיתוח אתר" },
     { value: "support", text: "תחזוקה של אתר" },

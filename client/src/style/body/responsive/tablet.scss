@@ -3,174 +3,298 @@
 
 @include respond-to(tablet) {
 
-    //nav
-    nav {
-        &>img {
-            width: 20%;
-            height: 20%;
-            padding: 20px;
+    body{
+  //nav
 
-        }
-    }
+nav>img{
+    margin-right: 20px;
 
-    //header
-    .header-container {
-        padding-right: 10px;
-
-        &__text {
-            color: $text-color;
-            width: 50%;
-
-            &--p {
-                font-size: $global-XS-font-size;
-
-                &--h1 {
-                    font-size: $global-M-font-size;
-
-                    &--p {
-                        font-size: $global-XS-font-size;
-
-                        &--p {
-                            font-size: 7px;
-                        }
-                    }
-                }
-            }
-        }
-
-        &__img {
-            width: 70%;
-            padding: 0px;
-        }
-    }
-
-    //form
-    .form-container {
-        margin-top: 20%;
-
-        &__text {
-            &--inputs {
-
-                &--input,
-                &--select,
-                &--button {
-                    height: 33px;
-                }
-            }
-        }
-    }
-
-    //offer
-
-    .offer-grid-container {
-        &__ol {
-            grid-column-end: 8;
-            grid-row-end: 4;
-
-            &--li {
-
-                &--img {
-                    grid-column-start: 1;
-                    grid-column-end: 2;
-                    padding-right: 25px;
-
-                    &--h4 {
-                        grid-column-start: 2;
-                        grid-column-end: 5;
-
-
-                        &--p {
-                            grid-column-start: 2;
-                            grid-column-end: 5;
-                        }
-                    }
-                }
-            }
-        }
-
-        &__img {
-            grid-row-start: 3;
-            grid-row-end: 9;
-            width: 270px;
-            height: 350px;
-        }
-    }
-
-    //howWorks
-    .worksHead-container {
-        &__text {
-            grid-row-start: 1;
-            grid-row-end: 5;
-
-            &--bold {
-
-                grid-row-start: 1;
-                grid-row-end: 5;
-                font-size: 40px;
-            }
-
-            &--p {
-                grid-row-start: 1;
-                grid-row-end: 5;
-                font-size: 20px;
-            }
-        }
-
-        &__img {
-            grid-column-start: 5;
-            grid-column-end: 7;
-            height: 270px;
-            width: 270px;
-        }
-    }
-
-    //whyUs
-
-    .whyUs-container {
-        &__text {
-            grid-column-start: 1;
-            grid-column-end: 4;
-            grid-row-start: 1;
-            grid-row-end: 3;
-
-            &--bold {
-                font-size: 30px;
-
-                &--p {
-                    font-size: 15px;
-                }
-            }
-        }
-
-        &__img {
-            grid-column-start: 4;
-            grid-column-end: 7;
-            grid-row-start: 3;
-            grid-row-end: 5;
-            height: 70px;
-            width: 300px;
-        }
-
-    }
-
-    //callUs
-    .callUs-container__text--img {
-        width: 300px;
-        height: 180px;
-    }
-
-    //footer
-    .footer-container__link--img {
-        width: 25px;
-        height: 25px;
-        padding-left: 0;
-    }
-
-    .logo-img {
-        width: 130px;
-        height: 35px;
-        padding: 30px;
-    }
 }
 
+
+    //header
+
+    .header-container {
+        justify-content: center;
+       // background-color: aqua;
+       margin-right: 40px;
+       margin-bottom: 40px;
+
+        &__text{
+     width: 80%;
+            &--p{
+                font-size: $global-S-font-size;
+    
+                &--h1{
+                    font-size: $global-M-font-size;
+    
+                    &--p{
+                        font-size: $global-S-font-size;
+                      margin-right: 0;
+
+                        &--p{
+                            font-size: 8px;
+                            margin-right: 0;                        }
+                    }
+                }
+            }
+    
+        }
+    
+        &__img{
+            width: 262px;
+            height: 202px;
+          //  background-color: aqua;
+        }
+      
+    }
+   
+    //
+
+    .info-container{
+        margin-right: 40px;
+        margin-bottom: 20px;
+        width: 522px;
+        height: 51px;
+        &__icon{
+    
+            &--link{
+                font-size: $global-S-font-size;
+    
+                &--img{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+    
+        }
+    }
+    //form
+    .form-container {
+
+        height: 200px;
+
+        &__text {
+            margin-right: 40px;
+            font-size: $global-M-font-size;
+
+            &--p {
+                margin-right: 40px;
+                font-size: $global-S-font-size;
+                &--inputs {
+                    margin-right: 40px;
+                    margin-top: 30px;
+                    &--input {
+                        width: 100px;
+                        height: 43px;
+                        font-size: $global-XS-font-size;
+
+                    }
+
+                    &--select {
+                        width: 140px;
+                        height: 43px;
+                        font-size: $global-XS-font-size;
+
+                    }
+
+                    &--button {
+                        width: 120px;
+                        height: 43px;
+                        font-size: $global-XS-font-size;
+
+                    
+
+                    &--bold{
+                        font-size: $global-XS-font-size;
+                        width: 120px;
+                        height: 43px;
+                    }
+                }
+                }
+            }
+        }
+    }
+
+    .form-container__text--p--inputs--input{
+        font-size: $global-XS-font-size;
+
+    }
+    .labelLine{
+        font-size: $global-XS-font-size;
+
+    }
+
+    .input-container input:focus ~ label,
+     .input-container input:valid ~ label
+    .icon-container {
+        font-size: $global-XS-font-size;
+      }
+      
+    .icon-container>img {
+        width: 10px;
+        height: 10px;
+      }
+    //offer
+
+    .offer-bold-text{
+        margin-right: 40px;
+        font-size: $global-M-font-size ;
+
+    } 
+    .offer-text{
+        margin-right: 40px;
+        font-size: $global-S-font-size ;
+        margin-bottom: 0;
+
+    }
+
+    .offer-grid-container{
+
+        &__ol{
+      padding-right: 0;
+            &--li{
+                &--img{
+                    width: 80px;
+                    height: 80px;
+            
+                    &--h4{
+                        grid-column-end: 5;
+                        font-size: $global-S-font-size;
+
+                        &--p{
+                            grid-column-end: 5;
+                            font-size: $global-XS-font-size;
+
+     
+    
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+        &__img{
+            width: 204px;
+            height: 362px;
+        }
+    }
+    //howWork
+
+    .worksHead-container{
+    
+        grid-template-rows: 20% 20% 20% 20% ;
+        padding-top: 0;
+        height: 250px;
+
+        &__text{
+            &--bold{
+                margin:30px 40px 0 0;
+                font-size: $global-M-font-size;
+
+            }
+                &--p{
+                    font-size: $global-S-font-size;
+                    margin-right: 40px;
+                }
+            
+        }
+    
+        &__img{
+            grid-row-start:2 ;
+            width: 212px;
+            height: 152px;
+        }
+}
+    
+    .howWork-grid-container{
+   
+        &__img{
+            width: 70px;
+            height: 70px;
+    
+            &--h4{
+                margin-right: 30px;
+                font-size: $global-XS-font-size;
+    
+                &--p{
+                  margin-right: 30px;
+                  font-size: $global-XS-font-size;
+    
+                }
+            }
+        }
+    }
+    
+ 
+    .howWork-grid-container>li{
+        margin: 0 10% 5% 5%;
+    
+    }
+
+
+    //whyUs
+    .whyUs-container{
+        &__text{
+
+            &--bold{
+                margin-right: 40px;
+                margin-bottom: 30px;
+                font-size: $global-M-font-size;
+
+                &--p{
+                    margin-right: 40px;
+                    font-size: $global-S-font-size;
+                }
+            }   
+        }
+    
+        &__img{
+            grid-column-start:4;
+            grid-row-start:2 ;
+            height:124.34px;
+            width:200.95px;
+            margin-right: 100PX;
+    
+    
+    
+        }
+    
+    }
+
+    .footer-container {
+        height: 103px;
+    
+        &__link {
+            &--img {
+                width: 15px;
+                padding: 3px;
+            }
+        }
+    }
+   
+    
+    .contact-container{
+        font-size: $global-XS-font-size;
+    
+    
+        &__div{
+    
+            &--img{
+                width: 10px;
+                height: 10px;   
+    
+            }
+        }
+    
+    }
+
+    .footer-container >img{
+        Width: 330px;
+        Height: 113px;
+    }
+
+}
+}
 ;
