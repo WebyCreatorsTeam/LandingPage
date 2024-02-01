@@ -18,13 +18,9 @@ const corsOptions = {
         } else {
             callback(new Error('Not allowed by CORS'))
         }
-    }
+    }, 
+    optionsSuccessStatus: 200
 }
-
-// var corsOptions = {
-//     origin: 'http://localhost:5173/',
-//     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-// }
 
 app.use('/dashboard', cors(corsOptions), require("./router/dashboard/dashboard.router"))
 app.use("/users", require("./router/user/user.router"));
