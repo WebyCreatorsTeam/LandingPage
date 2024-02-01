@@ -4,7 +4,7 @@ import { OfferList } from "./OfferList";
 
 const Offer: FC = () => {
     return (
-        <div>
+        <div className="offer-container">
             <h1 className="offer-bold-text">מה אנחנו מציעים?</h1>
             <p className="offer-text">
                 אנחנו מכירים את הדרך שתוביל לתוצאות מדויקות

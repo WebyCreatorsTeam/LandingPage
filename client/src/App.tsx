@@ -14,8 +14,7 @@ function App() {
       <UserForm />
       <Offer />
       <HowWorks />
-      <WhyUs />
-      <ContactInfo />
+      <WhyUs /> 
       <UserForm />
       <Footer />
     </>

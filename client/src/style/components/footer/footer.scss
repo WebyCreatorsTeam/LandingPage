@@ -18,3 +18,25 @@
     Width: 443px;
     Height: 193px;
 }
+
+.contact-container{
+    font-size: $global-S-font-size;
+
+
+    &__div{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 8px 0 8px 40px;
+
+        &--img{
+            width: 18px;
+            height: 18px;
+
+            &--p{
+                margin: 0 5px;
+            }
+        }
+    }
+
+}

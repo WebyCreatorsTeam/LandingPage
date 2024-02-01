@@ -5,8 +5,8 @@
     display: grid;
     grid-template-columns: 16% 16% 20% 10% 16% 16% ;
     grid-template-rows: 20% 20% 20% 20% 20%;
-    margin-bottom: 100px;
-   // background-color: $white-color;
+    //margin-bottom: 100px;
+   background-color: $white-color;
 
     &__text{
             grid-column-start: 1 ;

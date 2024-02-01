@@ -3,3 +3,9 @@ export interface FooterLinks {
     alt: string
     url: string
 }
+
+export interface FooterContactInfo{
+    text: string
+    img: string
+    alt: string
+}

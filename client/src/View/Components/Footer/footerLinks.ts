@@ -3,6 +3,7 @@ import LinkedIn from "../../../images/footer/linkedin.png";
 import Email from '../../../images/footer/instagram.png'
 import { FooterLinks } from "./types";
 
+
 export const footerlinks: Array<FooterLinks> = [
     {
         img: FaceBook,
@@ -16,3 +17,4 @@ export const footerlinks: Array<FooterLinks> = [
     },
     { img: Email, alt: "email", url: "mailto:webycreatorsteam@gmail.com" },
 ];
+

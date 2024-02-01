@@ -1,8 +1,10 @@
 import { FC } from "react";
 import Jet from "../../../images/whyus/why-us.png";
+import ContactInfo from "../../UI/ContactInfo/ContactInfo";
 
 const WhyUs: FC = () => {
     return (
+        <>
         <div className="whyUs-container">
             <div className="whyUs-container__text">
                 <h1 className="whyUs-container__text--bold">למה לבחור דווקא בנו?</h1>
@@ -20,6 +22,11 @@ const WhyUs: FC = () => {
                 alt="Big Weby Logo"
             />
         </div>
+
+        <div style={{backgroundColor: "white", width:'100%', padding: " 10px 0", margin: "0"}}>
+          <ContactInfo/>
+        </div>
+        </>
     );
 };
 

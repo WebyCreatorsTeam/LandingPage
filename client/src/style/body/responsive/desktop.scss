@@ -1,0 +1,49 @@
+@import '../../vars/index';
+
+
+@include respond-to(desktop) {
+
+    //header
+    .header-container {
+
+        &__text {
+            width: 70%;
+
+            &--p {
+                &--h1 {
+                    font-size: $global-L-font-size;
+                }
+            }
+        }
+
+        &__img {
+            height: 80%;
+            width: 80%;
+            margin-right: 50px
+        }
+    }
+
+    //form
+    .form-container {
+        &__text {
+            &--p {
+                &--inputs {
+                    &--input {
+                        width: 130px;
+                    }
+
+                    &--select {
+                        width: 200px;
+                    }
+
+                    &--button {
+                        width: 200px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+;
