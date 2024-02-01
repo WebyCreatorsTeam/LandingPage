@@ -20,7 +20,7 @@ exports.mailOptions = (userName, userEmail, userPhone, userHelp) => {
         <div style="text-align: center;" dir="rtl">
             <h2 style="color: blue">התקבלה פניה חדשה</h2>
             <p>שם: <b>${userName}</b></p>
-            <p>מספר טלפון: <b>${userPhone}</b></p>
+            <p>מספר טלפון: <a href="tel:${userPhone}"><b>${userPhone}</b></a></p>
             <p>אימייל: <b>${userEmail}</b></p>
             <p>רוצה עזרה ב: <b>${userHelp}</b></p>
         </div>
