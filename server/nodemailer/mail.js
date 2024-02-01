@@ -6,15 +6,15 @@ exports.transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: "webycreatorsteam@gmail.com",
-        pass: "zjgk wcgy bxdk ngdb",
+        user: process.env.MAIL,
+        pass: process.env.MAIL_PASS,
     },
 });
 
 exports.mailOptions = (userName, userEmail, userPhone, userHelp) => {
     return {
-        from: "webycreatorsteam@gmail.com",
-        to: "webycreatorsteam@gmail.com",
+        from: process.env.MAIL,
+        to: process.env.MAIL,
         subject: "פרטים חדשים נשלחו",
         html: `
         <div style="text-align: center;" dir="rtl">
