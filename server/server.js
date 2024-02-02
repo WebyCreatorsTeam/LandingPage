@@ -16,8 +16,8 @@ const PORT = process.env.PORT || 8080;
 //     ca: ca, // fs.readFileSync("./ssl/weby_team.ca-bundle")
 //     key: key // fs.readFileSync("./ssl/secret.key")
 //  };
- 
- // also okay: https.createServer({cert, ca, key}, (req, res) => { ...
+
+// also okay: https.createServer({cert, ca, key}, (req, res) => { ...
 //  const httpsServer = https.createServer(options, (req, res) => {
 //     res.statusCode = 200;
 //     res.setHeader('Content-Type', 'text/html');
@@ -41,7 +41,7 @@ const corsOptions = {
         } else {
             callback(new Error('Not allowed by CORS'))
         }
-    }, 
+    },
     optionsSuccessStatus: 200
 }
 
