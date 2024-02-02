@@ -1,4 +1,5 @@
 const { User } = require("../../model/user.model");
+const { transporter, mailOptions } = require("../../nodemailer/mail");
 const { httpCodes } = require("../../utils/httpStatusCode");
 const { userValidation } = require("../../utils/validation/user.validation");
 
@@ -18,6 +19,14 @@ exports.sendDetails = async (req, res) => {
         const newDetails = new User({ userName, userEmail, userPhone, userHelp });
 
         await newDetails.save();
+
+        transporter.sendMail(mailOptions(userName, userEmail, userPhone, userHelp), (error, info) => {
+            if (error) {
+                console.error("Error sending email: ", error);
+            } else {
+                console.log("Email sent: ", info.response);
+            }
+        });
 
         return res.status(httpCodes.OK).send({ continueWork: true, message: "קיבלנו את הפרטים שלך, נחזור בהקדם" });
     } catch (error) {
