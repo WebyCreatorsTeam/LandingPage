@@ -10,7 +10,11 @@ const WorksHead: FC = () => {
                     <br />
                     ונהיה זמינים לתמיכה בכל עת</p>
             </div>
-            <img className='worksHead-container__img' src={HowWorkImage} alt="בחור עומד מול עמוד דפדפן" />
+            <div className='worksHead-container__img'>
+             <div className='worksHead-container__img--mobile'>
+           <img src={HowWorkImage} alt="בחור עומד מול עמוד דפדפן" />
+           </div>
+           </div>
         </div>
     )
 }

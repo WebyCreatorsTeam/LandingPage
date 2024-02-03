@@ -51,7 +51,7 @@ const UserForm: FC = () => {
         <Form className="form-container" onSubmit={sendUserDetails}>
             <h1 className='form-container__text'>מוכנים לקדם את העסק שלכם?</h1>
             <p className="form-container__text--p">השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
-            <p style={{ color: green ? "green" : "red", textAlign: "center" }}>
+            <p className="message" style={{ color: green ? "green" : "red", textAlign: "center" }}>
                 {message.length > 0 ? message : null}
             </p>
             <div className="form-container__text--p--inputs">

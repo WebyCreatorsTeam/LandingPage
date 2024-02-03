@@ -17,8 +17,7 @@ nav>img{
     .header-container {
         justify-content: center;
        // background-color: aqua;
-       margin-right: 40px;
-       margin-bottom: 40px;
+       margin :0 40px 40px 0 ;
 
         &__text{
      width: 80%;
@@ -203,8 +202,14 @@ nav>img{
     
         &__img{
             grid-row-start:2 ;
-            width: 212px;
-            height: 152px;
+
+            &--mobile{
+            &>img{
+                width: 212px;
+                height: 152px;
+            }
+        }
+           
         }
 }
     

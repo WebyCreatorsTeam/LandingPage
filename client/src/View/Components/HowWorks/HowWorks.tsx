@@ -4,9 +4,11 @@ import { HowWorkList } from "./HowWorkList";
 
 const HowWorks: FC = () => {
   return (
-    <div>
+    <>
       <WorksHead />
+<div className="howWork-grid-container-mobile">
       <ol className='howWork-grid-container'>
+     
         {HowWorkList.map((wrk, ind) => (
           <li key={ind}>
             <img className='howWork-grid-container__img' src={wrk.img} alt={wrk.title} />
@@ -14,8 +16,10 @@ const HowWorks: FC = () => {
             <p className='howWork-grid-container__img--h4--p'>{wrk.text}</p>
           </li>
         ))}
+      
       </ol>
-    </div>
+      </div>
+    </>
   )
 }
 
