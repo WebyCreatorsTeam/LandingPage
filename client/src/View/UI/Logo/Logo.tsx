@@ -3,11 +3,13 @@ import Weby from "../../../images/logo.png";
 
 const Logo: FC = () => {
     return (
-        <img
-            className="logo-img"
-            src={Weby}
-            alt="Weby Logo"
-        />
+        <a href="/">
+            <img
+                className="logo-img"
+                src={Weby}
+                alt="Weby Logo"
+            />
+        </a>
     );
 };
 

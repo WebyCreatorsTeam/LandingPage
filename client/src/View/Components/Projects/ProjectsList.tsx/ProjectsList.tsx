@@ -1,8 +1,12 @@
-import React from 'react'
+import { FC } from 'react'
+import ProjectItem from '../ProjectItem/ProjectItem'
 
-const ProjectsList = () => {
+const ProjectsList: FC = () => {
     return (
-        <div>ProjectsList</div>
+        <div>
+            <p>Filter function....</p>
+            <ProjectItem />
+        </div>
     )
 }
 
