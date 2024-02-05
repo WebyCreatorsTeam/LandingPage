@@ -7,6 +7,7 @@ import {
 /* PAGES & COMPONENTS */
 import Layout from "../View/Components/Layout/Layout";
 import App from "../App";
+import Project from "../View/Project";
 
 const RouterPage = () => {
     const router = createBrowserRouter(
@@ -19,6 +20,7 @@ const RouterPage = () => {
                     index
                     element={<App />}
                 />
+                <Route path="projects" element={<Project />} />
             </Route>
         )
     );

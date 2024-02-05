@@ -1,7 +1,7 @@
-import Meeting from '../../../images/howworks/meet.png'
-import UXUI from '../../../images/howworks/uxui.png'
-import Dev from '../../../images/howworks/dev.png'
-import Support from '../../../images/offer/support.png'
+import Meeting from '../../../../images/howworks/meet.png'
+import UXUI from '../../../../images/howworks/uxui.png'
+import Dev from '../../../../images/howworks/dev.png'
+import Support from '../../../../images/offer/support.png'
 import { HowWork } from './types'
 
 export const HowWorkList: Array<HowWork> = [

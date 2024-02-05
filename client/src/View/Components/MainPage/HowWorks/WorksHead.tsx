@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import HowWorkImage from '../../../images/howworks/how-work-image.png'
+import HowWorkImage from '../../../../images/howworks/how-work-image.png'
 
 const WorksHead: FC = () => {
     return (
@@ -11,10 +11,10 @@ const WorksHead: FC = () => {
                     ונהיה זמינים לתמיכה בכל עת</p>
             </div>
             <div className='worksHead-container__img'>
-             <div className='worksHead-container__img--mobile'>
-           <img src={HowWorkImage} alt="בחור עומד מול עמוד דפדפן" />
-           </div>
-           </div>
+                <div className='worksHead-container__img--mobile'>
+                    <img src={HowWorkImage} alt="בחור עומד מול עמוד דפדפן" />
+                </div>
+            </div>
         </div>
     )
 }
