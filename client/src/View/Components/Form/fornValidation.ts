@@ -25,6 +25,7 @@ export const validateValues = (inputData: any): ValidReturn => {
             if (!validEmail) return {
                 continueWork: false, message: "נא למלא איימיל תקני"
             };
+
             break;
         case "userPhone":
             const phoneRegex: RegExp =
@@ -52,7 +53,7 @@ export const validateValues = (inputData: any): ValidReturn => {
         default:
             return {
                 continueWork: false,
-                message: "ישנה שגיא, נסא שנית",
+                message: "ישנה שגיאה, נסא שנית",
             };
     }
     return { continueWork: true, message: "" };
