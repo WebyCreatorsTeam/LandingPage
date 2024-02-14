@@ -4,19 +4,19 @@
 .offer-container{
     width: 100%;
     background-color: $white-color;
-    padding-top: 50px;
+    padding-top: 3.125rem; //50px
 }
 
 .offer-bold-text{
     color:$bold-text-color ;
     font-size: $global-L-font-size ;
-    margin-right: 120px;
+    margin-right: 7.5rem; //120px
 }
 
 .offer-text{
     color: $text-color ;
     font-size: $global-M-font-size ;
-    margin-right: 120px;
+    margin-right: 7.5rem; //120px
 }
 
 
@@ -46,11 +46,11 @@
                 grid-row-start:1;
                 grid-row-end: 4;
                 border-right: 5px solid $offer-li-border;
-                padding-right: 50px;
+                padding-right: 3.125rem; //50px
 
 
                 &--h4{
-                  margin: 0;
+                  margin: 20px 0 0 0;
                     color: $text-color;
                     font-size: $global-M-font-size;
                     grid-row-start:2;
@@ -83,8 +83,14 @@
         grid-column-end: 9;
         grid-row-start:2;
         grid-row-end: 9;
-        width: 404px;
-        height: 562px;
+        width: 25.25rem; //404px;
+        height: 35.125rem; // 562px;
     }
 }
 
+.text-mobile-container{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start:1;
+    grid-row-end: 10;
+}

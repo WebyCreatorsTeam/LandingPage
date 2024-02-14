@@ -8,16 +8,16 @@ const Footer: FC = () => {
         <footer
             className="footer-container"
         >
-             <div className="contact-container" >
+             <div className="footer-contact-container" >
              צרו קשר 
              {footerContactInfo.map((contact,index) => (
-            < div className="contact-container__div" key={index}>
+            < div className="footer-contact-container__div" key={index}>
                 <img
-                 className="contact-container__div--img"
+                 className="footer-contact-container__div--img"
                  src={contact.img}
                  alt={contact.alt}
                 />
-                <p  className="contact-container__div--img--p">{contact.text}</p>
+                <p  className="footer-contact-container__div--img--p">{contact.text}</p>
                 </div>
              ))}
             </div>

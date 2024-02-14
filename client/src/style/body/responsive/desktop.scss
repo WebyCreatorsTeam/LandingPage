@@ -7,7 +7,7 @@ body{
 //nav
 
 nav>img{
-    margin-right: 40px;
+    margin-right: 2.5rem;  //40px
 
 }
 
@@ -17,7 +17,7 @@ nav>img{
     .header-container {
         justify-content: center;
        // background-color: aqua;
-       margin-right: 80px;
+       margin-right: 5rem;  //80px;
 
         &__text{
      width: 80%;
@@ -32,7 +32,7 @@ nav>img{
     
                         &--p{
                             font-size: $global-XS-font-size;
-                            margin: 10px;
+                            margin: 0.625rem; //10px
                         }
                     }
                 }
@@ -41,8 +41,8 @@ nav>img{
         }
     
         &__img{
-            width: 312px;
-            height: 252px;
+            width:19.5rem; // 312px;
+            height:15.72rem; // 252px;
           //  background-color: aqua;
         }
       
@@ -51,27 +51,27 @@ nav>img{
     //
 
     .info-container{
-        margin-right: 80px;
+        margin-right: 5rem;  //80px;
     }
     //form
     .form-container {
 
         &__text {
-            margin-right: 80px;
+            margin-right: 5rem;  //80px;
             &--p {
-                margin-right: 80px;
+                margin-right: 5rem;  //80px;
                 &--inputs {
-                    margin-right: 80px;
+                    margin-right: 5rem;  //80px;
                     &--input {
-                        width: 130px;
+                        width: 8.125rem; // 130px;
                     }
 
                     &--select {
-                        width: 195px;
+                        width: 12.1875rem; // 195px;
                     }
 
                     &--button {
-                        width: 170px;
+                        width: 10.625rem; // 170px;
                     }
 
                 }
@@ -82,7 +82,7 @@ nav>img{
     //offer
 
     .offer-bold-text, .offer-text{
-        margin-right: 80px;
+        margin-right: 5rem;  //80px;
 
     }
 
@@ -91,11 +91,17 @@ nav>img{
         &__ol{
       
             &--li{
+                &:nth-child(3) >div > h4{
+                   // background-color: aqua;
+                    padding-right: 2.5rem;  //40px
+                }
             
                 &--img{
             
                     &--h4{
                         grid-column-end: 5;
+                        padding-right: 1.25rem;  //20px
+
     
                         &--p{
                             grid-column-end: 5;
@@ -109,8 +115,8 @@ nav>img{
             
         }
         &__img{
-            width: 304px;
-            height: 462px;
+            width: 19rem; // 304px;
+            height: 28.875rem; // 462px;
         }
     }
     //howWork
@@ -123,10 +129,10 @@ nav>img{
         &__text{
 
             &--bold{
-                margin-right: 80px;
+                margin-right: 5rem;  //80px;
             }
                 &--p{
-                    margin-right: 80px;
+                    margin-right: 5rem;  //80px;
                 }
             
         }
@@ -136,8 +142,8 @@ nav>img{
 
             &--mobile{
             &>img{
-                width: 312px;
-                height: 252px;
+                width: 19.5rem; // 312px;
+                height: 15.75rem; // 252px;
             }
         }
            
@@ -147,15 +153,15 @@ nav>img{
     .howWork-grid-container{
    
         &__img{
-            width:90px;
-            height: 90px;
+            width:5.625rem;  //90px
+            height: 5.625rem;  //90px
     
             &--h4{
-                margin-right: 30px;
+                margin-right: 1.875rem;  //30px
                 font-size: $global-S-font-size;
     
                 &--p{
-                  margin-right: 30px;
+                  margin-right: 1.875rem;  //30px
                   font-size: $global-S-font-size;
     
                 }
@@ -175,10 +181,10 @@ nav>img{
         &__text{
 
             &--bold{
-                margin-right: 80px;
+                margin-right: 5rem;  //80px;
 
                 &--p{
-                    margin-right: 80px;
+                    margin-right: 5rem;  //80px;
                 }
             }   
         }
@@ -186,9 +192,9 @@ nav>img{
         &__img{
             grid-column-start:4;
             grid-row-start:2 ;
-            height:224.34px;
-            width:300.95px;
-            margin-right: 100PX;
+            height: 14rem;//224.34px;
+            width:18.75rem; //300.95px;
+            margin-right:  6.25rem;//100PX;
     
     
     

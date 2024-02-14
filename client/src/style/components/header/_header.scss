@@ -2,7 +2,7 @@
 
 .header-container {
     width: 85%;
-    margin: 40px 120px 80px 120px;
+    margin: 2.5rem 7.5rem 5rem 7.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,22 +20,22 @@
                 background-color: $body-background-color;
 
                 & >span{
-                    margin-right: 10px;
+                    margin-right: 0.625rem; //10px
                     color: $bold-text-color;
                 }
 
                 &--p{
                     font-size: $global-M-font-size;
-                    margin: 10px;
+                    margin: 0.625rem; //10px
 
                     & >span{
-                        margin-right: 10px;
+                        margin-right: 0.625rem; //10px
                         color: $bold-text-color;
                     }
 
                     &--p{
                         font-size: $global-XS-font-size;
-                        margin: 10px;
+                        margin: 0.625rem; //10px
                     }
                 }
             }
@@ -44,8 +44,8 @@
     }
 
     &__img{
-      width: 412px;
-       height: 352px;
+      width:25rem; // 412px;
+       height:22rem; // 352px;
     }
   
 }
