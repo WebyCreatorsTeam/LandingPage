@@ -1,6 +1,6 @@
 import FaceBook from "../../../images/footer/facebook.png";
 import LinkedIn from "../../../images/footer/linkedin.png";
-import Email from '../../../images/footer/instagram.png'
+import Email from '../../../images/footer/email.png'
 import { FooterLinks } from "./types";
 
 
@@ -13,7 +13,7 @@ export const footerlinks: Array<FooterLinks> = [
     {
         img: LinkedIn,
         alt: "linkedin",
-        url: "www.linkedin.com/in/weby-creators-team",
+        url: "https://www.linkedin.com/in/weby-creators-team/",
     },
     { img: Email, alt: "email", url: "mailto:webycreatorsteam@gmail.com" },
 ];
