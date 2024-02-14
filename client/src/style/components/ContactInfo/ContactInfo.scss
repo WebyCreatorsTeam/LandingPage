@@ -1,9 +1,9 @@
 @import '../../vars/_index';
 
 .info-container{
-    width: 722px;
-    height: 71px;
-    margin: 0 120px 40px 0;
+    width: 45.125rem; // 722px;
+    height: 4.43rem;// 71px;
+    margin: 0 7.5rem 2.5rem 0;
     background-color: $info-background-color;
     display: flex;
     align-items: center;
@@ -19,12 +19,12 @@
         &--link{
             color: $info-text-color;
             font-size: $global-M-font-size;
-            margin-left: 15px;
+            margin-left: 1rem; // 15px;
 
             &--img{
-                width: 40px;
-                height: 40px;
-                padding: 5px;
+                width: 2.5rem; // 40px;
+                height:2.5rem; // 40px;
+                padding: 0.3125rem; // 5px;
             }
         }
 

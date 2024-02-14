@@ -7,7 +7,7 @@
   //nav
 
 nav>img{
-    margin-right: 20px;
+    margin-right: 1.25rem;  //20px
 
 }
 
@@ -17,7 +17,7 @@ nav>img{
     .header-container {
         justify-content: center;
        // background-color: aqua;
-       margin :0 40px 40px 0 ;
+       margin :0 2.5rem 2.5rem 0 ;
 
         &__text{
      width: 80%;
@@ -32,7 +32,7 @@ nav>img{
                       margin-right: 0;
 
                         &--p{
-                            font-size: 8px;
+                            font-size: 0.5rem;
                             margin-right: 0;                        }
                     }
                 }
@@ -41,8 +41,8 @@ nav>img{
         }
     
         &__img{
-            width: 262px;
-            height: 202px;
+            width: 16.375rem; // 262px;
+            height:12.625rem // 202px;
           //  background-color: aqua;
         }
       
@@ -51,18 +51,18 @@ nav>img{
     //
 
     .info-container{
-        margin-right: 40px;
-        margin-bottom: 20px;
-        width: 522px;
-        height: 51px;
+        margin-right: 2.5rem; //40px
+        margin-bottom: 1.25rem;  //20px
+        width :32.62rem; // 522px;
+        height:3.18rem; // 51px;
         &__icon{
     
             &--link{
                 font-size: $global-S-font-size;
     
                 &--img{
-                    width: 30px;
-                    height: 30px;
+                    width: 1.875rem;// 30px;
+                    height:  1.875rem;// 30px;
                 }
             }
     
@@ -71,43 +71,43 @@ nav>img{
     //form
     .form-container {
 
-        height: 200px;
+        height:12.5rem; // 200px;
 
         &__text {
-            margin-right: 40px;
+            margin-right: 2.5rem; //40px
             font-size: $global-M-font-size;
 
             &--p {
-                margin-right: 40px;
+                margin-right: 2.5rem; //40px
                 font-size: $global-S-font-size;
                 &--inputs {
-                    margin-right: 40px;
-                    margin-top: 30px;
+                    margin-right: 2.5rem; //40px
+                   // margin-top: 1rem; //30px
                     &--input {
-                        width: 100px;
-                        height: 43px;
+                        width: 6.25rem; //100px;
+                        height: 2.68rem; //43px
                         font-size: $global-XS-font-size;
 
                     }
 
                     &--select {
-                        width: 140px;
-                        height: 43px;
+                        width: 8.75rem; // 140px;
+                        height: 2.68rem; //43px
                         font-size: $global-XS-font-size;
 
                     }
 
                     &--button {
-                        width: 120px;
-                        height: 43px;
+                        width: 7.5rem; //120px
+                        height: 2.68rem; //43px
                         font-size: $global-XS-font-size;
 
                     
 
                     &--bold{
                         font-size: $global-XS-font-size;
-                        width: 120px;
-                        height: 43px;
+                        width: 7.5rem; //120px
+                        height: 2.68rem; //43px
                     }
                 }
                 }
@@ -131,18 +131,23 @@ nav>img{
       }
       
     .icon-container>img {
-        width: 10px;
-        height: 10px;
+        width: 0.625rem ;// 10px;
+        height: 0.625rem ;// 10px;
+      }
+
+      .message{
+        font-size: 1rem;
+        margin-bottom: 0;
       }
     //offer
 
     .offer-bold-text{
-        margin-right: 40px;
+        margin-right: 2.5rem; //40px
         font-size: $global-M-font-size ;
 
     } 
     .offer-text{
-        margin-right: 40px;
+        margin-right: 2.5rem; //40px
         font-size: $global-S-font-size ;
         margin-bottom: 0;
 
@@ -153,15 +158,24 @@ nav>img{
         &__ol{
       padding-right: 0;
             &--li{
+
+                &:nth-child(3) >div > h4{
+                    // background-color: aqua;
+                     padding-right: 2.5rem; //40px
+                 }
                 &--img{
-                    width: 80px;
-                    height: 80px;
+                    width:5rem; // 80px;
+                    height: 5rem; // 80px;
+
             
                     &--h4{
+                        padding-right: 1.25rem; //20px
                         grid-column-end: 5;
                         font-size: $global-S-font-size;
 
                         &--p{
+                            padding-right: 1.25rem; //20px
+
                             grid-column-end: 5;
                             font-size: $global-XS-font-size;
 
@@ -175,9 +189,13 @@ nav>img{
             
         }
         &__img{
-            width: 204px;
-            height: 362px;
+            width: 12.75rem; // 204px;
+            height: 22.625rem; // 362px;
         }
+    }
+
+    .text-mobile-container{
+
     }
     //howWork
 
@@ -185,17 +203,17 @@ nav>img{
     
         grid-template-rows: 20% 20% 20% 20% ;
         padding-top: 0;
-        height: 250px;
+        height:15.625rem; // 250px;
 
         &__text{
             &--bold{
-                margin:30px 40px 0 0;
+                margin:1.875rem 2.5rem 0 0;
                 font-size: $global-M-font-size;
 
             }
                 &--p{
                     font-size: $global-S-font-size;
-                    margin-right: 40px;
+                    margin-right: 2.5rem; //40px
                 }
             
         }
@@ -205,8 +223,8 @@ nav>img{
 
             &--mobile{
             &>img{
-                width: 212px;
-                height: 152px;
+                width: 13.25rem; // 212px;
+                height: 7.812rem; // 152px;
             }
         }
            
@@ -216,15 +234,15 @@ nav>img{
     .howWork-grid-container{
    
         &__img{
-            width: 70px;
-            height: 70px;
+            width: 4.375rem; // 70px;
+            height: 4.375rem; // 70px
     
             &--h4{
-                margin-right: 30px;
+                margin-right: 1.87rem; //30px
                 font-size: $global-XS-font-size;
     
                 &--p{
-                  margin-right: 30px;
+                  margin-right: 1.87rem; //30px
                   font-size: $global-XS-font-size;
     
                 }
@@ -244,12 +262,12 @@ nav>img{
         &__text{
 
             &--bold{
-                margin-right: 40px;
-                margin-bottom: 30px;
+                margin-right: 2.5rem; //40px
+                margin-bottom: 1.87rem; //30px
                 font-size: $global-M-font-size;
 
                 &--p{
-                    margin-right: 40px;
+                    margin-right: 2.5rem; //40px
                     font-size: $global-S-font-size;
                 }
             }   
@@ -258,9 +276,9 @@ nav>img{
         &__img{
             grid-column-start:4;
             grid-row-start:2 ;
-            height:124.34px;
-            width:200.95px;
-            margin-right: 100PX;
+            height:7.75rem; // 124.34px;
+            width: 12.5rem; //200.95px;
+            margin-right:6.25rem; // 100PX;
     
     
     
@@ -269,26 +287,26 @@ nav>img{
     }
 
     .footer-container {
-        height: 103px;
+        height:6.43rem; // 103px;
     
         &__link {
             &--img {
-                width: 15px;
-                padding: 3px;
+                width: 1rem; // 15px;
+                padding:0.18rem; // 3px;
             }
         }
     }
    
     
-    .contact-container{
+    .footer-contact-container{
         font-size: $global-XS-font-size;
     
     
         &__div{
     
             &--img{
-                width: 10px;
-                height: 10px;   
+                width: 0.625rem;// 10px;
+                height: 0.625rem;// 10px;  
     
             }
         }
@@ -296,8 +314,8 @@ nav>img{
     }
 
     .footer-container >img{
-        Width: 330px;
-        Height: 113px;
+        Width: 20.625rem; //330px
+        Height: 7.06rem; //113px
     }
 
 }
