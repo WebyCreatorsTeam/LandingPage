@@ -1,5 +1,5 @@
 import { FC } from "react";
-import OfferImg from "../../../images/offer/offer-image.png";
+import OfferImg from "../../../../images/offer/offer-image.png";
 import { OfferList } from "./OfferList";
 
 const Offer: FC = () => {
