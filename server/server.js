@@ -1,37 +1,44 @@
 const express = require("express");
+const http = require('node:http')
+const https = require('node:https')
+const fs = require('node:fs')
+const cors = require('cors')
+
 require('dotenv').config()
 const { dbconnect } = require("./dbconnect");
+
 const app = express();
-const cors = require('cors')
-const PORT = process.env.PORT || 8080;
-// const fs = require('node:fs');
-// const https = require('node:https')
+const hostname = 'weby.team';
+const httpPort = 80;
+const httpsPort = 443;
 
-// const cert = fs.readFileSync("./ssl/weby_team.crt")
-// const ca = fs.readFileSync("./ssl/weby_team.ca-bundle")
-// const key = fs.readFileSync("./ssl/secret.key")
+dbconnect()
 
-// let options = {
-//     cert: cert, // fs.readFileSync("./ssl/weby_team.crt")
-//     ca: ca, // fs.readFileSync("./ssl/weby_team.ca-bundle")
-//     key: key // fs.readFileSync("./ssl/secret.key")
-//  };
+const cert = fs.readFileSync("./ssl/weby_team.crt")
+const ca = fs.readFileSync("./ssl/weby_team.ca-bundle")
+const key = fs.readFileSync("./ssl/secret.key")
 
-// also okay: https.createServer({cert, ca, key}, (req, res) => { ...
-//  const httpsServer = https.createServer(options, (req, res) => {
-//     res.statusCode = 200;
-//     res.setHeader('Content-Type', 'text/html');
-//     res.end("<h1>HTTPS server running</h1>");
-//  });
+const httpsOptions = {
+    cert, // fs.readFileSync("./ssl/weby_team.crt")
+    ca, // fs.readFileSync("./ssl/weby_team.ca-bundle")
+    key // fs.readFileSync("./ssl/secret.key")
+}
 
-// const cert = fs.readFileSync('./path/to/the/cert.crt');
-// const ca = fs.readFileSync('./path/to/the/ca.crt');
-// const key = fs.readFileSync('./path/to/the/private.key');
+const httpServer = http.createServer(app)
+// const httpsServer = https.createServer(httpsOptions, app)
+const httpsServer = https.createServer(httpsOptions, app);
+
+app.use((req, res, next) => {
+    if(req.protocol === 'http') {
+      res.redirect(301, `https://${req.headers.host}${req.url}`);
+    }
+    next();
+ });
 
 app.use(express.json());
 app.use(express.static('../client/build'))
+// const PORT = process.env.PORT || 8080;
 
-dbconnect()
 
 const whitelist = [process.env.CORS1, process.env.CORS2]
 const corsOptions = {
@@ -48,6 +55,10 @@ const corsOptions = {
 app.use('/dashboard', cors(corsOptions), require("./router/dashboard/dashboard.router"))
 app.use("/users", require("./router/user/user.router"));
 
-app.listen(PORT, () => {
-    console.log(`listen on http://localhost:${PORT}`);
+httpServer.listen(httpPort, '0.0.0.0',()=>{
+    console.log(`cho bla`)
+})
+// httpsServer.listen(httpsPort, hostname)
+httpsServer.listen(httpsPort, '0.0.0.0', ()=>{
+    console.log(`cho bla 2`)
 });
