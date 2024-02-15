@@ -4,29 +4,6 @@ const { dbconnect } = require("./dbconnect");
 const app = express();
 const cors = require('cors')
 const PORT = process.env.PORT || 8080;
-// const fs = require('node:fs');
-// const https = require('node:https')
-
-// const cert = fs.readFileSync("./ssl/weby_team.crt")
-// const ca = fs.readFileSync("./ssl/weby_team.ca-bundle")
-// const key = fs.readFileSync("./ssl/secret.key")
-
-// let options = {
-//     cert: cert, // fs.readFileSync("./ssl/weby_team.crt")
-//     ca: ca, // fs.readFileSync("./ssl/weby_team.ca-bundle")
-//     key: key // fs.readFileSync("./ssl/secret.key")
-//  };
-
-// also okay: https.createServer({cert, ca, key}, (req, res) => { ...
-//  const httpsServer = https.createServer(options, (req, res) => {
-//     res.statusCode = 200;
-//     res.setHeader('Content-Type', 'text/html');
-//     res.end("<h1>HTTPS server running</h1>");
-//  });
-
-// const cert = fs.readFileSync('./path/to/the/cert.crt');
-// const ca = fs.readFileSync('./path/to/the/ca.crt');
-// const key = fs.readFileSync('./path/to/the/private.key');
 
 app.use(express.json());
 app.use(express.static('../client/build'))
