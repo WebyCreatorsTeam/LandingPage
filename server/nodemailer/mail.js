@@ -15,6 +15,9 @@ exports.mailOptions = (userName, userEmail, userPhone, userHelp) => {
     return {
         from: process.env.MAIL,
         to: process.env.MAIL,
+        cc: [
+            `"Katya Ru" <${process.env.MAIL_CC}>`
+        ],
         subject: "✨✨Weby - פרטים חדשים התקבלו ✨✨",
         html: `
         <div style="text-align: center;" dir="rtl">
