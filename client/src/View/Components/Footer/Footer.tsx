@@ -26,6 +26,8 @@ const Footer: FC = () => {
                 {footerlinks.map((lnk, index) => (
                     <a
                         className="footer-container__link"
+                        target="_blank"
+                        rel="noreferrer"
                         href={lnk.url}
                         key={index}
                     >
