@@ -16,9 +16,9 @@ exports.sendDetails = async (req, res) => {
             );
         }
 
-        const newDetails = new User({ userName, userEmail, userPhone, userHelp });
+        // const newDetails = new User({ userName, userEmail, userPhone, userHelp });
 
-        await newDetails.save();
+        // await newDetails.save();
 
         transporter.sendMail(mailOptions(userName, userEmail, userPhone, userHelp), (error, info) => {
             if (error) {
