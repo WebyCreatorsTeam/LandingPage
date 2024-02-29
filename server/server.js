@@ -21,7 +21,7 @@ const corsOptions = {
     },
     optionsSuccessStatus: 200
 }
-
+    
 app.use('/projects', cors(corsOptions), require("./router/projects/project.rout"))
 app.use("/users", require("./router/user/user.router"));
 
