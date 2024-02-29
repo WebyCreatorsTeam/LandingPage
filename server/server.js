@@ -22,7 +22,7 @@ const corsOptions = {
     optionsSuccessStatus: 200
 }
 
-app.use('/dashboard', cors(corsOptions), require("./router/dashboard/dashboard.router"))
+app.use('/projects', cors(corsOptions), require("./router/projects/project.rout"))
 app.use("/users", require("./router/user/user.router"));
 
 app.listen(PORT, () => {
