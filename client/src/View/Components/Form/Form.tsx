@@ -6,7 +6,7 @@ import Input from "../../UI/Input/Input";
 import { Form } from "react-router-dom";
 import ArrowIcon from "../../../images/arrow-icon.png"
 import { validateValues } from "./fornValidation";
-// import { API_ENDPOINT } from "../../../utils/api-connect";
+import { API_ENDPOINT } from "../../../utils/api-connect";
 
 const UserForm: FC = () => {
     const [message, setMessage] = useState<string>("");
@@ -36,7 +36,7 @@ const UserForm: FC = () => {
 
     const sendUserDetails = async (ev: React.SyntheticEvent) => {
         ev.preventDefault()
-        const { data: { continueWork, message } } = await axios.post(`https://landing-page-api-gold.vercel.app/users/user-send-details/`, { inputFields });
+        const { data: { continueWork, message } } = await axios.post(`${API_ENDPOINT}/users/user-send-details/`, { inputFields });
         setGreen(continueWork);
 
         const formInputs = document.querySelectorAll(".form-container__text--p--inputs--input") as NodeList
