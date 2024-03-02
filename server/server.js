@@ -6,7 +6,7 @@ const cors = require('cors')
 const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
-app.use(express.static('../client/build'))
+// app.use(express.static('../client/build'))
 
 dbconnect()
 
@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
     }
 })
 
-app.use('/projects', cors(corsOptions), require("./router/projects/project.rout"))
+app.use('/projects', require("./router/projects/project.rout"))
 app.use("/users", require("./router/user/user.router"));
 
 app.listen(PORT, () => {
