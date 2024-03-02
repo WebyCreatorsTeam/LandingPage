@@ -6,7 +6,7 @@ import Input from "../../UI/Input/Input";
 import { Form } from "react-router-dom";
 import ArrowIcon from "../../../images/arrow-icon.png"
 import { validateValues } from "./fornValidation";
-import { API_ENDPOINT } from "../../../utils/api-connect";
+// import { API_ENDPOINT } from "../../../utils/api-connect";
 
 const UserForm: FC = () => {
     const [message, setMessage] = useState<string>("");
@@ -27,7 +27,7 @@ const UserForm: FC = () => {
         return setInputFields({ ...inputFields, [target.name]: target.value });
     };
 
-    console.log(API_ENDPOINT)
+    // console.log(API_ENDPOINT)
     useEffect(() => {
         (() => {
             return setSubmitting(Object.values(inputsError).every((a) => a.length === 0));
