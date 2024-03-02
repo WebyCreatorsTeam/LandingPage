@@ -21,7 +21,7 @@ dbconnect()
 // }
 
 app.use(cors({
-    origin: process.env.NODE_ENV === 'production' ? "https://landing-page-sandy-chi.vercel.app" : "http://localhost:3000",
+    origin: process.env.NODE_ENV === 'production' ? "https://www.weby.team" : "http://localhost:3000",
     methods: ["POST", "GET"],
 }))
 
