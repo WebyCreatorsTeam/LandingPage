@@ -11,5 +11,6 @@ export const options: Array<OptionsList> = [
     { value: "dev", text: "פיתוח אתר" },
     { value: "uxui", text: "UX/UI ופיתוח אתר" },
     { value: "support", text: "תחזוקה של אתר" },
+    { value: "vebinar", text: "הרשמה לובינר 19.03.2024" },
     { value: "other", text: "אחר" },
 ];
