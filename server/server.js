@@ -10,18 +10,27 @@ app.use(express.static('../client/build'))
 
 dbconnect()
 
-const whitelist = [process.env.CORS1, process.env.CORS2]
-const corsOptions = {
-    origin: function (origin, callback) {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true)
-        } else {
-            callback(new Error('Not allowed by CORS'))
-        }
-    },
-    optionsSuccessStatus: 200
-}
-    
+// const whitelist = [process.env.CORS1, process.env.CORS2]
+// const corsOptions = {
+//     origin: function (origin, callback) {
+//         if (whitelist.indexOf(origin) !== -1 || !origin) {
+//             callback(null, true)
+//         } else {
+//             callback(new Error('Not allowed by CORS'))
+//         }
+//     },
+//     optionsSuccessStatus: 200
+// }
+
+app.get("/", (req, res) => {
+    try {
+        return res.json({ ok: true })
+    } catch (error) {
+        console.log(error)
+        return res.json({ "error": error })
+    }
+})
+
 app.use('/projects', cors(corsOptions), require("./router/projects/project.rout"))
 app.use("/users", require("./router/user/user.router"));
 
