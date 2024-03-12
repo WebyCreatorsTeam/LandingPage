@@ -11,12 +11,12 @@ const Header: FC = () => {
                     <br />
                     שיקח אותכם צד אחד
                     <span>קדימה</span>                 </h1>
-                <p className='header-container__text--p--h1--p'>
+                {/* <p className='header-container__text--p--h1--p'>
                     אנחנו יודעים שהתחלות יכולות להיות מאתגרות
                     <br />
                     לכן השירות שלנו כרגע
                     <span>בחינם</span>
-                </p>
+                </p> */}
                 <p className='header-container__text--p--h1--p--p'>*השירות לא כולל תשלומים נוספים (כגון דומיין, בסיס נתונים וכדומה)</p>
             </div>
             <div>
