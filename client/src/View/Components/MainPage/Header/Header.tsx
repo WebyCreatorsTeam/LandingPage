@@ -9,15 +9,15 @@ const Header: FC = () => {
                 <h1 className='header-container__text--p--h1'>
                     בואו לבנות את האתר שלכם,
                     <br />
-                    שיקח אותכם צד אחד
+                    שיקח אתכם צעד אחד
                     <span>קדימה</span>                 </h1>
-                <p className='header-container__text--p--h1--p'>
+                {/* <p className='header-container__text--p--h1--p'>
                     אנחנו יודעים שהתחלות יכולות להיות מאתגרות
                     <br />
                     לכן השירות שלנו כרגע
                     <span>בחינם</span>
-                </p>
-                <p className='header-container__text--p--h1--p--p'>*השירות לא כולל תשלומים נוספים (כגון דומיין, בסיס ונתונים וכדומה)</p>
+                </p> */}
+                {/* <p className='header-container__text--p--h1--p--p'>*השירות לא כולל תשלומים נוספים (כגון דומיין, בסיס נתונים וכדומה)</p> */}
             </div>
             <div>
                 <img className='header-container__img' src={HeaderImage} alt="אנשים עומדים" />

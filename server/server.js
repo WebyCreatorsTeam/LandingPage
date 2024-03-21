@@ -6,8 +6,6 @@ const cors = require('cors')
 const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
-app.use(express.static('../client/build'))
-
 dbconnect()
 
 // const whitelist = [process.env.CORS1, process.env.CORS2]
@@ -22,6 +20,11 @@ dbconnect()
 //     optionsSuccessStatus: 200
 // }
 
+app.use(cors({
+    origin: process.env.NODE_ENV === 'production' ? "https://www.weby.team" : "http://localhost:3000",
+    methods: ["POST", "GET"],
+}))
+
 app.get("/", (req, res) => {
     try {
         return res.json({ ok: true })
@@ -31,7 +34,7 @@ app.get("/", (req, res) => {
     }
 })
 
-app.use('/projects', cors(corsOptions), require("./router/projects/project.rout"))
+app.use('/projects', require("./router/projects/project.rout"))
 app.use("/users", require("./router/user/user.router"));
 
 app.listen(PORT, () => {
