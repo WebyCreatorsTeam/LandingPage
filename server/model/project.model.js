@@ -15,9 +15,13 @@ const ProjectSchema = new Schema({
     urlSite: {
         type: String
     },
-    show: {
+    draft: {
         type: Boolean,
-        default: false
+        default: true
+    },
+    customerFeedback: {
+        type: Schema.Types.ObjectId,
+        ref: "Feedback"
     }
 })
 
