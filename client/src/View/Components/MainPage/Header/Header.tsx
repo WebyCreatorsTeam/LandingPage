@@ -9,7 +9,7 @@ const Header: FC = () => {
                 <h1 className='header-container__text--p--h1'>
                     בואו לבנות את האתר שלכם,
                     <br />
-                    שיקח אותכם צד אחד
+                    שיקח אתכם צעד אחד
                     <span>קדימה</span>                 </h1>
                 {/* <p className='header-container__text--p--h1--p'>
                     אנחנו יודעים שהתחלות יכולות להיות מאתגרות
