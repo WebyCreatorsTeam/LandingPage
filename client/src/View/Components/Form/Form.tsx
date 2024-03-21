@@ -44,9 +44,22 @@ const UserForm: FC = () => {
         formSelect.value = "פיתוח אתר"
 
         setInputsError({ userName: "none", userEmail: "none", userPhone: "none", userHelp: "none" })
+        //setloader(false)
         return setMessage(message);
     };
 
+    /*
+    const func = () => {
+        try {
+            //setloader(true)
+        } catch (err) {
+
+        } finaly {
+            //setloader(false)
+        }
+    }
+
+    */
     return (
         <Form className="form-container" onSubmit={sendUserDetails}>
             <h1 className='form-container__text'>מוכנים לקדם את העסק שלכם?</h1>
@@ -90,6 +103,10 @@ const UserForm: FC = () => {
                     type="submit"
                     disabled={!submitting}
                     className={submitting ? "form-container__text--p--inputs--button--bold" : "form-container__text--p--inputs--button"}>
+                    {/* {loading? 
+                        "אנחנו שולחים את המידע"
+                         : 
+                         "שלח "} */}
                     שלח
                 </button>
             </div>
