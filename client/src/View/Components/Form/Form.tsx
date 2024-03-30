@@ -51,12 +51,16 @@ const UserForm: FC = () => {
 
     return (
         <Form className="form-container" onSubmit={sendUserDetails}>
+          <div className="loader-container">
+          <div className="loader-container__style"></div>
+          </div>
             <h1 className='form-container__text'>מוכנים לקדם את העסק שלכם?</h1>
             <p className="form-container__text--p">השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
             <p className="message" style={{ color: green ? "green" : "red", textAlign: "center" }}>
                 {message.length > 0 ? message : null}
             </p>
             <div className="form-container__text--p--inputs">
+
                 {inputs.map((int, index) => (
                     <Input
                         key={index}
