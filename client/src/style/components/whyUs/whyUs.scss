@@ -2,33 +2,36 @@
 
 .whyUs-container{
     width: 100%;
-    display: grid;
-    grid-template-columns: 16% 16% 20% 10% 16% 16% ;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    /*display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;*/
     //margin-bottom: 6.25rem; //100px
+    
    background-color: $white-color;
 
     &__text{
-            grid-column-start: 1 ;
-            grid-column-end: 4;
+          /*  grid-column-start: 1 ;
+            grid-column-end: 3;
             grid-row-start: 1;
-            grid-row-end: 6;
-        //    background-color: aqua;
-           
+            grid-row-end: 3;
+           background-color: aqua;*/
+           display: flex;
+           align-items: center;
+           justify-content: start;
 
-        &--bold{
-            grid-column-start: 1 ;
+       &--bold{
+           /* grid-column-start: 1 ;
             grid-column-end: 4;
             grid-row-start: 1;
             grid-row-end: 3;
-      //      background-color: bisque;
+      //      background-color: bisque;*/
             color:$bold-text-color ;
             font-size: $global-L-font-size ;
             margin:3.125rem 7.5rem 3.75rem 0;
 
       
 
-            &--p{
+          /*  &--p{
                 grid-column-start: 1;
                 grid-column-end: 4;
                 grid-row-start: 2;
@@ -38,21 +41,28 @@
                 font-size: $global-M-font-size ;
                 margin-right: 7.5rem;
             }
-        }
         
+        */
+       }
     }
 
     &__img{
-        grid-column-start:5;
+        grid-column-start:4;
         grid-column-end:6 ;
-        grid-row-start:3 ;
-        grid-row-end: 5;
-        height: 14rem; //224.34px;
-        width: 18.75rem; //300.95px;
-        margin-right: 6.25rem; //100px
+        grid-row-start:1 ;
+        grid-row-end: 3;
+        height: 3.75rem; //224.34px;
+        width: 5rem; //300.95px;
+        margin-right: 2.25rem; //100px
+       // background-color: bisque;
 
 
 
+    }
+
+    &__pointes{
+        text-align: center;
+        margin-top: 2rem ;
     }
 
 }
@@ -60,6 +70,40 @@
 .contact-container{
     background-color: $white-color;
      width:100%;
-     padding: 10px 0;
+     padding: 2rem 0;
      margin: 0;
 }
+
+.feedback-container{
+width: 40rem ;
+height: 16.5;
+border-radius: 8px;
+border: 3px solid $form-background-color;
+    &__title{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        &--text{
+            font-size: $feedback-title-font-size;
+            font-weight: 700;
+            color: $black-color;
+
+        }
+
+        &--img{
+       
+
+        }
+
+    }
+
+    &__p{
+        text-align: center;
+        font-size: $global-M-font-size;
+        font-weight: 400;
+        color: $black-color;
+    }
+}
+
+

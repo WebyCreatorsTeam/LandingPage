@@ -2,7 +2,7 @@ import { FC } from "react";
 import { InputPorps } from "./inputType";
 
 const Input: FC<InputPorps> = ({
-    type, name, placeholder, inputsValue, checkFunction, inputsError,
+    type, name, placeholder, inputsValue, checkFunction, inputsError
 }) => {
     return (
         <div className="input-container">

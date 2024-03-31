@@ -5,7 +5,7 @@ import { inputs, options } from "./inputsList";
 import Input from "../../UI/Input/Input";
 import { Form } from "react-router-dom";
 import ArrowIcon from "../../../images/arrow-icon.png"
-import { validateValues } from "./fornValidation";
+import { validateValues } from "./formValidation";
 import { API_ENDPOINT } from "../../../utils/api-connect";
 
 const UserForm: FC = () => {
@@ -14,7 +14,7 @@ const UserForm: FC = () => {
     const [submitting, setSubmitting] = useState<boolean>(false);
     const [inputsError, setInputsError] = useState<User>({ userName: "none", userEmail: "none", userPhone: "none", userHelp: "none" });
     const [inputFields, setInputFields] = useState<User>({ userName: "", userEmail: "", userPhone: "", userHelp: "" });
-
+    const [isLoader, setIsLoader] = useState<boolean>(false);
     const handleChangeInput = (ev: React.SyntheticEvent) => {
         let target = ev.target as HTMLInputElement;
 
@@ -36,6 +36,7 @@ const UserForm: FC = () => {
 
     const sendUserDetails = async (ev: React.SyntheticEvent) => {
         ev.preventDefault()
+        setIsLoader(prev => !prev)
         const { data: { continueWork, message } } = await axios.post(`${API_ENDPOINT}/users/user-send-details/`, { inputFields });
         setGreen(continueWork);
 
@@ -47,11 +48,12 @@ const UserForm: FC = () => {
 
         setInputsError({ userName: "none", userEmail: "none", userPhone: "none", userHelp: "none" })
         return setMessage(message);
+
     };
 
     return (
         <Form className="form-container" onSubmit={sendUserDetails}>
-          <div className="loader-container">
+          <div className={isLoader ? "loader-container" : "loader-container-false"}>
           <div className="loader-container__style"></div>
           </div>
             <h1 className='form-container__text'>מוכנים לקדם את העסק שלכם?</h1>
@@ -68,6 +70,7 @@ const UserForm: FC = () => {
                         inputsValue={inputFields}
                         checkFunction={handleChangeInput}
                         inputsError={inputsError}
+                        
                     />
                 ))}
                 <div className="select-container">

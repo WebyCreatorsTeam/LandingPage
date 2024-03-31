@@ -104,7 +104,7 @@
               //form
               .form-container {
                 width: 19.375rem; // 310px;
-                height: 18rem; // 288px;
+                height: 21.87rem; // 350px;
                 border-radius: 8px;
                 margin: 2.5rem auto;
           
@@ -153,20 +153,24 @@
                 margin: 0;
               }
 
-             
+              .form-container__text--p--inputs{
+                margin: 1rem auto;
+          
+              }
               .form-container__text--p--inputs--input{
                 font-size: 0.75rem;
+                margin: 0.75rem auto;
           
               }
               .labelLine{
                 font-size:0.75rem;
+                padding: 0;
               }
 
               .input-container input:focus ~ label,
               .input-container input:valid ~ label{
-                font-size:0.4rem;
-                top: 0.7rem;
-                background-color: $white-color;
+                font-size:0.75rem;
+                top:2px;
 
               }
 
@@ -184,15 +188,21 @@
                 }
 
                 .message{
-                    font-size: 0.6rem;
-                    margin: 4px auto;
+                    font-size: 0.8rem;
+                    margin: 0.5rem auto;
                   //  font-style: italic;
                
                 }
                 .loader-container{
                   width: 19.4rem;
-                  height: 18rem;
+                  height: 21.87rem; // 350px;
                   border-radius: 8px;
+                  &__style {
+                    width: 20px;
+                    height: 20px;
+                   // top: 10%;
+                   // right: 45%;
+                  }
                 }
               //offer
           
