@@ -1,19 +1,19 @@
 @import '../../vars/_index.scss';
 
- 
-.offer-container{
+
+.offer-container {
     width: 100%;
     background-color: $white-color;
     padding-top: 3.125rem; //50px
 }
 
-.offer-bold-text{
-    color:$bold-text-color ;
+.offer-bold-text {
+    color: $bold-text-color ;
     font-size: $global-L-font-size ;
     margin-right: 7.5rem; //120px
 }
 
-.offer-text{
+.offer-text {
     color: $text-color ;
     font-size: $global-M-font-size ;
     margin-right: 7.5rem; //120px
@@ -21,76 +21,80 @@
 
 
 
-.offer-grid-container{
+.offer-grid-container {
     width: 100%;
     display: grid;
-    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% ;
-    grid-template-rows: 11% 11% 11% 11% 11% 11% 11% 11% 11% ;
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    // grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: 11% 11% 11% 11% 11% 11% 11% 11% 11%;
+    // grid-template-rows:repeat(9, 11%);
     background-color: $white-color;
-    &__ol{
+
+    &__ol {
         grid-column-start: 1;
         grid-column-end: 6;
-        grid-row-start:1;
+        grid-row-start: 1;
         grid-row-end: 10;
 
-        &--li{
+        &--li {
             margin: 10%;
             display: grid;
-            grid-template-columns: 30% 20% 10%  20% 20%;
+            grid-template-columns: 30% 20% 10% 20% 20%;
             grid-template-rows: 25% 25% 25% 25%;
-            
-         
-            &--img{
+
+
+            &--img {
                 grid-column-start: 1;
                 grid-column-end: 2;
-                grid-row-start:1;
+                grid-row-start: 1;
                 grid-row-end: 4;
                 border-right: 5px solid $offer-li-border;
                 padding-right: 3.125rem; //50px
 
 
-                &--h4{
-                  margin: 20px 0 0 0;
+                &--h4 {
+                    margin: 20px 0 0 0;
                     color: $text-color;
                     font-size: $global-M-font-size;
-                    grid-row-start:1;
+                    grid-row-start: 1;
                     grid-row-end: 3;
                     grid-column-start: 2;
                     grid-column-end: 4;
                     text-align: center;
 
-                    &--p{
+                    &--p {
                         margin-top: 10px;
-                        grid-row-start:3;
-                        grid-row-end: 4 ;
+                        grid-row-start: 3;
+                        grid-row-end: 4;
                         grid-column-start: 2;
-                        grid-column-end:4;
+                        grid-column-end: 4;
                         color: $bold-text-color;
                         font-size: $global-S-font-size;
                         text-align: center;
- 
+
 
                     }
                 }
             }
-            
+
         }
 
-        
+
     }
-    &__img{
+
+    &__img {
         grid-column-start: 6;
         grid-column-end: 9;
-        grid-row-start:2;
+        grid-row-start: 2;
         grid-row-end: 9;
         width: 25.25rem; //404px;
         height: 35.125rem; // 562px;
     }
 }
 
-.text-mobile-container{
+.text-mobile-container {
     grid-column-start: 1;
     grid-column-end: 6;
-    grid-row-start:1;
+    grid-row-start: 1;
     grid-row-end: 10;
 }
