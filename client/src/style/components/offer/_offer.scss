@@ -31,10 +31,12 @@
     background-color: $white-color;
 
     &__ol {
-        grid-column-start: 1;
-        grid-column-end: 6;
         grid-row-start: 1;
+        grid-column-start: 1;
         grid-row-end: 10;
+        grid-column-end: 6;
+
+        // grid-area: 1 / 1 / 10 / 6
 
         &--li {
             margin: 10%;
