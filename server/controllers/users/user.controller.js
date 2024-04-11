@@ -18,6 +18,7 @@ exports.sendDetails = async (req, res) => {
 
         const newDetails = new User({ userName, userEmail, userPhone, userHelp });
 
+        console.log(`befote mail`)
         transporter.sendMail(mailOptions(userName, userEmail, userPhone, userHelp), (error, info) => {
             console.log(`email transporter enter`)
             if (error) {
@@ -28,6 +29,7 @@ exports.sendDetails = async (req, res) => {
                 console.log(`email transporter enter sent`)
             }
         });
+        console.log(`after mail`)
 
         await newDetails.save();
 
