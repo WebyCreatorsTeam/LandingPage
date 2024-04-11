@@ -18,8 +18,6 @@ exports.sendDetails = async (req, res) => {
 
         const newDetails = new User({ userName, userEmail, userPhone, userHelp });
 
-        await newDetails.save();
-
         transporter.sendMail(mailOptions(userName, userEmail, userPhone, userHelp), (error, info) => {
             console.log(`email transporter enter`)
             if (error) {
@@ -30,6 +28,9 @@ exports.sendDetails = async (req, res) => {
                 console.log(`email transporter enter sent`)
             }
         });
+
+        await newDetails.save();
+
 
         return res.status(httpCodes.OK).send({ continueWork: true, message: "קיבלנו את הפרטים שלך, נחזור בהקדם" });
     } catch (error) {
