@@ -18,18 +18,22 @@ exports.sendDetails = async (req, res) => {
 
         const newDetails = new User({ userName, userEmail, userPhone, userHelp });
 
-        console.log(`befote mail`)
-        transporter.sendMail(mailOptions(userName, userEmail, userPhone, userHelp), (error, info) => {
-            console.log(`email transporter enter`)
-            if (error) {
-                console.log(`email transporter enter error`)
-                console.error("Error sending email: ", error);
-            } else {
-                console.log("Email sent: ", info.response);
-                console.log(`email transporter enter sent`)
-            }
-        });
-        console.log(`after mail`)
+        await new Promise((resolve, reject) => {
+            console.log(`befote mail`)
+            transporter.sendMail(mailOptions(userName, userEmail, userPhone, userHelp), (error, info) => {
+                console.log(`email transporter enter`)
+                if (error) {
+                    console.log(`email transporter enter error`)
+                    console.error("Error sending email: ", error);
+                    reject(error)
+                } else {
+                    console.log("Email sent: ", info.response);
+                    console.log(`email transporter enter sent`)
+                    resolve(info.response)
+                }
+            });
+            console.log(`after mail`)
+        })
 
         await newDetails.save();
 
