@@ -37,6 +37,7 @@ app.get("/", (req, res) => {
 app.use("/users", require("./router/user/user.router"));
 app.use('/projects', require("./router/projects/project.rout"))
 app.use('/feedbacks', require("./router/feedback/feedback.router"))
+app.use('/blog', require("./router/blog/blog.router"))
 
 app.listen(PORT, () => {
     console.log(`listen on http://localhost:${PORT}`);
