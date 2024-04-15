@@ -1,208 +1,218 @@
 @import '../../vars/index';
-body{
+
+body {
 
 
-@include respond-to(desktop) {
+    @include respond-to(desktop) {
 
-//nav
+        //nav
 
-nav>img{
-    margin-right: 2.5rem;  //40px
+        nav>img {
+            margin-right: 2.5rem; //40px
 
-}
+        }
 
 
-    //header
+        //header
 
-    .header-container {
-        justify-content: center;
-       // background-color: aqua;
-       margin-right: 5rem;  //80px;
+        .header-container {
+            justify-content: center;
+            // background-color: aqua;
+            margin-right: 5rem; //80px;
 
-        &__text{
-     width: 80%;
-            &--p{
-                font-size: $global-S-font-size;
-    
-                &--h1{
-                    font-size: $global-L-font-size;
-    
-                    &--p{
-                        font-size: $global-S-font-size;
-    
-                        &--p{
-                            font-size: $global-XS-font-size;
-                            margin: 0.625rem; //10px
+            &__text {
+                width: 80%;
+
+                &--p {
+                    font-size: $global-S-font-size;
+
+                    &--h1 {
+                        font-size: $global-L-font-size;
+
+                        &--p {
+                            font-size: $global-S-font-size;
+
+                            &--p {
+                                font-size: $global-XS-font-size;
+                                margin: 0.625rem; //10px
+                            }
                         }
                     }
                 }
+
             }
-    
-        }
-    
-        &__img{
-            width:19.5rem; // 312px;
-            height:15.72rem; // 252px;
-          //  background-color: aqua;
-        }
-      
-    }
-   
-    //
 
-    .info-container{
-        margin-right: 5rem;  //80px;
-    }
-    //form
-    .form-container {
-
-        &__text {
-            margin-right: 5rem;  //80px;
-            &--p {
-                margin-right: 5rem;  //80px;
-                &--inputs {
-                    margin-right: 5rem;  //80px;
-                    &--input {
-                        width: 8.125rem; // 130px;
-                    }
-
-                    &--select {
-                        width: 12.1875rem; // 195px;
-                    }
-
-                    &--button {
-                        width: 10.625rem; // 170px;
-                    }
-
-                }
-            }
-        }
-    }
-
-    //offer
-
-    .offer-bold-text, .offer-text{
-        margin-right: 5rem;  //80px;
-
-    }
-
-    .offer-grid-container{
-
-        &__ol{
-      
-            &--li{
-                &:nth-child(3) >div > h4{
-                   // background-color: aqua;
-                    padding-right: 2.5rem;  //40px
-                }
-            
-                &--img{
-            
-                    &--h4{
-                        grid-column-end: 5;
-                        padding-right: 1.25rem;  //20px
-
-    
-                        &--p{
-                            grid-column-end: 5;
-     
-    
-                        }
-                    }
-                }
-                
-            }
-            
-        }
-        &__img{
-            width: 19rem; // 304px;
-            height: 28.875rem; // 462px;
-        }
-    }
-    //howWork
-
-    .worksHead-container{
-    
-        grid-template-rows: 20% 20% 20% ;
-        padding-top: 0;
-
-        &__text{
-
-            &--bold{
-                margin-right: 5rem;  //80px;
-            }
-                &--p{
-                    margin-right: 5rem;  //80px;
-                }
-            
-        }
-    
-        &__img{
-            grid-row-start:2 ;
-
-            &--mobile{
-            &>img{
+            &__img {
                 width: 19.5rem; // 312px;
-                height: 15.75rem; // 252px;
+                height: 15.72rem; // 252px;
+                //  background-color: aqua;
             }
+
         }
-           
+
+        //
+
+        .info-container {
+            margin-right: 5rem; //80px;
         }
-}
-    
-    .howWork-grid-container{
-   
-        &__img{
-            width:5.625rem;  //90px
-            height: 5.625rem;  //90px
-    
-            &--h4{
-                margin-right: 1.875rem;  //30px
-                font-size: $global-S-font-size;
-    
-                &--p{
-                  margin-right: 1.875rem;  //30px
-                  font-size: $global-S-font-size;
-    
+
+        //form
+        .form-container {
+
+            &__text {
+                margin-right: 5rem; //80px;
+
+                &--p {
+                    margin-right: 5rem; //80px;
+
+                    &--inputs {
+                        margin-right: 5rem; //80px;
+
+                        &--input {
+                            width: 8.125rem; // 130px;
+                        }
+
+                        &--select {
+                            width: 12.1875rem; // 195px;
+                        }
+
+                        &--button {
+                            width: 10.625rem; // 170px;
+                        }
+
+                    }
                 }
             }
         }
-    }
-    
- 
-    .howWork-grid-container>li{
-        margin: 0 10% 5% 10%;
-    
-    }
+
+        //offer
+
+        .offer-bold-text,
+        .offer-text {
+            margin-right: 5rem; //80px;
+
+        }
+
+        .offer-grid-container {
+
+            &__ol {
+
+                &--li {
+                    &:nth-child(3)>div>h4 {
+                        // background-color: aqua;
+                        padding-right: 2.5rem; //40px
+                    }
+
+                    &--img {
+
+                        &--h4 {
+                            grid-column-end: 5;
+                            padding-right: 1.25rem; //20px
 
 
-    //whyUs
-    .whyUs-container{
-        &__text{
+                            &--p {
+                                grid-column-end: 5;
 
-            &--bold{
-                margin-right: 5rem;  //80px;
 
-                &--p{
-                    margin-right: 5rem;  //80px;
+                            }
+                        }
+                    }
+
                 }
-            }   
+
+            }
+
+            &__img {
+                width: 19rem; // 304px;
+                height: 28.875rem; // 462px;
+            }
         }
-    
-        &__img{
-            grid-column-start:4;
-            grid-row-start:2 ;
-            height: 14rem;//224.34px;
-            width:18.75rem; //300.95px;
-            margin-right:  6.25rem;//100PX;
-    
-    
-    
+
+        //howWork
+
+        .worksHead-container {
+
+            grid-template-rows: 20% 20% 20%;
+            padding-top: 0;
+
+            &__text {
+
+                &--bold {
+                    margin-right: 5rem; //80px;
+                }
+
+                &--p {
+                    margin-right: 5rem; //80px;
+                }
+
+            }
+
+            &__img {
+                grid-row-start: 2;
+
+                &--mobile {
+                    &>img {
+                        width: 19.5rem; // 312px;
+                        height: 15.75rem; // 252px;
+                    }
+                }
+
+            }
         }
-    
+
+        .howWork-grid-container {
+
+            &__img {
+                width: 5.625rem; //90px
+                height: 5.625rem; //90px
+
+                &--h4 {
+                    margin-right: 1.875rem; //30px
+                    font-size: $global-S-font-size;
+
+                    &--p {
+                        margin-right: 1.875rem; //30px
+                        font-size: $global-S-font-size;
+
+                    }
+                }
+            }
+        }
+
+
+        .howWork-grid-container>li {
+            margin: 0 10% 5% 10%;
+
+        }
+
+
+        //whyUs
+        .whyUs-container {
+            &__text {
+
+                &--bold {
+                    margin-right: 5rem; //80px;
+
+                    &--p {
+                        margin-right: 5rem; //80px;
+                    }
+                }
+            }
+
+            &__img {
+                grid-column-start: 4;
+                grid-row-start: 2;
+                height: 14rem; //224.34px;
+                width: 18.75rem; //300.95px;
+                margin-right: 6.25rem; //100PX;
+
+
+
+            }
+
+        }
+
     }
-    
-}
 }
 
 

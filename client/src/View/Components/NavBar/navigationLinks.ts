@@ -1,7 +1,10 @@
 import { Navigation } from "./navigationTypes";
 
 export const navigationLinks: Array<Navigation> = [
-    { link: "our-team", title: "צוות שלנו" },
-    { link: "projects", title: "תיק עבודות" },
-    { link: "about", title: "אודות" }
+    { link: "about", title: "מי אנחנו" },
+    { link: "pojects", title: "פרויקטים" },
+    { link: "feedbacks", title: "פידבקים" },
+    { link: "/blog", title: "בלוג" },
+    { link: "faq", title: "שאלות" },
+    { link: "contact", title: "צור קשר" },
 ]

@@ -1,19 +1,49 @@
 @import "./vars/_index";
 @import "./mixin/index";
 
-html,
 body {
     margin: 0;
-    padding: 0;
 }
 
-@import "./body/body";
-@import "./components/navBar/_navBar";
-@import "./components/header/_header";
-@import "./components/ContactInfo/ContactInfo";
-@import "./components/form/from";
-@import "./components/offer/offer";
-@import "./components/howWorks/howWorks";
-@import "./components/whyUs/whyUs";
-@import './components/callUs/callUs';
-@import './components/footer/footer'
+nav {
+    background-color: aqua;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0% 5%;
+    position: sticky;
+    top: 0;
+
+    .navigation {
+        background-color: beige;
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+// html {
+//     background-color: aquamarine;
+//     max-width: 1440px;
+//     margin: 0 auto;
+// }
+
+// html,
+// body {
+//     margin: 0;
+//     padding: 0;
+// }
+
+// @import "./body/body";
+// @import "./components/navBar/_navBar";
+// @import "./components/header/_header";
+// @import "./components/ContactInfo/ContactInfo";
+// @import "./components/form/from";
+// @import "./components/offer/offer";
+// @import "./components/howWorks/howWorks";
+// @import "./components/whyUs/whyUs";
+// @import './components/callUs/callUs';
+// @import './components/footer/footer'

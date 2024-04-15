@@ -4,10 +4,8 @@ import {
     createBrowserRouter,
     createRoutesFromElements,
 } from "react-router-dom";
-/* PAGES & COMPONENTS */
 import Layout from "../View/Components/Layout/Layout";
-import App from "../App";
-// import Project from "../View/Project";
+import HomePage from "../View/Pages/HomePage";
 
 const RouterPage = () => {
     const router = createBrowserRouter(
@@ -18,7 +16,7 @@ const RouterPage = () => {
             >
                 <Route
                     index
-                    element={<App />}
+                    element={<HomePage />}
                 />
                 {/* <Route path="projects" element={<Project />} /> */}
             </Route>

@@ -7,9 +7,9 @@ const Layout: FC = () => {
   return (
     <>
       <NavBar />
-      <main>
-        <Outlet />
-      </main>
+      {/* <main> */}
+      <Outlet />
+      {/* </main> */}
       <Footer />
     </>
   )

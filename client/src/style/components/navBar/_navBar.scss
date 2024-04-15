@@ -1,20 +1,20 @@
 @import "../../vars/index";
 
 nav {
-    background-color: $navar-background-color;
-   // position: fixed;
+  // background-color: $navar-background-color;
+  background-color: grey;
+  width: 100vw;
+  // position: fixed;
   //  top: 0;
-   // right: 0;
-    width: 100%;
-    height: 5rem; // 80px;
-  }
+  // right: 0;
+  // width: 100vw;
 
-  
-    .logo__nav-img{
-      width:12.8rem; // 206px;  
-      height: 5.6rem; // 91px;
-      margin-right: 5rem; // 80px;
-    }
+  // height: 5rem; // 80px;
+}
 
 
-
+.logo__nav-img {
+  // width:12.8rem; // 206px;  
+  // height: 5.6rem; // 91px;
+  // margin-right: 5rem; // 80px;
+}
