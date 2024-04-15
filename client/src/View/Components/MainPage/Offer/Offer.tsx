@@ -4,36 +4,39 @@ import { OfferList } from "./OfferList";
 
 const Offer: FC = () => {
     return (
-        <div className="offer-container"> 
-            <h1 className="offer-bold-text">מה אנחנו מציעים?</h1>
+        <section className="offer-container">
+            <h2 className="offer-bold-text">מה אנחנו מציעים?</h2>
             <p className="offer-text">
-                אנחנו מכירים את הדרך שתוביל לתוצאות מדויקות
+                אנחנו מציעים ייעוץ מקצועי וליווי בכל התהליך.
+                <br />
+                אנו מבינים את הצרכים והאתגרים הנפוצים <br />מציעים פתרונות מותאמים אישית שיכולים להבטיח לך <br />תוצאות מרשימות והצלחה בפרויקטים שלך.
+                {/* אנחנו מכירים את הדרך שתוביל לתוצאות מדויקות */}
             </p>
             <div className="offer-container-mobile">
-            <div className="offer-grid-container">
-                <ol className="offer-grid-container__ol">
-                    {OfferList.map((ofr, ind) => (
-                        <li key={ind} className="offer-grid-container__ol--li">
-                            <img
-                                className="offer-grid-container__ol--li--img"
-                                src={ofr.img}
-                                alt="עיצוב"
-                            />
-                            <div className="text-mobile-container">
-                            <h4 className="offer-grid-container__ol--li--img--h4" >{ofr.head}</h4>
-                            <p className="offer-grid-container__ol--li--img--h4--p">{ofr.text}</p>
-                            </div>
-                        </li>
-                    ))}
-                </ol>
-                <img
-                    className="offer-grid-container__img"
-                    src={OfferImg}
-                    alt="בן אדם יושב"
-                />
+                <div className="offer-grid-container">
+                    <ol className="offer-grid-container__ol">
+                        {OfferList.map((ofr, ind) => (
+                            <li key={ind} className="offer-grid-container__ol--li">
+                                <img
+                                    className="offer-grid-container__ol--li--img"
+                                    src={ofr.img}
+                                    alt="עיצוב"
+                                />
+                                <div className="text-mobile-container">
+                                    <h4 className="offer-grid-container__ol--li--img--h4" >{ofr.head}</h4>
+                                    <p className="offer-grid-container__ol--li--img--h4--p">{ofr.text}</p>
+                                </div>
+                            </li>
+                        ))}
+                    </ol>
+                    <img
+                        className="offer-grid-container__img"
+                        src={OfferImg}
+                        alt="בן אדם יושב"
+                    />
+                </div>
             </div>
-            </div>
-        </div>
+        </section>
     );
 };
 

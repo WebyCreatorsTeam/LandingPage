@@ -10,12 +10,14 @@ function App() {
   return (
     <>
       <Header />
-      <ContactInfo />
-      <UserForm />
-      <Offer />
-      <HowWorks />
-      <WhyUs />
-      <UserForm />
+      <main>
+        <ContactInfo />
+        <UserForm />
+        <WhyUs /> {/* chenged to about us */}
+        <Offer />
+        <HowWorks />
+        <UserForm />
+      </main>
     </>
   );
 }

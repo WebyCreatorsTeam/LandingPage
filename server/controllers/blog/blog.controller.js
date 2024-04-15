@@ -1,5 +1,5 @@
 const { Post } = require("../../model/blog.model");
-const { httpCodes } = require("../../utils/httpCodes/index");
+const { httpCodes } = require("../../utils/httpStatusCode")
 
 exports.getBlog = async (req, res) => {
     try {
