@@ -12,9 +12,9 @@ function App() {
       <Header />
       <ContactInfo />
       <UserForm />
+      <WhyUs />
       <Offer />
       <HowWorks />
-      <WhyUs />
       <UserForm />
     </>
   );
