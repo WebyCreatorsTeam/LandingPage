@@ -1,0 +1,41 @@
+.how-work {
+    background-color: $sectionEggColor;
+
+    &__info {
+        background-image: url("./how-work/Vector.svg"), url("./how-work/Vector-1.svg");
+        background-repeat: no-repeat, no-repeat;
+        // background-position: 7vw 133px, 18vw 73px;
+        background-position: 126px 133px, 331px 73px;
+        max-width: 1440px;
+        margin: 0 auto;
+        box-sizing: content-box;
+        padding: 100px 0;
+
+        &--more {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5%;
+            row-gap: 10%;
+            box-sizing: border-box;
+            margin: 8% 0%;
+            padding: 0;
+
+            &__list {
+                display: grid;
+                grid-template-columns: 0.8fr 2fr;
+
+                img {
+                    grid-area: 1 / 1 / 3 / 2;
+                    width: 60%;
+                    height: 100%;
+                }
+
+                li {
+                    list-style: decimal inside none;
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

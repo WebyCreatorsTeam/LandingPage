@@ -13,12 +13,12 @@ const HomePage = () => {
         <>
             <Header />
             <main>
-                <About />
-                <Offer />
+                {/* <About /> */}
+                {/* <Offer /> */}
                 <HowWork />
                 <Projects />
-                <Feedbacks />
-                <FAQ />
+                {/* <Feedbacks /> */}
+                {/* <FAQ /> */}
                 <UserForm />
             </main>
         </>

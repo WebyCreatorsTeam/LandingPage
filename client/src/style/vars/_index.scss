@@ -1,45 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&family=Suez+One&display=swap');
 
-$white-color: #FFFFFF;
-$black-color:#000000;
-$green-bold-color: #8902FF;
-$gray-color:#878080;
-//$green-regular-color:background: #8902FF;
+// .suez-one-regular {
+//     font-family: "Suez One", serif;
+//     font-weight: 400;
+//     font-style: normal;
+// }
 
-
-$body-background-color:#FAFAFA;
-
-
-$text-color: $black-color;
-$bold-text-color:$green-bold-color;
-
-$navar-background-color: $white-color; 
-$navar-background-color-mobile:#D9D9D9;
-
-$info-background-color: $green-bold-color;
-$info-text-color: $white-color;
-
-$form-background-color:#E2D2F7;
-$form-input-background-color: $white-color;
-$form-button-background-color: $green-bold-color;
-$form-button-background-hover-color:#6b0ac0;
-
-$offer-li-border: $green-bold-color;
+$headerFontsSize: "Suez One", serif;
+$textFontSize: "Saira", sans-serif;
+$sectionEggColor: #F5F5F5;
+// $white-color: #FFFFFF;
+// $black-color:#000000;
+// $green-bold-color: #8902FF;
+// $gray-color:#878080;
+// //$green-regular-color:background: #8902FF;
 
 
+// $body-background-color:#FAFAFA;
+
+
+// $text-color: $black-color;
+// $bold-text-color:$green-bold-color;
+
+// $navar-background-color: $white-color; 
+// $navar-background-color-mobile:#D9D9D9;
+
+// $info-background-color: $green-bold-color;
+// $info-text-color: $white-color;
+
+// $form-background-color:#E2D2F7;
+// $form-input-background-color: $white-color;
+// $form-button-background-color: $green-bold-color;
+// $form-button-background-hover-color:#6b0ac0;
+
+// $offer-li-border: $green-bold-color;
 
 
 
-$global-XL-font-size: 3rem; //48px; 
 
-$global-L-font-size: 2.5rem; // 40px; 
 
-$global-M-font-size: 1.5rem; // 24px; 
+// $global-XL-font-size: 3rem; //48px; 
 
-$global-S-font-size: 1.125rem; // 18px;
+// $global-L-font-size: 2.5rem; // 40px; 
 
-$global-XS-font-size: 0.875rem; // 14px; 
+// $global-M-font-size: 1.5rem; // 24px; 
 
-$global-mobile-L-font-size: 1rem; //16px
+// $global-S-font-size: 1.125rem; // 18px;
 
-$global-mobile-S-font-size: 0.625rem; //10px
+// $global-XS-font-size: 0.875rem; // 14px; 
+
+// $global-mobile-L-font-size: 1rem; //16px
+
+// $global-mobile-S-font-size: 0.625rem; //10px

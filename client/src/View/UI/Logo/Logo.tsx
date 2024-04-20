@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Weby from "../../../images/logo.png";
+import Weby from '../../../images/logo2_without_bkgr.svg'
 
 const Logo: FC = () => {
     return (

@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Layout from "../View/Components/Layout/Layout";
 import HomePage from "../View/Pages/HomePage";
+import { projectLoader } from "../View/Components/Components/Projects";
 
 const RouterPage = () => {
     const router = createBrowserRouter(
@@ -17,6 +18,7 @@ const RouterPage = () => {
                 <Route
                     index
                     element={<HomePage />}
+                    loader={projectLoader}
                 />
                 {/* <Route path="projects" element={<Project />} /> */}
             </Route>
