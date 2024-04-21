@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { FC, Suspense } from 'react'
-import { Await, defer, useLoaderData } from 'react-router-dom';
+import { Await, useLoaderData } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import { API_ENDPOINT } from '../../../utils/api-connect';
 
@@ -43,17 +43,8 @@ const Projects: FC = () => {
 
 export default Projects
 
-const hendleGetProjects = async () => {
+export const hendleGetProjects = async () => {
     const { data: { continueWork, projects } } = await axios.get(`${API_ENDPOINT}/projects/get-projects`)
-    // const { continueWork, projects } = data
-    // return data
-    // const { data: { continue, projects } } = await axios.get(`${API_ENDPOINT}/projects/get-projects`)
     if (continueWork) return projects
-    // if(!continueWork) return [{}]
 }
 
-export const projectLoader = async () => {
-    return defer({
-        projects: await hendleGetProjects()
-    })
-}

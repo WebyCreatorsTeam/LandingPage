@@ -8,6 +8,7 @@ import ArrowIcon from "../../../images/arrow-icon.png"
 import { validateValues } from "./fornValidation";
 import { API_ENDPOINT } from "../../../utils/api-connect";
 import { Element } from 'react-scroll';
+import Women from "../../../images/callus/women.png";
 
 
 const UserForm: FC = () => {
@@ -66,9 +67,16 @@ const UserForm: FC = () => {
     */
     return (
         <Element name="contact">
-            <section>
-                <h2>מוכנים לקדם את העסק שלכם?</h2>
-                <p>Form section</p>
+            <section className="contact-form">
+                <div className="contact-form__element">
+                    <div>
+                        <h2>מוכנים לקדם את העסק שלכם?</h2>
+                        <p>Form section</p>
+                    </div>
+                    <div>
+                        <img src={Women} alt="אישה עם טלפון" />
+                    </div>
+                </div>
             </section>
         </Element>
         // <Form className="form-container" onSubmit={sendUserDetails}>

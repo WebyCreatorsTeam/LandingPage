@@ -1,3 +1,5 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 @import "./vars/_index";
 // @import "./mixin/index";
 
@@ -31,66 +33,27 @@ button {
     cursor: pointer;
 }
 
-.projects {
-    // background-image: url("./proj-back.png");
-    background-color: #8422A2;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    box-sizing: border-box;
-    padding: 5% 0;
+.contact-form {
+    background-color: #F5F5F5;
 
-    &__main {
-        max-width: 1440px;
+    &__element {
+        width: 1440px;
         margin: 0 auto;
+        display: flex;
+        flex-direction: row;
 
-        h2 {
-            color: rgb(250, 250, 250);
-        }
-
-        &--projects {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3%;
-            align-items: center;
-            justify-items: center;
-        }
-
-        &--project {
-            max-width: 688px;
-            height: 100%;
-            background-color: white;
-            border-radius: 8px;
-
-            h3 {
-                font-size: 2.1rem;
-            }
-
-            img {
-                border-top-left-radius: 8px;
-                border-top-right-radius: 8px;
-                width: 100%
-            }
-
-            &__text {
-                box-sizing: border-box;
-                padding: 0% 5%;
-                margin-bottom: 5%;
-
-                a {
-                    color: #B865FF;
-                    font-size: 1.5rem;
-                    font-family: $headerFontsSize;
-                }
-            }
-
+        div {
+            width: 50%;
         }
     }
 }
 
+
 @import "./components/new-components/navbar";
 @import "./components/new-components/header";
 @import "./components/new-components/how-work";
+@import "./components/new-components/projects";
+@import "./components/new-components/feedbacks";
 
 // @import "./body/body";
 // @import "./components/navBar/_navBar";

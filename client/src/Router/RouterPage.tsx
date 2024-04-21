@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 import Layout from "../View/Components/Layout/Layout";
 import HomePage from "../View/Pages/HomePage";
-import { projectLoader } from "../View/Components/Components/Projects";
+import { projectLoader } from "../View/Components/Components/loader";
+// import { projectLoader } from "../View/Components/Components/Projects";
 
 const RouterPage = () => {
     const router = createBrowserRouter(
