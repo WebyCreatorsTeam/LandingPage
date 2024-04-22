@@ -33,20 +33,7 @@ button {
     cursor: pointer;
 }
 
-.contact-form {
-    background-color: #F5F5F5;
 
-    &__element {
-        width: 1440px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-
-        div {
-            width: 50%;
-        }
-    }
-}
 
 
 @import "./components/new-components/navbar";
@@ -54,14 +41,5 @@ button {
 @import "./components/new-components/how-work";
 @import "./components/new-components/projects";
 @import "./components/new-components/feedbacks";
-
-// @import "./body/body";
-// @import "./components/navBar/_navBar";
-// @import "./components/header/_header";
-// @import "./components/ContactInfo/ContactInfo";
-// @import "./components/form/from";
-// @import "./components/offer/offer";
-// @import "./components/howWorks/howWorks";
-// @import "./components/whyUs/whyUs";
-// @import './components/callUs/callUs';
-// @import './components/footer/footer'
+@import "./components/form/from";
+@import "./components/new-components/footer";

@@ -7,11 +7,11 @@ const Input: FC<InputPorps> = ({
     return (
         <div className="input-container">
             <input className="form-container__text--p--inputs--input"
-                style={{
-                    border: inputsError[name as keyof typeof inputsError] === 'none' ? "none"
-                        :
-                        inputsError[name as keyof typeof inputsError].length === 0 ? "none" : "1px solid red"
-                }}
+                // style={{
+                //     border: inputsError[name as keyof typeof inputsError] === 'none' ? "none"
+                //         :
+                //         inputsError[name as keyof typeof inputsError].length === 0 ? "none" : "1px solid red"
+                // }}
                 type={type}
                 name={name}
                 required

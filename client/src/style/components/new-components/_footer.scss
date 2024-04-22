@@ -1,0 +1,45 @@
+.footer-container {
+    margin: 1% 0%;
+
+    &>div {
+        width: 1440px;
+        margin: 0 auto;
+        display: grid;
+        // grid-template-columns: 0.6fr 1.2fr 1.5fr 1.5fr;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        // background-color: rgb(85, 112, 135);
+    }
+
+    .logo-img {
+        width: 50%;
+    }
+
+    &__social,
+    &__phone,
+    &__email,
+    &__phone--deal {
+        display: flex;
+    }
+
+    &__social {
+        box-sizing: border-box;
+        padding: 0% 20%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__phone,
+    &__email {
+        justify-content: flex-end;
+        align-items: center;
+
+        img {
+            margin-right: 4%;
+        }
+    }
+
+    &__phone--deal {
+        flex-direction: column
+    }
+}

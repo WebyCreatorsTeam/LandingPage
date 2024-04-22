@@ -6,14 +6,15 @@ import { API_ENDPOINT } from '../../../utils/api-connect';
 
 interface IProject {
     name: string
+    projectType: string
     description: string
     urlImage: string
     urlSite: string
     _id: string
 }
+
 const Projects: FC = () => {
     const { projects } = useLoaderData() as { projects: Array<IProject> }
-
     return (
         <Element name="pojects">
             <section className='projects'>
@@ -45,6 +46,7 @@ export default Projects
 
 export const hendleGetProjects = async () => {
     const { data: { continueWork, projects } } = await axios.get(`${API_ENDPOINT}/projects/get-projects`)
+    console.log(projects)
     if (continueWork) return projects
 }
 
