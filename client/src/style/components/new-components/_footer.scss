@@ -1,15 +1,32 @@
 .footer-container {
-    margin: 2% 0%;
+    @media screen and (min-width: 768px) {
+        margin: 2% 0%;
+    }
 
     &>div {
         @include windowWidth;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-items: center;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+        }
+
+        .logo-url {
+            display: flex;
+
+            @media screen and (min-width: 768px) {
+                display: block;
+            }
+        }
     }
 
     .logo-img {
-        width: 50%;
+        width: 200px;
+        height: 100%;
+        margin: 5% auto;
     }
 
     &__social,
@@ -17,6 +34,10 @@
     &__email,
     &__phone--deal {
         display: flex;
+        margin: 2% 0%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
     &__social {
@@ -24,19 +45,21 @@
         padding: 0% 20%;
         justify-content: space-evenly;
         align-items: center;
+
+        @media screen and (min-width: 768px) {
+            padding: 0% 10%;
+        }
     }
 
     &__phone,
     &__email {
-        justify-content: flex-end;
-        align-items: center;
-
         img {
             margin-right: 4%;
         }
     }
 
     &__phone--deal {
-        flex-direction: column
+        flex-direction: column;
+        width: 15ch;
     }
 }

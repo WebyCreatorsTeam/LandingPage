@@ -5,11 +5,13 @@ import Scroll from 'react-scroll';
 
 const Logo: FC = () => {
     return (
-        <Link to="/">
+        <Link to="/" className="logo-url">
             <img
                 className="logo-img"
                 src={Weby}
                 alt="Weby Logo"
+                width={283}
+                height={60}
             />
         </Link>
     );
