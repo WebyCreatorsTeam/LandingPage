@@ -3,9 +3,14 @@
 @import "./vars/_index";
 @import "./mixin/index";
 
+* {
+    transition: .2s;
+}
+
 body {
     margin: 0;
     font-family: $textFontSize;
+
 }
 
 a {

@@ -10,7 +10,7 @@ const Logo: FC = () => {
                 className="logo-img"
                 src={Weby}
                 alt="Weby Logo"
-                width={283}
+                width={230}
                 height={60}
             />
         </Link>

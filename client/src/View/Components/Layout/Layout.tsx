@@ -7,10 +7,10 @@ import UserForm from '../Form/Form'
 const Layout: FC = () => {
   return (
     <>
-      {/* <NavBar /> */}
+      <NavBar />
       <Outlet />
       {/* <UserForm /> */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
