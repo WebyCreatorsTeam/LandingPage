@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { FC, Suspense } from 'react'
-import { Await, useLoaderData } from 'react-router-dom';
+import { FC, Suspense, useEffect } from 'react'
+import { Await, useLoaderData, useLocation } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import { API_ENDPOINT } from '../../../utils/api-connect';
 
@@ -15,8 +15,18 @@ interface IProject {
 
 const Projects: FC = () => {
     const { projects } = useLoaderData() as { projects: Array<IProject> }
+    // const { state } = useLocation();
+    // const { targetId } = state || {};
+
+    // useEffect(() => {
+    //     const el = document.getElementById(targetId);
+    //     if (el) {
+    //         el.scrollIntoView({ block: "start" });
+    //     }
+    // }, [targetId]);
+
     return (
-        <Element name="pojects">
+        <Element name="pojects" id="pojects">
             <section className='projects'>
                 <div className='projects__main'>
                     <h2>פרויקטים</h2>

@@ -1,11 +1,12 @@
 import { FC } from 'react'
 import Logo from '../../../UI/Logo/Logo'
 import { navigationLinks } from './navigationLinks'
-import { Link } from 'react-router-dom'
-// import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { Link, useNavigate } from 'react-router-dom'
 import Scroll from 'react-scroll';
 
 const NavBar: FC = () => {
+  const navigate = useNavigate(); // From react-router v6
+
   return (
     <nav >
       <div className='navigation'>
@@ -21,13 +22,20 @@ const NavBar: FC = () => {
                 smooth={true}
                 offset={50}
                 duration={500}
+              // onClick={() => navigate("/", { state: { targetId: nav.link } })}
               >{nav.title}</Scroll.Link>
           ))}
           <Link to="/blog">בלוג</Link>
         </div>
         <div className='navigation__contact'>
           <Scroll.Link
-            to="contact">
+            to="contact"
+            smooth={true}
+            offset={50}
+            duration={500}
+          // containerId="containerElement"
+          // onClick={() => navigate("/", { state: { targetId: "contact" } })}
+          >
             דברו איתנו
           </Scroll.Link>
         </div>

@@ -1,25 +1,27 @@
-import React from 'react'
+import { FC } from 'react'
 import Header from '../Components/Components/Header/Header'
-// import About from '../Components/Components/About'
-// import Offer from '../Components/Components/Offer'
+import About from '../Components/Components/About'
+import Offer from '../Components/Components/Offer'
 import HowWork from '../Components/Components/HowWork'
-import UserForm from '../Components/Form/Form'
 import Projects from '../Components/Components/Projects'
 import Feedbacks from '../Components/Components/Feedbacks'
-// import FAQ from '../Components/Components/FAQ'
 
-const HomePage = () => {
+import FAQ from '../Components/Components/FAQ'
+import UserForm from '../Components/Form/Form'
+
+const HomePage: FC = () => {
     return (
         <>
             <Header />
             <main>
-                {/* <About /> */}
-                {/* <Offer /> */}
+                <About />
+                <Offer />
                 <HowWork />
                 <Projects />
                 <Feedbacks />
-                {/* <FAQ /> */}
+                <FAQ />
                 <UserForm />
+
             </main>
         </>
     )

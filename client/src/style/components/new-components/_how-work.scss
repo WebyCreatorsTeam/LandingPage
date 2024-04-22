@@ -6,8 +6,7 @@
         background-repeat: no-repeat, no-repeat;
         // background-position: 7vw 133px, 18vw 73px;
         background-position: 126px 133px, 331px 73px;
-        max-width: 1440px;
-        margin: 0 auto;
+        @include windowWidth;
         box-sizing: content-box;
         padding: 100px 0;
 

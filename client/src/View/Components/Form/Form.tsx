@@ -3,7 +3,7 @@ import axios from "axios";
 import { User } from "./types";
 import { inputs, options } from "./inputsList";
 import Input from "../../UI/Input/Input";
-import { Form } from "react-router-dom";
+import { Form, useLocation } from "react-router-dom";
 import ArrowIcon from "../../../images/arrow-icon.png"
 import { validateValues } from "./fornValidation";
 import { API_ENDPOINT } from "../../../utils/api-connect";
@@ -12,6 +12,18 @@ import Women from "../../../images/callus/women.png";
 
 
 const UserForm: FC = () => {
+    // const { state } = useLocation();
+    // console.log(state)
+    // const { targetId } = state || {};
+
+    // useEffect(() => {
+    //     const el = document.getElementById(targetId);
+    //     if (el) {
+    //         el.scrollIntoView({ block: "start" });
+    //     }
+    // }, [targetId]);
+
+
     const [message, setMessage] = useState<string>("");
     const [green, setGreen] = useState<boolean>();
     const [submitting, setSubmitting] = useState<boolean>(false);
@@ -68,8 +80,8 @@ const UserForm: FC = () => {
 
     */
     return (
-        <Element name="contact">
-            <section className="contact-form">
+        <section className="contact-form">
+            <Element name="contact" id="contact">
                 <div className="contact-form__element">
                     <div className="contact-form__element--form" >
                         <h2>מוכנים לקדם את העסק שלכם?</h2>
@@ -112,8 +124,8 @@ const UserForm: FC = () => {
                         <img src={Women} alt="אישה עם טלפון" width={672} height={704} />
                     </div>
                 </div>
-            </section >
-        </Element >
+            </Element >
+        </section >
         // <Form className="form-container" onSubmit={sendUserDetails}>
         //     <h1 className='form-container__text'>מוכנים לקדם את העסק שלכם?</h1>
         //     <p className="form-container__text--p">השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>

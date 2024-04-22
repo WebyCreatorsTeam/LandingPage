@@ -2,9 +2,11 @@ import { FC } from 'react'
 
 const Offer: FC = () => {
     return (
-        <section        >
-            <h3>מה אנחנו מציעים?</h3>
-            <p>אנחנו מכירים את הדרך שתוביל לתוצאות מדויקות</p>
+        <section className='offer'>
+            <div className='offer__info'>
+                <h2>מה אנחנו מציעים?</h2>
+                <p>אנחנו מכירים את הדרך שתוביל לתוצאות מדויקות</p>
+            </div>
         </section>
     )
 }

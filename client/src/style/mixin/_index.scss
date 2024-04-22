@@ -1,26 +1,30 @@
-@mixin respond-to($breakpoint) {
-    @if $breakpoint == mobile {
-        @media (max-width: 767px) {
-            @content;
-        }
-    }
-
-    @if $breakpoint == tablet {
-        @media (min-width: 767px) and (max-width: 1023px) {
-            @content;
-        }
-    }
-
-    @if $breakpoint == desktop {
-        @media (min-width: 1024px) and (max-width: 1400px) {
-            @content;
-        }
-    }
-
-    @if $breakpoint == LDesktop {
-        @media (min-width: 1400px) {
-            @content;
-        }
-    }
+@mixin windowWidth ($winwidth: 1440px, $winMarg: 0 auto) {
+    max-width: $winwidth;
+    margin: $winMarg;
 }
 
+// @mixin respond-to($breakpoint) {
+//     @if $breakpoint == mobile {
+//         @media (max-width: 767px) {
+//             @content;
+//         }
+//     }
+
+//     @if $breakpoint == tablet {
+//         @media (min-width: 767px) and (max-width: 1023px) {
+//             @content;
+//         }
+//     }
+
+//     @if $breakpoint == desktop {
+//         @media (min-width: 1024px) and (max-width: 1400px) {
+//             @content;
+//         }
+//     }
+
+//     @if $breakpoint == LDesktop {
+//         @media (min-width: 1400px) {
+//             @content;
+//         }
+//     }
+// }

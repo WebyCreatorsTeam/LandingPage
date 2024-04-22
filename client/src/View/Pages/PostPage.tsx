@@ -1,14 +1,32 @@
 import axios from 'axios'
-import React from 'react'
-import { defer, useLoaderData } from 'react-router-dom'
+import { Suspense } from 'react'
+import { Await, defer, useLoaderData, Link } from 'react-router-dom'
 import { API_ENDPOINT } from '../../utils/api-connect'
 import { IBlog } from './BlogPage'
 
+interface IPost extends IBlog {
+    createdAt: string
+    updatedAt: string
+}
+
 const PostPage = () => {
-    const { post } = useLoaderData() as { post: IBlog }
-    console.log(post)
+    const { post } = useLoaderData() as { post: IPost }
+
     return (
-        <div>PostPage</div>
+        <main className='pagePage'>
+            <Link to="/blog">חזרה לבלוג</Link>
+            <Suspense>
+                <Await resolve={post}>
+                    <article>
+                        <h1>{post.title}</h1>
+                        <p dangerouslySetInnerHTML={{ __html: post.content }}></p>
+                        <p>פורסם ב:{post.createdAt.slice(0, 10)}</p>
+                        {post.createdAt !== post.updatedAt &&
+                            <p>עודכן ב:{post.updatedAt.slice(0, 10)}</p>}
+                    </article>
+                </Await>
+            </Suspense>
+        </main>
     )
 }
 

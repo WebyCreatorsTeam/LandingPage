@@ -6,5 +6,5 @@ export const navigationLinks: Array<Navigation> = [
     // { link: "feedbacks", title: "פידבקים" },
     // { link: "/blog", title: "בלוג" },
     { link: "faq", title: "שאלות" },
-    { link: "contact", title: "צור קשר" },
+    // { link: "contact", title: "צור קשר" },
 ]

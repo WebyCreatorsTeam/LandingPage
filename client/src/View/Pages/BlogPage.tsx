@@ -11,9 +11,9 @@ export interface IBlog {
 
 const BlogPage = () => {
     const { blog } = useLoaderData() as { blog: Array<IBlog> }
-    console.log(blog)
+
     return (
-        <main>
+        <main className='blogPage'>
             <h1>בלוג</h1>
             <Suspense>
                 <Await resolve={blog}>

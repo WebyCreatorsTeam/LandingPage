@@ -1,5 +1,6 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import HeaderImage from '../../../../images/header/header-img/header-image.webp'
+import { useLocation } from 'react-router-dom';
 
 const Header: FC = () => {
     return (

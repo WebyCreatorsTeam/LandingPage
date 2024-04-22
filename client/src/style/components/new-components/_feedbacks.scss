@@ -1,6 +1,5 @@
 .feedbacks {
-    max-width: 1440px;
-    margin: 7% auto;
+    @include windowWidth($winMarg: 7% auto);
 
     &__main {
         &--feedback {
