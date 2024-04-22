@@ -6,8 +6,9 @@ import {
 } from "react-router-dom";
 import Layout from "../View/Components/Layout/Layout";
 import HomePage from "../View/Pages/HomePage";
-import { projectLoader } from "../View/Components/Components/loader";
-// import { projectLoader } from "../View/Components/Components/Projects";
+import { webyLoader } from "../View/Components/Components/loader";
+import BlogPage, { blogLoader } from "../View/Pages/BlogPage";
+import PostPage, { postLoader } from "../View/Pages/PostPage";
 
 const RouterPage = () => {
     const router = createBrowserRouter(
@@ -19,9 +20,16 @@ const RouterPage = () => {
                 <Route
                     index
                     element={<HomePage />}
-                    loader={projectLoader}
+                    loader={webyLoader}
                 />
-                {/* <Route path="projects" element={<Project />} /> */}
+                <Route path="blog"
+                    element={<BlogPage />}
+                    loader={blogLoader}
+                />
+
+                <Route path="blog/post/:id"
+                    element={<PostPage />}
+                    loader={postLoader} />
             </Route>
         )
     );

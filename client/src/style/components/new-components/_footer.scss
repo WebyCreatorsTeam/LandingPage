@@ -1,14 +1,12 @@
 .footer-container {
-    margin: 1% 0%;
+    margin: 2% 0%;
 
     &>div {
         width: 1440px;
         margin: 0 auto;
         display: grid;
-        // grid-template-columns: 0.6fr 1.2fr 1.5fr 1.5fr;
         grid-template-columns: repeat(4, 1fr);
         align-items: center;
-        // background-color: rgb(85, 112, 135);
     }
 
     .logo-img {

@@ -34,13 +34,13 @@ const Feedbacks: FC = () => {
                         <div className='feedbacks__main'>
                             <Slider {...settings}>
                                 {feedbacks.map(fdb => (
-                                    <div key={fdb._id} dir='rtl'>
+                                    <article key={fdb._id} dir='rtl'>
                                         <div className='feedbacks__main--feedback'>
                                             <h3>{fdb.customerName}, "{fdb.webSiteName}"</h3>
                                             <img src={Stars} alt="חמש כוכבים" />
                                             <p>"{fdb.customerFeedback}"</p>
                                         </div>
-                                    </div>
+                                    </article>
                                 ))}
                             </Slider>
                         </div>
@@ -54,6 +54,10 @@ const Feedbacks: FC = () => {
 export default Feedbacks
 
 export const hendleGetPFeedbacks = async () => {
-    const { data: { continueWork, feedbacks } } = await axios.get(`${API_ENDPOINT}/feedbacks/get-feedbacks`)
-    if (continueWork) return feedbacks
+    try {
+        const { data: { continueWork, feedbacks } } = await axios.get(`${API_ENDPOINT}/feedbacks/get-feedbacks`)
+        if (continueWork) return feedbacks
+    } catch (error) {
+        console.log(error)
+    }
 }

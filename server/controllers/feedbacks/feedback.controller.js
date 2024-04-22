@@ -3,7 +3,7 @@ const { httpCodes } = require("../../utils/httpStatusCode");
 
 exports.showAllFeedbacks = async (req, res) => {
     try {
-        const feedbacks = await Feedback.find({ "customerFeedback": { "$gt": 0 } })
+        const feedbacks = await Feedback.find({ "customerFeedback": { "$gt": 0 } }).select(['-projectId'])
         return res.status(httpCodes.OK).json({ continueWork: true, feedbacks })
     } catch (error) {
         console.log(`feedback cont error showAllFeedbacks`)

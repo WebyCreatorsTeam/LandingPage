@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import Logo from '../../UI/Logo/Logo'
+import Logo from '../../../UI/Logo/Logo'
 import { navigationLinks } from './navigationLinks'
 import { Link } from 'react-router-dom'
 // import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';

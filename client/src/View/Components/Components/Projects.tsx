@@ -24,14 +24,14 @@ const Projects: FC = () => {
                         <Await resolve={projects}>
                             <div className='projects__main--projects'>
                                 {projects.map(pro => (
-                                    <div key={pro._id} className='projects__main--project'>
+                                    <article key={pro._id} className='projects__main--project'>
                                         <img src={pro.urlImage} alt={pro.name} />
                                         <div className='projects__main--project__text'>
                                             <h3>{pro.name}</h3>
                                             <p>{pro.description}</p>
                                             <a href={pro.urlSite} target="_blank" rel="noreferrer">בקרו באתר</a>
                                         </div>
-                                    </div>
+                                    </article>
                                 ))}
                             </div>
                         </Await>
@@ -45,8 +45,11 @@ const Projects: FC = () => {
 export default Projects
 
 export const hendleGetProjects = async () => {
-    const { data: { continueWork, projects } } = await axios.get(`${API_ENDPOINT}/projects/get-projects`)
-    console.log(projects)
-    if (continueWork) return projects
+    try {
+        const { data: { continueWork, projects } } = await axios.get(`${API_ENDPOINT}/projects/get-projects`)
+        if (continueWork) return projects
+    } catch (error) {
+        alert(error)
+    }
 }
 
