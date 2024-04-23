@@ -4,14 +4,18 @@
     }
 
     &>div {
-        @include windowWidth;
+        @include windowWidth($winMarg: 0% 3%);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-items: center;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 1120px) {
             flex-direction: row;
+        }
+
+        @media screen and (min-width: 1440px) {
+            margin: 0 auto;
         }
 
         .logo-url {

@@ -10,7 +10,7 @@ const Layout: FC = () => {
       <NavBar />
       <Outlet />
       {/* <UserForm /> */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

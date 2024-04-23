@@ -6,25 +6,34 @@
     padding: 5% 0;
 
     &__main {
-        @include windowWidth;
+        @include windowWidth($winMarg: 0% 3%);
+
+        @media screen and (min-width: 768px) {
+            margin: 0 auto;
+        }
 
         h2 {
             color: rgb(250, 250, 250);
+            text-align: center;
         }
 
         &--projects {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3%;
-            align-items: center;
-            justify-items: center;
+            grid-template-columns: repeat(1, 1fr);
+
+            @media screen and (min-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         &--project {
             max-width: 688px;
-            height: 100%;
             position: relative;
-            text-align: center;
+            margin: 5% 0%;
+
+            @media screen and (min-width: 768px) {
+                margin: 2% 3%;
+            }
 
             &:hover .projects__main--project__text {
                 display: flex;
@@ -35,12 +44,12 @@
 
 
             h3 {
-                margin: 0;
                 color: #7D1F99;
-            }
+                font-size: 1.8rem;
 
-            h3 {
-                font-size: 2.1rem;
+                @media screen and (min-width: 768px) {
+                    font-size: 2.1rem;
+                }
             }
 
             &:hover img {
@@ -59,17 +68,43 @@
                 top: 0;
                 border-radius: 8px;
                 background-color: rgba(255, 255, 255, 0.85);
-                background-size: cover;
+                text-align: center;
                 width: 100%;
                 height: 100%;
                 box-sizing: border-box;
-                padding: 0% 10%;
                 display: none;
 
+                @media screen and (min-width: 768px) {
+                    padding: 0% 10%;
+                }
+
+                h3 {
+                    margin: 0%;
+                }
+
+                p {
+                    font-size: 18px;
+                    margin: 0;
+
+                    @media screen and (min-width: 1000px) {
+                        margin: 2% 0%;
+                        font-size: 1.3rem;
+                    }
+                }
+
                 a {
+                    border: 1px solid #B865FF;
+                    border-radius: 8px;
+                    padding: 1% 2%;
+                    margin: 1%;
                     color: #B865FF;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     font-family: $headerFontsSize;
+
+                    @media screen and (min-width: 1000px) {
+                        padding: 0% 10%;
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }

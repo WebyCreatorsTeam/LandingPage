@@ -1,173 +1,83 @@
 .header {
     @include windowWidth;
-    height: 670px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
-    &__text,
-    &__image {
-        width: 50%;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        height: 670px;
     }
 
     &__text {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 5fr 5fr 3fr;
+        width: 90%;
+        margin: 0 auto;
+
+        @media screen and (min-width: 768px) {
+            margin: 0% 3%;
+            width: 40%;
+
+        }
+
+        @media screen and (min-width: 1300px) {
+            width: 50%;
+        }
+
+        @media screen and (min-width: 1440px) {
+            margin: 0% auto;
+        }
 
         p {
             font-family: $headerFontsSize;
-            display: flex;
-            align-items: flex-end;
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #7D7D7D;
+
+            @media screen and (min-width: 1300px) {
+                margin: 15% 0%;
+                font-size: 3rem;
+            }
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-family: $headerFontsSize;
             font-weight: 200;
+
+            @media screen and (min-width: 1300px) {
+                font-size: 3.5rem;
+            }
         }
 
         button {
+            margin: 22% 0%;
             background: linear-gradient(90deg, #CB33F9 0%, #520199 100%);
-            max-width: 325px;
-            max-height: 53px;
+            width: 325px;
+            height: 53px;
             font-size: 24px;
             color: white;
             border-radius: 8px;
             border: none;
+
+            @media screen and (min-width: 1300px) {
+                margin: 5% 0%;
+            }
         }
     }
 
     &__image {
-        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            width: 60%;
+        }
+
+        @media screen and (min-width: 1300px) {
+            width: 50%;
+        }
 
         img {
             width: 100%;
         }
     }
 }
-
-/*
-.header {
-    display: flex;
-    flex-direction: column;
-    // background-color: aqua;
-    @include windowWidth;
-
-    &__text {
-
-        margin: 5% 5%;
-
-        p {
-            font-family: $headerFontsSize;
-            display: flex;
-            align-items: flex-end;
-            font-size: 3rem;
-            color: #7D7D7D;
-            margin: 0;
-
-            // @media screen and (max-width: 360px) {
-            //     font-size: 3rem;
-            //     // grid-template-rows: 1fr 1fr 1fr;
-            // }
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-family: $headerFontsSize;
-            font-weight: 200;
-        }
-
-        button {
-            background: linear-gradient(90deg, #CB33F9 0%, #520199 100%);
-            min-width: 250px;
-            max-width: 325px;
-            max-height: 53px;
-            font-size: 24px;
-            color: white;
-            border-radius: 8px;
-            border: none;
-            // margin: 0 auto;
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        height: 670px;
-        flex-direction: row;
-        // height: 100vh;
-
-
-        &__text,
-        &__image {
-            width: 50%;
-        }
-
-
-    }
-
-
-    img {
-        width: 100%;
-    }
-
-}
-
-
-
-//     &__text,
-//     &__image {
-//         width: 50%;
-
-//         @media screen and (max-width: 360px) {
-//             width: 100%;
-//         }
-//     }
-
-//     &__text {
-//         display: grid;
-//         grid-template-columns: 1fr;
-//         grid-template-rows: 5fr 5fr 3fr;
-
-
-//         @media screen and (max-width: 360px) {
-//             grid-template-rows: 1fr 1fr 1fr;
-//         }
-
-//         p {
-//             font-family: $headerFontsSize;
-//             display: flex;
-//             align-items: flex-end;
-//             font-size: 3rem;
-//             color: #7D7D7D;
-
-//             @media screen and (max-width: 360px) {
-//                 font-size: 3rem;
-//                 // grid-template-rows: 1fr 1fr 1fr;
-//             }
-//         }
-
-//         h1 {
-//             font-size: 3.5rem;
-//             font-family: $headerFontsSize;
-//             font-weight: 200;
-//         }
-
-//         button {
-//             background: linear-gradient(90deg, #CB33F9 0%, #520199 100%);
-//             max-width: 325px;
-//             max-height: 53px;
-//             font-size: 24px;
-//             color: white;
-//             border-radius: 8px;
-//             border: none;
-//         }
-//     }
-
-//     &__image {
-//         // position: relative;
-
-//         
-//     }
-// }
-*/

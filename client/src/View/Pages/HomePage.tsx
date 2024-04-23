@@ -12,12 +12,13 @@ import UserForm from '../Components/Form/Form'
 const HomePage: FC = () => {
     return (
         <>
-            {/* <Header /> */}
+            <Header />
             <main>
-                {/* <About />
+                <About />
                 <Offer />
                 <HowWork />
                 <Projects />
+                {/* 
                 <Feedbacks />
                 <FAQ />
                 <UserForm /> */}
