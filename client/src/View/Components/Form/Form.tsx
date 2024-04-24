@@ -96,7 +96,7 @@ const UserForm: FC = () => {
                                     inputsError={inputsError}
                                 />
                             ))}
-                            {/* <div className="select-container">
+                            <div className="select-container">
                                 <select
                                     className="form-container__text--p--inputs--select"
                                     name="userHelp"
@@ -113,11 +113,11 @@ const UserForm: FC = () => {
                                         </option>
                                     ))}
 
-                                </select> */}
-                            {/* <div className="icon-container">
+                                </select>
+                                <div className="icon-container">
                                     <img src={ArrowIcon} alt="arrow"></img>
-                                </div> */}
-                            {/* </div> */}
+                                </div>
+                            </div>
                         </Form>
                     </div>
                     <div>
@@ -126,56 +126,6 @@ const UserForm: FC = () => {
                 </div>
             </Element >
         </section >
-        // <Form className="form-container" onSubmit={sendUserDetails}>
-        //     <h1 className='form-container__text'>מוכנים לקדם את העסק שלכם?</h1>
-        //     <p className="form-container__text--p">השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
-        //     <p className="message" style={{ color: green ? "green" : "red", textAlign: "center" }}>
-        //         {message.length > 0 ? message : null}
-        //     </p>
-        //     <div className="form-container__text--p--inputs">
-        //         {inputs.map((int, index) => (
-        //             <Input
-        //                 key={index}
-        //                 {...int}
-        //                 inputsValue={inputFields}
-        //                 checkFunction={handleChangeInput}
-        //                 inputsError={inputsError}
-        //             />
-        //         ))}
-        //         <div className="select-container">
-        //             <select
-        //                 className="form-container__text--p--inputs--select"
-        //                 name="userHelp"
-        //                 defaultValue={inputFields.userHelp}
-        //                 onChange={handleChangeInput}
-        //             >
-        //                 {options.map((opt, index) => (
-        //                     <option
-        //                         key={index}
-        //                         defaultValue={opt.value}
-        //                         disabled={opt.value === "" ? true : false}
-        //                     >
-        //                         {opt.text}
-        //                     </option>
-        //                 ))}
-
-        //             </select>
-        //             <div className="icon-container">
-        //                 <img src={ArrowIcon} alt="arrow"></img>
-        //             </div>
-        //         </div>
-        //         <button
-        //             type="submit"
-        //             disabled={!submitting}
-        //             className={submitting ? "form-container__text--p--inputs--button--bold" : "form-container__text--p--inputs--button"}>
-        //             {/* {loading? 
-        //                 "אנחנו שולחים את המידע"
-        //                  : 
-        //                  "שלח "} */}
-        //             שלח
-        //         </button>
-        //     </div>
-        // </Form>
     );
 };
 
