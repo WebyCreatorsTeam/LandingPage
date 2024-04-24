@@ -3,6 +3,12 @@ interface ValidReturn {
     message: string;
 }
 
+// function hedleAlphabetic(str: string) {
+//     // return str.split(" ").every(char => isNaN(char))
+//     // (let i in srt)
+//     // [...str].every(char => isNaN(char));
+// }
+
 export const validateValues = (inputKey: string, inputValue: string
     // inputData: any
 ): ValidReturn => {
@@ -13,9 +19,17 @@ export const validateValues = (inputKey: string, inputValue: string
 
     switch (inputKey) {
         case "userName":
-            if (inputValue.length === 0 || inputValue.length < 2) return {
-                continueWork: false, message: "השם קצר מדי, נא למלא את השם המלא"
+            if (inputValue.length === 0 
+                // || inputValue.length < 2
+            ) return {
+                continueWork: false, message: "נא למלא את השם המלא"
             };
+
+            // const textRegEx: RegExp = /[A-Za-z]/gi;
+            // const validText = RegExp(/^\p{L}/,'u').test(inputValue)
+            // const validText = hedleAlphabetic(inputValue)
+            
+            // console.log(validText)
 
             break;
         case "userEmail":
@@ -23,11 +37,11 @@ export const validateValues = (inputKey: string, inputValue: string
             const validEmail = emailRegex.test(inputValue);
 
             if (inputValue.length === 0) return {
-                continueWork: false, message: "האימייל לא יכול להיות ריק"
+                continueWork: false, message: "נא למלא אימייל"
             };
 
             if (!validEmail) return {
-                continueWork: false, message: "נא למלא איימיל תקני"
+                continueWork: false, message: "אימייל לא תקין"
             };
 
             break;
@@ -39,23 +53,22 @@ export const validateValues = (inputKey: string, inputValue: string
 
             if (inputValue.length === 0) return {
                 continueWork: false,
-                message: "מספר טלפון לא יכול להיות ריק",
+                message: "נא למלא מספר טלפון",
             };
 
             if (!validPhone) return {
                 continueWork: false,
-                message: "נא למלא מספר טלפון תקין",
+                message: "מספר טלפון לא תקין",
             };
 
             break;
-        case "userHelp":
-            if (inputValue.length === 0) return {
-                continueWork: false,
-                message: "מספר טלפון לא יכול להיות ריק",
-            };
+        // case "userHelp":
+        //     if (inputValue.length === 0) return {
+        //         continueWork: false,
+        //         message: "מספר טלפון לא יכול להיות ריק",
+        //     };
 
-
-            break;
+        //     break;
         default:
             return {
                 continueWork: false,

@@ -5,10 +5,8 @@ import Offer from '../Components/Components/Offer'
 import HowWork from '../Components/Components/HowWork'
 import Projects from '../Components/Components/Projects'
 import Feedbacks from '../Components/Components/Feedbacks'
-
 import FAQ from '../Components/Components/FAQ'
 import UserForm from '../Components/Components/UserForm'
-// import UserForm from '../Components/Form/Form'
 
 const HomePage: FC = () => {
     return (
@@ -21,7 +19,6 @@ const HomePage: FC = () => {
                 <Projects />
                 <Feedbacks />
                 <FAQ />
-                {/* <UserForm /> */}
                 <UserForm />
             </main>
         </>

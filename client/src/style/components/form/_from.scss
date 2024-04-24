@@ -15,8 +15,9 @@
     }
 
 
-    div {
+    &--form{
       width: 100%;
+      // background-color: rgb(41, 73, 73);
 
       @media screen and (min-width: 768px) {
         // @include windowWidth($winMarg: 0 auto);
@@ -32,16 +33,54 @@
 
     &--form {
       form {
-        width: 80%;
+        width: 100%;
         // background-color: aqua;
       }
 
-      input {
+      .inputField {
+        // background-color: aqua;
+        position: relative;
+
+        p {
+          position: absolute;
+          font-size: 16px;
+          top: -25%;
+          color: red;
+          // margin: 0% 2.5%;
+          margin-right: 2.5%;
+        }
+      }
+      input, select {
         // width: 40em;
+        width: 95%;
+        margin: 3% 2.5%;
+        padding: 5% 0%;
+        font-size: 1.2rem;
         border: none;
         border-bottom: 1px solid black;
         background: none;
 
+        &:focus {
+          background-color: none;
+          outline: none;
+        }
+
+        // select:invalid { color:grey; }
+        // select option:first-child{
+        //   color: green;
+        // }
+
+        select:invalid {
+          color: green;
+        }
+
+        // &::placeholder {
+        //   color: grey;
+        // }
+
+        // option {
+        //   color: black;
+        // }
       }
     }
   }

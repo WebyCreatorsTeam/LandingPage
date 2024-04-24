@@ -18,7 +18,7 @@ const Input: FC<I_Input> = ({ type, name, placeholder, setUserDetails }) => {
     }
 
     return (
-        <div>
+        <div className='inputField'>
             <p>{error}</p>
             <input
                 required

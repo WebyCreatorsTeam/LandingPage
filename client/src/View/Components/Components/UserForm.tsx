@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Form } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import Women from "../../../images/callus/women.png";
@@ -8,8 +8,15 @@ import axios from 'axios';
 import { API_ENDPOINT } from '../../../utils/api-connect';
 
 const UserForm = () => {
+    const [submitting, setSubmitting] = useState<boolean>(true);
     const [userDetails, setUserDetails] = useState({ userName: "", userEmail: "", userPhone: "", userHelp: "" })
-    console.log(userDetails)
+
+    useEffect(() => {
+        (() => {
+            return setSubmitting(Object.values(userDetails).every((a) => a.length > 0));
+        })()
+    }, [userDetails]);
+
     return (
         <Element name="contact">
             <section className="contact-form">
@@ -25,10 +32,10 @@ const UserForm = () => {
                                 setUserDetails((user: any) => { return { ...user, [ev.target.name]: ev.target.value } })
                             }>
                                 {options.map((opt, idx) => (
-                                    <option key={idx} value={opt.value}>{opt.text}</option>
+                                    <option key={idx} value={opt.value} selected={opt.value===""} disabled={opt.value===""}>{opt.text}</option>
                                 ))}
                             </select>
-                            <button>שלח</button>
+                            <button disabled={!submitting}>שלח</button>
                         </Form>
                     </div>
                     <div>
@@ -40,7 +47,7 @@ const UserForm = () => {
     )
 }
 
-export default UserForm
+export default UserForm;
 
 interface IUser {
     userName: string, userEmail: string, userPhone: string, userHelp: string
@@ -49,7 +56,6 @@ const hendleSendDetails = async ({ userName, userEmail, userPhone, userHelp }: I
     console.log(userName, userEmail, userPhone, userHelp)
     const { data } = await axios.post(`${API_ENDPOINT}/users/user-send-details`, { userName, userEmail, userPhone, userHelp })
     return data
-    // return "da"
 }
 
 export const formAction = async ({ request }: any) => {
