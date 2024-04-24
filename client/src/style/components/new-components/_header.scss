@@ -48,14 +48,15 @@
         }
 
         button {
-            margin: 22% 0%;
-            background: linear-gradient(90deg, #CB33F9 0%, #520199 100%);
-            width: 325px;
-            height: 53px;
-            font-size: 24px;
-            color: white;
-            border-radius: 8px;
-            border: none;
+            margin: 15% 0% 22% 0%;
+            // background: linear-gradient(90deg, #CB33F9 0%, #520199 100%);
+            // width: 325px;
+            // height: 53px;
+            // font-size: 24px;
+            // color: white;
+            // border-radius: 8px;
+            // border: none;
+            @include btn;
 
             @media screen and (min-width: 1300px) {
                 margin: 5% 0%;

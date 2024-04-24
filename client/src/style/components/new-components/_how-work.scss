@@ -2,7 +2,7 @@
     background-color: $sectionEggColor;
 
     &__info {
-        @include windowWidth($winMarg: 0% 3%);
+        @include windowWidth($winMarg: 0% 5%);
         background-image: url("./how-work/Vector.svg"), url("./how-work/Vector-1.svg");
         background-size: 30%, 20%;
         background-repeat: no-repeat, no-repeat;

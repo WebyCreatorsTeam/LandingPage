@@ -35,7 +35,7 @@ const UserForm = () => {
                                     <option key={idx} value={opt.value} selected={opt.value===""} disabled={opt.value===""}>{opt.text}</option>
                                 ))}
                             </select>
-                            <button disabled={!submitting}>שלח</button>
+                            <button disabled={!submitting} className={!submitting ? "form-btn_disable" : "form-btn_active"}>שלח</button>
                         </Form>
                     </div>
                     <div>

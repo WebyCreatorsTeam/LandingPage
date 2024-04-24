@@ -10,7 +10,7 @@
     flex-direction: column;
 
     @media screen and (min-width: 768px) {
-      // @include windowWidth($winMarg: 0 auto);
+      @include windowWidth($winMarg: 0 auto);
       flex-direction: row;
     }
 
@@ -52,13 +52,23 @@
       }
       input, select {
         // width: 40em;
+        box-sizing: border-box;
         width: 95%;
         margin: 3% 2.5%;
-        padding: 5% 0%;
+        padding: 5% 3%;
         font-size: 1.2rem;
         border: none;
         border-bottom: 1px solid black;
         background: none;
+        
+        @media screen and (min-width: 1000px) {
+          margin: 2% 2%;
+          padding: 3% 2.5%;
+        }
+        @media screen and (min-width: 1200px) {
+          margin: 2% 0%;
+          padding: 2.5% 2%;
+        }
 
         &:focus {
           background-color: none;
@@ -70,17 +80,37 @@
         //   color: green;
         // }
 
-        select:invalid {
-          color: green;
-        }
+        // select:invalid {
+        //   color: green;
+        // }
 
         // &::placeholder {
         //   color: grey;
         // }
 
-        // option {
-        //   color: black;
-        // }
+        option {
+          // color: grey;
+        }
+
+      }
+
+      button { 
+        margin: 10% 2%;
+      }
+      .form-btn_disable {
+        @include btn;
+        background: linear-gradient(90deg, #b6b6b6 0%, #505050 100%);
+        // background-color:aqua;
+      }
+      
+      .form-btn_active {
+        @include btn;
+        // background-color: grey;
+        // width: 325px;
+        // height: 53px;
+        // font-size: 24px;
+// font-size: 20px;
+// padding: 3% 10% ;
       }
     }
   }
