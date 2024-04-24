@@ -5,7 +5,7 @@ const { userValidation } = require("../../utils/validation/user.validation");
 
 exports.sendDetails = async (req, res) => {
     try {
-        const { inputFields: { userName, userEmail, userPhone, userHelp } } = req.body;
+        const { userName, userEmail, userPhone, userHelp } = req.body;
 
         const { error } = userValidation.validate({ userName, userEmail, userPhone, userHelp });
 

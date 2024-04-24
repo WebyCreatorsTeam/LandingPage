@@ -9,6 +9,7 @@ import HomePage from "../View/Pages/HomePage";
 import { webyLoader } from "../View/Components/Components/loader";
 import BlogPage, { blogLoader } from "../View/Pages/BlogPage";
 import PostPage, { postLoader } from "../View/Pages/PostPage";
+import { formAction } from "../View/Components/Components/UserForm";
 
 const RouterPage = () => {
     const router = createBrowserRouter(
@@ -16,6 +17,7 @@ const RouterPage = () => {
             <Route
                 path="/"
                 element={<Layout />}
+                action={formAction}
             >
                 <Route
                     index

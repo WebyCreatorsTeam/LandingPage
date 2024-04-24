@@ -3,9 +3,13 @@ interface ValidReturn {
     message: string;
 }
 
-export const validateValues = (inputData: any): ValidReturn => {
-    const inputValue = Object.values(inputData)[0] as string;
-    const inputKey = Object.keys(inputData)[0];
+export const validateValues = (inputKey: string, inputValue: string
+    // inputData: any
+): ValidReturn => {
+    // const inputValue = Object.values(inputData)[0] as string;
+    // console.log(value)
+    // console.log(name)
+    // const inputKey = Object.keys(inputData)[0];
 
     switch (inputKey) {
         case "userName":
@@ -49,6 +53,8 @@ export const validateValues = (inputData: any): ValidReturn => {
                 continueWork: false,
                 message: "מספר טלפון לא יכול להיות ריק",
             };
+
+
             break;
         default:
             return {
