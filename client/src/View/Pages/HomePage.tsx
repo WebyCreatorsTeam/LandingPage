@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import Header from '../Components/Components/Header/Header'
 import About from '../Components/Components/About'
-import Offer from '../Components/Components/Offer'
+import Offer from '../Components/Components/Offer/Offer'
 import HowWork from '../Components/Components/HowWork'
 import Projects from '../Components/Components/Projects'
 import Feedbacks from '../Components/Components/Feedbacks'
@@ -13,13 +13,19 @@ const HomePage: FC = () => {
         <>
             <Header />
             <main>
-                <About />
-                <Offer />
-                <HowWork />
+                <div className='top-elements-bkg'>
+                    <About />
+                    <Offer />
+                    <HowWork />
+                </div>
                 <Projects />
-                <Feedbacks />
+                <div className='bottom-elements-bkg'>
+                    <Feedbacks />
+                    <UserForm />
+                </div>
+                {/* 
                 <FAQ />
-                <UserForm />
+                */}
             </main>
         </>
     )

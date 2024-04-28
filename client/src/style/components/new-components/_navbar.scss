@@ -62,22 +62,26 @@ nav {
         @media screen and (min-width: 768px) {
             flex-direction: row;
             padding: 0% 0%;
-            width: 50%;
+            width: 60%;
             margin: 0% 5%;
         }
 
-        @media screen and (min-width: 1000px) {
-            flex-direction: row;
-            padding: 0% 0%;
-            width: 35%;
+        @media screen and (min-width: 1200px) {
+            width: 50%;
             margin: 0% 3%;
+        }
+
+        @media screen and (min-width: 1400px) {
+            width: 35%;
         }
     }
 
     &__contact {
         height: 30%;
+        width: 100%;
         display: flex;
         align-items: center;
+        justify-content: center;
 
         @media screen and (min-width: 768px) {
             width: 100%;
@@ -85,8 +89,11 @@ nav {
         }
 
         a {
-            color: #8902FF;
+            color: $purpleColor;
             font-weight: bold;
+            padding: 2% 5%;
+            border-radius: 8px;
+            border: 2px solid $purpleColor;
         }
     }
 

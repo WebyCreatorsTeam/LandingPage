@@ -9,8 +9,8 @@
 
 body {
     margin: 0;
+    padding: 0;
     font-family: $textFontSize;
-
 }
 
 a {
@@ -19,15 +19,10 @@ a {
     cursor: pointer;
 }
 
-h2,
-h3 {
-    font-family: $headerFontsSize;
-    font-weight: 400;
-}
-
 h2 {
-    font-size: 3rem;
-    color: #7D1F99;
+    font-size: 2.5rem;
+    color: $purpleColor;
+    text-align: center;
 }
 
 p {
@@ -38,28 +33,67 @@ button {
     cursor: pointer;
 }
 
-.about {
-    &__info {
+.elementWidth {
+    @include windowWidth($winwidth: 90%);
+
+    @media screen and (min-width: 768px) {
         @include windowWidth;
     }
 }
 
-.offer {
-    &__info {
-        @include windowWidth;
-    }
+.top-elements-bkg {
+    background-image: url("./components/new-components/bkg/bck\ top.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.blogPage {
-    @include windowWidth;
+.bottom-elements-bkg {
+    background-image: url("./components/new-components/bkg/bck\ down.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
-.pagePage {
-    @include windowWidth;
-}
+
+// .header {
+//     @include windowWidth;
+// }
+
+
+// .about__info,
+// .offer__info,
+// .how-work__info,
+// .projects__main,
+// .feedbacks,
+// .faq__info,
+// .contact-form__element {
+//     @include windowWidth($winwidth: 90%);
+// }
+
+// // .about {
+// //     &__info {
+// //         @include windowWidth;
+// //     }
+// // }
+
+// // .offer {
+// //     &__info {
+// //         @include windowWidth;
+// //     }
+// // }
+
+// // .blogPage {
+// //     @include windowWidth;
+// // }
+
+// // .pagePage {
+// //     @include windowWidth;
+// // }
 
 @import "./components/new-components/navbar";
 @import "./components/new-components/header";
+@import "./components/new-components/about";
+@import "./components/new-components/offer";
 @import "./components/new-components/how-work";
 @import "./components/new-components/projects";
 @import "./components/new-components/feedbacks";

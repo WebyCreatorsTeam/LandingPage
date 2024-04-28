@@ -15,10 +15,10 @@ const FAQ = () => {
 
     return (
         <Element name="faq" id="faq">
-            <section
-            // style={{ margin: "100vh  0" }}
-            >
-                <h2>שאלות נפוצות</h2>
+            <section className='faq'            >
+                <div className='faq__info'>
+                    <h2>שאלות נפוצות</h2>
+                </div>
             </section>
         </Element>
     )

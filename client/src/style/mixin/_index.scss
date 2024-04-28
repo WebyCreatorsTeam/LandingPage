@@ -1,14 +1,16 @@
 @mixin windowWidth ($winwidth: 1440px, $winMarg: 0 auto) {
+    // min-width: 250px;
     max-width: $winwidth;
     margin: $winMarg;
 }
 
-@mixin btn($bkgnd:  linear-gradient(90deg, #CB33F9 0%, #520199 100%)) {
+@mixin btn($bkgnd: linear-gradient(90deg, #CB33F9 0%, #520199 100%)) {
     background: $bkgnd;
     color: white;
     border-radius: 8px;
     border: none;
-    width: 325px;
+    width: 16vw;
+    min-width: 200px;
     height: 53px;
     font-size: 24px;
 }

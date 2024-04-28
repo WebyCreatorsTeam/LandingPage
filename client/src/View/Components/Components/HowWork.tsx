@@ -21,14 +21,17 @@ const howWorkList: Array<IHowWorkList> = [
 const HowWork: FC = () => {
     return (
         <section className='how-work'>
-            <div className='how-work__info'>
-                <h2>איך זה יעבוד?</h2>
-                <p>
+            <div className='elementWidth how-work__info'>
+                <h2>
+                    איך זה יעבוד?
+                </h2>
+                <h3>
                     נתחיל בבניית האתר בהתמקדות בדרישות והצרכים של בעל העסק, נספק לו תמיכה מקצועית וזמינה לאורך כל התהליך.
-                </p>
+                </h3>
+                {/* <div className='how-work__info--element'> */}
                 <ol className='how-work__info--more'>
                     {howWorkList.map((hwl, idx) => (
-                        <div className='how-work__info--more__list' key={idx}>
+                        <div className='how-work__info--more__item' key={idx}>
                             <img src={hwl.img} alt={hwl.alt} width={160} height={160} />
                             <li style={{ color: hwl.color }}>{hwl.title}</li>
                             <p>{hwl.text}</p>
@@ -36,6 +39,7 @@ const HowWork: FC = () => {
                     ))}
                 </ol>
             </div>
+            {/* </div> */}
         </section>
     )
 }

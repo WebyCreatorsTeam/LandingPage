@@ -28,7 +28,7 @@ const Projects: FC = () => {
     return (
         <Element name="pojects" id="pojects">
             <section className='projects'>
-                <div className='projects__main'>
+                <div className='elementWidth projects__main'>
                     <h2>פרויקטים</h2>
                     <Suspense>
                         <Await resolve={projects}>

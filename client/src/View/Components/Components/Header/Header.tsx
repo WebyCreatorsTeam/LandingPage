@@ -1,10 +1,9 @@
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import HeaderImage from '../../../../images/header/header-img/header-image.webp'
-import { useLocation } from 'react-router-dom';
 
 const Header: FC = () => {
     return (
-        <header id="header" className='header'>
+        <header id="header" className='elementWidth header'>
             <div className='header__text'>
                 <p>יש לכם עסק? מיזם? סטארטפ?</p>
                 <h1>

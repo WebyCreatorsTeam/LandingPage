@@ -6,10 +6,11 @@
     padding: 5% 0;
 
     &__main {
-        @include windowWidth($winMarg: 0% 3%);
+        // @include windowWidth($winMarg: 0% 3%);
+        // @include windowWidth($winMarg: 0% 3%);
 
         @media screen and (min-width: 768px) {
-            margin: 0 auto;
+            // margin: 0 auto;
         }
 
         h2 {

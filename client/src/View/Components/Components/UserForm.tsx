@@ -20,7 +20,7 @@ const UserForm = () => {
     return (
         <Element name="contact">
             <section className="contact-form">
-                <div className="contact-form__element">
+                <div className="elementWidth contact-form__element">
                     <div className="contact-form__element--form">
                         <h2>מוכנים לקדם את העסק שלכם?</h2>
                         <p>השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
@@ -32,7 +32,7 @@ const UserForm = () => {
                                 setUserDetails((user: any) => { return { ...user, [ev.target.name]: ev.target.value } })
                             }>
                                 {options.map((opt, idx) => (
-                                    <option key={idx} value={opt.value} selected={opt.value===""} disabled={opt.value===""}>{opt.text}</option>
+                                    <option key={idx} value={opt.value} selected={opt.value === ""} disabled={opt.value === ""}>{opt.text}</option>
                                 ))}
                             </select>
                             <button disabled={!submitting} className={!submitting ? "form-btn_disable" : "form-btn_active"}>שלח</button>

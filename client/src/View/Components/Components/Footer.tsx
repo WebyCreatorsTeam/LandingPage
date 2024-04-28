@@ -7,6 +7,7 @@ import Phone from "../../../images/footer/phone.svg"
 import Mail from "../../../images/footer/email.svg"
 import Linkedin from "../../../images/footer/linkedin.svg"
 import Facebook from "../../../images/footer/facebook.svg"
+import YouTube from "../../../images/footer/yt icon.svg"
 
 const Footer: FC = () => {
     return (
@@ -21,7 +22,7 @@ const Footer: FC = () => {
                         <img src={Linkedin} alt="לינקדאין" width={40} height={40} />
                     </a>
                     <a href="https://www.youtube.com/@Weby-Create-team" target="_blank" rel="noreferrer">
-                        <img src="" alt="יוטיוב" width={40} height={40} />
+                        <img src={YouTube} alt="יוטיוב" width={40} height={40} />
                     </a>
                 </div>
                 <div className="footer-container__phone">
