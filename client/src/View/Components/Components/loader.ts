@@ -1,5 +1,5 @@
 import { defer } from "react-router-dom"
-import { hendleGetProjects } from "./Projects"
+import { hendleGetProjects } from "./Projects/Projects"
 import { hendleGetPFeedbacks } from "./Feedbacks"
 
 export const webyLoader = async () => {

@@ -2,7 +2,8 @@ import axios from 'axios';
 import { FC, Suspense, useEffect } from 'react'
 import { Await, useLoaderData, useLocation } from 'react-router-dom';
 import { Element } from 'react-scroll';
-import { API_ENDPOINT } from '../../../utils/api-connect';
+import { API_ENDPOINT } from '../../../../utils/api-connect';
+import Filter from './Filter';
 
 interface IProject {
     name: string
@@ -30,8 +31,15 @@ const Projects: FC = () => {
             <section className='projects'>
                 <div className='elementWidth projects__main'>
                     <h2>פרויקטים</h2>
+                    <p>
+                        תיק עבודות שלנו נבנה עם הזמן, כול הפרויקטים הם אתרים פעילים ואפשר לבקר בהם.
+                        <br />
+                        WEBY
+                        מתמחים בבניית אתרים בשפות שונות תוכלו לראות את מגוון העבודות שלנו שנעשו מיום פתיחת הסטודיו.
+                    </p>
                     <Suspense>
                         <Await resolve={projects}>
+                            <Filter />
                             <div className='projects__main--projects'>
                                 {projects.map(pro => (
                                     <article key={pro._id} className='projects__main--project'>

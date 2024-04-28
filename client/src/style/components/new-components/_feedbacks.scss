@@ -2,14 +2,7 @@
     padding: 10% 0%;
 
     @media screen and (min-width: 768px) {
-        padding: 5% 0% 10% 0%;
-        // @include windowWidth($winMarg: 7% auto);
-    }
-
-    // @include windowWidth($winMarg: 0 3%);
-
-    @media screen and (min-width: 768px) {
-        // @include windowWidth($winMarg: 7% auto);
+        padding: 5% 0% 7% 0%;
     }
 
     h2 {
@@ -24,13 +17,10 @@
 
     &__main {
         &--feedback {
-            // margin: 2% 0%;
             max-width: 500px;
-            // height: 300px;
             background-color: white;
             box-shadow: $itemShadow;
             margin: 3% 3%;
-            // border: 1px solid black;
             display: grid;
             grid-template-columns: 2fr 1fr;
             align-items: center;
@@ -40,7 +30,6 @@
             border-radius: 25px;
 
             h3 {
-                // margin: 0;
                 background-color: white;
                 font-family: $headerFontsSize;
                 font-weight: 400;
@@ -55,31 +44,4 @@
             }
         }
     }
-}
-
-.slick-dots {
-    & li {
-        & div {
-            background-color: aqua;
-            // color: red;
-        }
-    }
-
-    // background-color: aqua;
-    // color: red;
-}
-
-.slick-active {
-    // &>div {
-    //     color: red;
-    // }
-
-    // button {
-    //     &::before {
-    //         // background-color: aqua;
-    //     }
-    // }
-
-    // background-color: aqua;
-    // color: white;
 }

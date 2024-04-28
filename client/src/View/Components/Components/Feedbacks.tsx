@@ -26,12 +26,12 @@ const Feedbacks: FC = () => {
         speed: 500,
         slidesToShow: desktop ? 2 : 1,
         slidesToScroll: 1,
-        appendDots: (dots: any) => <ul>{dots}</ul>,
-        customPaging: (i: any) => (
-            <div className="ft-slick__dots--custom">
-                <div className="loading" />
-            </div>
-        )
+        // appendDots: (dots: any) => <ul>{dots}</ul>,
+        // customPaging: (i: any) => (
+        //     <div className="ft-slick__dots--custom">
+        //         <div className="loading" />
+        //     </div>
+        // )
     };
 
     return (

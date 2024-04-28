@@ -38,7 +38,7 @@ const UserForm = () => {
                             <button disabled={!submitting} className={!submitting ? "form-btn_disable" : "form-btn_active"}>שלח</button>
                         </Form>
                     </div>
-                    <div>
+                    <div className="contact-form__element--image">
                         <img src={Women} alt="אישה עם טלפון" width={672} height={704} />
                     </div>
                 </div>
