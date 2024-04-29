@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Form } from 'react-router-dom';
+import { useEffect, useState } from 'react'
+import { Form, useActionData, useFetcher } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import Women from "../../../images/callus/women.png";
 import { inputs, options } from '../Form/inputsList';
@@ -10,6 +10,10 @@ import { API_ENDPOINT } from '../../../utils/api-connect';
 const UserForm = () => {
     const [submitting, setSubmitting] = useState<boolean>(true);
     const [userDetails, setUserDetails] = useState({ userName: "", userEmail: "", userPhone: "", userHelp: "" })
+    const data = useActionData()
+    console.log(useActionData())
+    const fetcher = useFetcher()
+    console.log(fetcher)
 
     useEffect(() => {
         (() => {
@@ -53,7 +57,7 @@ interface IUser {
     userName: string, userEmail: string, userPhone: string, userHelp: string
 }
 const hendleSendDetails = async ({ userName, userEmail, userPhone, userHelp }: IUser) => {
-    console.log(userName, userEmail, userPhone, userHelp)
+    // console.log(userName, userEmail, userPhone, userHelp)
     const { data } = await axios.post(`${API_ENDPOINT}/users/user-send-details`, { userName, userEmail, userPhone, userHelp })
     return data
 }
@@ -68,7 +72,6 @@ export const formAction = async ({ request }: any) => {
         userHelp: formData.get("userHelp"),
     };
 
-    console.log(formData.get("userHelp"))
     if (
         !formData.get("userName") ||
         !formData.get("userEmail") ||
@@ -76,9 +79,12 @@ export const formAction = async ({ request }: any) => {
         !formData.get("userHelp")
     ) { return "נא למלא את כל השדות"; }
 
-    // const data = await hendleSendDetails(user)
-    // console.log(data)
-    // return data
-    return "da"
+    const { continueWork, message } = await hendleSendDetails(user)
+    console.log(continueWork, message)
+    if (continueWork) {
+        alert(message)
+        return message
+    }
+    if (!continueWork) return alert("היית שגיא, נסה שנית")
 }
 
