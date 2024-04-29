@@ -9,7 +9,7 @@ const Offer: FC = () => {
                 <h2>מה אנחנו מציעים?</h2>
                 <div className='offer__info--grid'>
                     {offerArray.map((ofr, idx) => (
-                        <div className='offer__info--window'>
+                        <div className='offer__info--window' key={idx}>
                             <img src={ofr.img} alt={`איור של ${ofr.siteTypeHe}`} loading="lazy" />
                             <h3 className='offer__info--window__header'>{ofr.siteTypeHe}</h3>
                             <h3 className='offer__info--window__header--en'>{ofr.siteTypeEn}</h3>
