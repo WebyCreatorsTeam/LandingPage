@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Form, useActionData, useFetcher } from 'react-router-dom';
+import { Form } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import Women from "../../../images/callus/women.png";
 import { inputs, options } from '../Form/inputsList';
@@ -10,10 +10,6 @@ import { API_ENDPOINT } from '../../../utils/api-connect';
 const UserForm = () => {
     const [submitting, setSubmitting] = useState<boolean>(true);
     const [userDetails, setUserDetails] = useState({ userName: "", userEmail: "", userPhone: "", userHelp: "" })
-    const data = useActionData()
-    console.log(useActionData())
-    const fetcher = useFetcher()
-    console.log(fetcher)
 
     useEffect(() => {
         (() => {
