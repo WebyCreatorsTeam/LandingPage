@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import { FC, useState } from 'react'
 import { validateValues } from '../Components/Form/fornValidation'
 interface I_Input {
     type: string, name: string, placeholder: string

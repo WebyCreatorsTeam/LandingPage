@@ -1,5 +1,4 @@
-import { FC, useEffect } from 'react'
-import { useLocation } from 'react-router-dom';
+import { FC } from 'react'
 import { Element } from 'react-scroll';
 import AboutImage from '../../../images/whoAreWe/Component 21.webp';
 import WebyLogo from '../../../images/logo2_without_bkgr.svg';

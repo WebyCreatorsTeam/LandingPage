@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { FC, Suspense, useEffect, useState } from 'react'
-import { Await, useLoaderData, useLocation } from 'react-router-dom';
+import { FC, Suspense, useState } from 'react'
+import { Await, useLoaderData } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import { API_ENDPOINT } from '../../../../utils/api-connect';
 import Filter from './Filter';
@@ -17,7 +17,7 @@ interface IProject {
 const Projects: FC = () => {
     const { projects } = useLoaderData() as { projects: Array<IProject> }
     const [userChoose, setUserChoose] = useState<"" | "landing" | "corporate" | "commerce" | "complex">("")
-    const filteredProjects = projects.filter(pr => userChoose === "" ? pr : pr.projectType === userChoose)
+    const filteredProjects = projects.length > 0 ? projects.filter(pr => userChoose === "" ? pr : pr.projectType === userChoose) : []
     // const { state } = useLocation();
     // const { targetId } = state || {};
 
