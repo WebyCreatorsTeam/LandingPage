@@ -49,9 +49,11 @@
         box-sizing: border-box;
         padding: 3% 2%;
         border-radius: 25px;
+        box-shadow: $itemShadow;
 
         @media screen and (min-width: 768px) {
           width: 90%;
+          padding-top: 5%;
         }
       }
 
@@ -100,6 +102,10 @@
 
       button {
         margin: 10% 2%;
+
+        @media screen and (min-width: 768px) {
+          margin: 5% 2%;
+        }
       }
 
       .form-btn_disable {

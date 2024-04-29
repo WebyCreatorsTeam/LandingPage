@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Form, useActionData, useNavigation } from 'react-router-dom';
 import { Element } from 'react-scroll';
-import Women from "../../../images/callus/women.png";
+import Women from "../../../images/callus/women.webp";
 import { inputs, options } from '../Form/inputsList';
 import Input from '../../UI/Input';
 import axios from 'axios';

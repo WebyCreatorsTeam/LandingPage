@@ -44,14 +44,13 @@ button {
 .top-elements-bkg {
     background-image: url("./components/new-components/bkg/bck\ top.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    // background-size: cover;
 }
 
 .bottom-elements-bkg {
     background-image: url("./components/new-components/bkg/bck\ down.png");
     background-repeat: no-repeat;
-    background-size: cover;
-
+    // background-size: cover;
 }
 
 @import "./components/new-components/navbar";
