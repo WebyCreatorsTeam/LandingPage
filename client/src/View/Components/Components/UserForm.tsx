@@ -30,7 +30,7 @@ const UserForm = () => {
                             {inputs.map((int, idx) => (
                                 <Input key={idx} {...int} setUserDetails={setUserDetails} />
                             ))}
-                            <select name="userHelp" required onChange={(ev: any) =>
+                            <select name="userHelp" aria-label="במה אנחנו יכולים לעזור" required onChange={(ev: any) =>
                                 setUserDetails((user: any) => { return { ...user, [ev.target.name]: ev.target.value } })
                             }>
                                 {options.map((opt, idx) => (
