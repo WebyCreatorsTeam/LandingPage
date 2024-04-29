@@ -1,5 +1,4 @@
 @mixin windowWidth ($winwidth: 1440px, $winMarg: 0 auto) {
-    // min-width: 250px;
     max-width: $winwidth;
     margin: $winMarg;
 }

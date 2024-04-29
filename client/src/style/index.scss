@@ -54,42 +54,6 @@ button {
 
 }
 
-
-// .header {
-//     @include windowWidth;
-// }
-
-
-// .about__info,
-// .offer__info,
-// .how-work__info,
-// .projects__main,
-// .feedbacks,
-// .faq__info,
-// .contact-form__element {
-//     @include windowWidth($winwidth: 90%);
-// }
-
-// // .about {
-// //     &__info {
-// //         @include windowWidth;
-// //     }
-// // }
-
-// // .offer {
-// //     &__info {
-// //         @include windowWidth;
-// //     }
-// // }
-
-// // .blogPage {
-// //     @include windowWidth;
-// // }
-
-// // .pagePage {
-// //     @include windowWidth;
-// // }
-
 @import "./components/new-components/navbar";
 @import "./components/new-components/header";
 @import "./components/new-components/about";
