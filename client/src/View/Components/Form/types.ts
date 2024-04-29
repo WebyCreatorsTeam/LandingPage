@@ -2,6 +2,7 @@ export interface InputsList {
     type: string
     name: string
     placeholder: string
+    autoComp: string
 }
 
 export interface UserData {

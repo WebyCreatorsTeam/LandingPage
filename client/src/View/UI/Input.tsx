@@ -1,11 +1,11 @@
 import { FC, useState } from 'react'
 import { validateValues } from '../Components/Form/fornValidation'
 interface I_Input {
-    type: string, name: string, placeholder: string
+    type: string, name: string, placeholder: string, autoComp: string
     setUserDetails: Function
 }
 
-const Input: FC<I_Input> = ({ type, name, placeholder, setUserDetails }) => {
+const Input: FC<I_Input> = ({ type, name, placeholder, autoComp, setUserDetails }) => {
     const [error, setError] = useState("")
 
     const hendleFillInput = (ev: any) => {
@@ -26,6 +26,8 @@ const Input: FC<I_Input> = ({ type, name, placeholder, setUserDetails }) => {
                 name={name}
                 placeholder={placeholder}
                 onBlur={hendleFillInput}
+                aria-label={placeholder}
+                autoComplete={autoComp}
                 style={{ borderColor: error.length > 0 ? "red" : "black" }}
             />
         </div>

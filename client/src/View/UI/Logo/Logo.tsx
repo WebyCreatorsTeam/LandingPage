@@ -5,13 +5,14 @@ import { Link } from "react-router-dom";
 
 const Logo: FC = () => {
     return (
-        <Link to="/" className="logo-url">
+        <Link to="/" className="logo-url" title="לעמוד הבית">
             <img
                 className="logo-img"
                 src={Weby}
                 alt="Weby Logo"
                 width={230}
                 height={60}
+                loading="lazy"
             />
         </Link>
     );

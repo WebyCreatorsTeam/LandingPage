@@ -18,15 +18,6 @@ const Projects: FC = () => {
     const { projects } = useLoaderData() as { projects: Array<IProject> }
     const [userChoose, setUserChoose] = useState<"" | "landing" | "corporate" | "commerce" | "complex">("")
     const filteredProjects = projects.length > 0 ? projects.filter(pr => userChoose === "" ? pr : pr.projectType === userChoose) : []
-    // const { state } = useLocation();
-    // const { targetId } = state || {};
-
-    // useEffect(() => {
-    //     const el = document.getElementById(targetId);
-    //     if (el) {
-    //         el.scrollIntoView({ block: "start" });
-    //     }
-    // }, [targetId]);
 
     return (
         <Element name="pojects" id="pojects">
@@ -47,7 +38,7 @@ const Projects: FC = () => {
                                     filteredProjects.length > 0 ?
                                         filteredProjects.map(pro => (
                                             <article key={pro._id} className='projects__main--project'>
-                                                <img src={pro.urlImage} alt={pro.name} />
+                                                <img src={pro.urlImage} alt={pro.name} loading="lazy" />
                                                 <div className='projects__main--project__text'>
                                                     <h3>{pro.name}</h3>
                                                     <p>{pro.description}</p>
@@ -55,9 +46,7 @@ const Projects: FC = () => {
                                                 </div>
                                             </article>
                                         ))
-                                        :
-                                        <p className='no-projects'>יבוא בקרוב...</p>
-                                }
+                                        : <p className='no-projects'>יבוא בקרוב...</p>}
                             </div>
                         </Await>
                     </Suspense>

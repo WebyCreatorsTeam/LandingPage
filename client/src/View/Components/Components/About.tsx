@@ -4,18 +4,6 @@ import AboutImage from '../../../images/whoAreWe/Component 21.webp';
 import WebyLogo from '../../../images/logo2_without_bkgr.svg';
 
 const About: FC = () => {
-    // const { state } = useLocation();
-    // console.log(state)
-
-    // const { targetId } = state || {};
-
-    // useEffect(() => {
-    //     const el = document.getElementById(targetId);
-    //     if (el) {
-    //         el.scrollIntoView({ block: "start" });
-    //     }
-    // }, [targetId]);
-
     return (
         <Element name="about" id="about">
             <section className='about'>
@@ -31,10 +19,10 @@ const About: FC = () => {
                         שהאתר שלך יהיה לא רק מרהיב מבחינה חזותית, אלא גם יעיל ויעיל מבחינה טכנולוגית.
                     </p>
                     <div className='about__info--logo'>
-                        <img src={WebyLogo} alt="וובי לוגו" />
+                        <img src={WebyLogo} alt="וובי לוגו" loading="lazy" />
                     </div>
                     <div className='about__info--image'>
-                        <img src={AboutImage} alt="שולחן עם מכשירים אלקטרוניים" />
+                        <img src={AboutImage} alt="שולחן עם מכשירים אלקטרוניים" loading="lazy" />
                     </div>
                 </div>
             </section>

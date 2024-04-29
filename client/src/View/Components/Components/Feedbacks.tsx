@@ -47,7 +47,7 @@ const Feedbacks: FC = () => {
                                         <div className='feedbacks__main--feedback'>
                                             <h3>{fdb.customerName},
                                                 <br /> "{fdb.webSiteName}"</h3>
-                                            <img src={Stars} alt="חמש כוכבים" />
+                                            <img src={Stars} alt="חמש כוכבים" loading="lazy" />
                                             <p>"{fdb.customerFeedback}"</p>
                                         </div>
                                     </article>

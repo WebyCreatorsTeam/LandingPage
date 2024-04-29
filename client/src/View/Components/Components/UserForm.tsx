@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Form } from 'react-router-dom';
+import { Form, useActionData, useNavigation } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import Women from "../../../images/callus/women.png";
 import { inputs, options } from '../Form/inputsList';
@@ -10,6 +10,8 @@ import { API_ENDPOINT } from '../../../utils/api-connect';
 const UserForm = () => {
     const [submitting, setSubmitting] = useState<boolean>(true);
     const [userDetails, setUserDetails] = useState({ userName: "", userEmail: "", userPhone: "", userHelp: "" })
+    // const navigation = useNavigation();
+    // console.log(navigation)
 
     useEffect(() => {
         (() => {
@@ -35,11 +37,16 @@ const UserForm = () => {
                                     <option key={idx} value={opt.value} selected={opt.value === ""} disabled={opt.value === ""}>{opt.text}</option>
                                 ))}
                             </select>
-                            <button disabled={!submitting} className={!submitting ? "form-btn_disable" : "form-btn_active"}>שלח</button>
+                            <button disabled={!submitting
+                                // || navigation.state === "submitting"
+                            }
+                                className={!submitting ? "form-btn_disable" : "form-btn_active"}
+                                title="שלח"
+                            >שלח</button>
                         </Form>
                     </div>
                     <div className="contact-form__element--image">
-                        <img src={Women} alt="אישה עם טלפון" width={672} height={704} />
+                        <img src={Women} alt="אישה עם טלפון" width={672} height={704} loading="lazy" />
                     </div>
                 </div>
             </section>
