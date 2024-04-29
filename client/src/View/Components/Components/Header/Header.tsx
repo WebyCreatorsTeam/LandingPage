@@ -24,7 +24,7 @@ const Header: FC = () => {
                 </button>
             </div>
             <div className='header__image'>
-                <img src={HeaderImage} alt="אישה יושבת" loading="lazy" />
+                <img src={HeaderImage} alt="אישה יושבת" />
             </div>
         </header>
     )
