@@ -1,0 +1,33 @@
+.post {
+    max-width: 960px;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    &__tldr {
+        background-color: rgb(210, 210, 210);
+        box-sizing: border-box;
+        padding: 5%;
+
+        @media screen and (min-width: 768px) {
+            padding: 1% 2%;
+        }
+
+        h2 {
+            color: black;
+            font-size:x-large;
+            text-align: start;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    h1 {
+        text-align: center;
+    }
+}

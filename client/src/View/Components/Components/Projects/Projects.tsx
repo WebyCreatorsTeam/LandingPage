@@ -30,7 +30,7 @@ const Projects: FC = () => {
                         WEBY
                         מתמחים בבניית אתרים בשפות שונות תוכלו לראות את מגוון העבודות שלנו שנעשו מיום פתיחת הסטודיו.
                     </p>
-                    <Suspense>
+                    <Suspense fallback={<h2>Loading...</h2>}>
                         <Await resolve={projects}>
                             <Filter setUserChoose={setUserChoose} userChoose={userChoose} />
                             <div className='projects__main--projects'>

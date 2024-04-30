@@ -14,12 +14,12 @@ const BlogPage = () => {
     const { blog } = useLoaderData() as { blog: Array<IBlog> }
 
     return (
-        <main className='elementWidth blogPage'>
+        <main className='elementWidth'>
             <h1>בלוג</h1>
             <p>
                 משתפים אתכם בתובנות והמידע שאספנו לאורך השנים, בבלוג שלנו נחקור את הכלים החדשים ונעזור לכם להבין כיצד ליישם את הידע בפרויקטים שלכם.
             </p>
-            <Suspense>
+            <Suspense fallback={<h2>Loading...</h2>}>
                 <Await resolve={blog}>
                     <section className='blog-section'>
                         {blog.map((bl) => (
