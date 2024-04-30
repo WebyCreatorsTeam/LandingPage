@@ -56,41 +56,44 @@ button {
     background-image: url("./components/new-components/bkg/bck\ down.webp");
 }
 
-.blog-section {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr;
+// .blog-section {
+//     display: grid;
+//     justify-items: center;
+//     grid-template-columns: 1fr;
     
-    @media screen and (min-width: 768px) {
-        grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-    }
+//     @media screen and (min-width: 768px) {
+//         grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+//     }
 
-    &__article {
-        @include itemStyle;
+//     &__article {
+//         @include itemStyle;
 
-        @media screen and (min-width: 768px) {
-            padding: 3% 3% 5% 3%;
-            margin: 3% 5%;
-        }
+//         @media screen and (min-width: 768px) {
+//             padding: 3% 3% 5% 3%;
+//             margin: 3% 5%;
+//         }
 
-        img {
-            @include itemImageStyle;
-        }
+//         img {
+//             @include itemImageStyle;
+//         }
 
-        h2 {
-            @include itemHeaderStyle;
-        }
+//         h2 {
+//             @include itemHeaderStyle;
+//         }
 
-        &--link {
-            font-size: 1.2rem;
-            color: $purpleColor;
-            font-weight: bold;
-            padding: 2% 5%;
-            border-radius: 8px;
-            border: 2px solid $purpleColor;
-        }
-    }
-}
+//         p {
+//             margin-bottom: 10%;
+//         }
+//         &--link {
+//             font-size: 1.2rem;
+//             color: $purpleColor;
+//             font-weight: bold;
+//             padding: 2% 5%;
+//             border-radius: 8px;
+//             border: 2px solid $purpleColor;
+//         }
+//     }
+// }
 
 @import "./components/new-components/navbar";
 @import "./components/new-components/header";
@@ -101,3 +104,4 @@ button {
 @import "./components/new-components/feedbacks";
 @import "./components/form/from";
 @import "./components/new-components/footer";
+@import "./components//new-components/blog";

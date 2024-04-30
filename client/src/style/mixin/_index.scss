@@ -14,15 +14,15 @@
     font-size: 24px;
 }
 
-@mixin itemStyle($itemMargin: 10% 0%) {
+@mixin itemStyle($itemMarg: 10% 0%, $itemPadd: 5% ) {
     background-color: white;
-    margin: $itemMargin;
+    margin: $itemMarg;
     max-width: 480px;
     min-width: 250px;
     border-radius: 20px;
     box-shadow: $itemShadow;    
     box-sizing: border-box;
-    padding: 5%;
+    padding: $itemPadd;
     text-align: center;
 }
 
