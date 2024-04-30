@@ -10,7 +10,11 @@ const Offer: FC = () => {
                 <div className='offer__info--grid'>
                     {offerArray.map((ofr, idx) => (
                         <div className='offer__info--window' key={idx}>
-                            <img src={ofr.img} alt={`איור של ${ofr.siteTypeHe}`} loading="lazy" />
+                            <div>
+                                <img src={ofr.img} alt={`איור של ${ofr.siteTypeHe}`} loading="lazy"
+                                    width={336} height={277}
+                                />
+                            </div>
                             <h3 className='offer__info--window__header'>{ofr.siteTypeHe}</h3>
                             <h3 className='offer__info--window__header--en'>{ofr.siteTypeEn}</h3>
                             <p>{ofr.siteDesc}</p>

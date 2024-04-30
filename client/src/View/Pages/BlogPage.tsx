@@ -14,7 +14,7 @@ const BlogPage = () => {
     const { blog } = useLoaderData() as { blog: Array<IBlog> }
 
     return (
-        <main className='elementWidth'>
+        <main className='elementWidth blog'>
             <h1>בלוג</h1>
             <p>
                 משתפים אתכם בתובנות והמידע שאספנו לאורך השנים, בבלוג שלנו נחקור את הכלים החדשים ונעזור לכם להבין כיצד ליישם את הידע בפרויקטים שלכם.
@@ -24,12 +24,16 @@ const BlogPage = () => {
                     <section className='blog-section'>
                         {blog.map((bl) => (
                             <article key={bl._id} className='blog-section__article'>
-                                <img src={bl.smallImg} alt={`איור של פוסט ${bl.title}`} />
+                                <div>
+                                    <img src={bl.smallImg} alt={`איור של פוסט ${bl.title}`}
+                                        width={445} height={250}
+                                    />
+                                </div>
                                 <h2>{bl.title}</h2>
                                 <p>{bl.content}...</p>
-                                <Link 
-                                className='blog-section__article--link'
-                                to={`/blog/post/${bl._id}`}>המשך קריאה {">"}</Link>
+                                <Link
+                                    className='blog-section__article--link'
+                                    to={`/blog/post/${bl._id}`}>המשך קריאה {">"}</Link>
                             </article>
                         ))}
                     </section>

@@ -1,3 +1,9 @@
+.blog {
+        text-align: center;
+    h1 {
+        color: $purpleColor;
+    }
+}
 
 .blog-section {
     display: grid;
@@ -8,8 +14,12 @@
         grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     }
 
+    
+
     &__article {
         @include itemStyle($itemPadd: 5% 5% 10% 5%);
+        display: flex;
+        flex-direction: column;
 
         @media screen and (min-width: 768px) {
             padding: 3% 3% 5% 3%;
@@ -18,6 +28,10 @@
 
         img {
             @include itemImageStyle;
+            // width: 100%;
+            // height: 100%;
+            // width: 320px;
+            // height: 180px;
         }
 
         h2 {
