@@ -3,7 +3,7 @@ const { httpCodes } = require("../../utils/httpStatusCode");
 
 exports.getBlog = async (req, res) => {
     try {
-        const blogs = await Post.find({ draft: false }).select(['-draft', '-createdAt', '-updatedAt'])
+        const blogs = await Post.find({ draft: false }).select(['-draft', '-createdAt', '-updatedAt', '-coverImg', '-tldr'])
         const blog = blogs.map(bl => ({ ...bl._doc, content: bl.content.replace(/(<([^>]+)>)/gi, "").slice(0, 80) }))
         return res.status(httpCodes.OK).json({ continueWork: true, blog })
     } catch (error) {

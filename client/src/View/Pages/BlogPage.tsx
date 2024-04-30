@@ -7,27 +7,33 @@ export interface IBlog {
     _id: string
     title: string
     content: string
+    smallImg: string
 }
 
 const BlogPage = () => {
     const { blog } = useLoaderData() as { blog: Array<IBlog> }
 
     return (
-        <main className='blogPage'>
+        <main className='elementWidth blogPage'>
             <h1>בלוג</h1>
+            <p>
+                משתפים אתכם בתובנות והמידע שאספנו לאורך השנים, בבלוג שלנו נחקור את הכלים החדשים ונעזור לכם להבין כיצד ליישם את הידע בפרויקטים שלכם.
+            </p>
             <Suspense>
                 <Await resolve={blog}>
-                    <section>
-                        {blog.map((bl, idx) => (
-                            <article>
-                                <h3>{bl.title}</h3>
+                    <section className='blog-section'>
+                        {blog.map((bl) => (
+                            <article key={bl._id} className='blog-section__article'>
+                                <img src={bl.smallImg} alt={`איור של פוסט ${bl.title}`} />
+                                <h2>{bl.title}</h2>
                                 <p>{bl.content}...</p>
-                                <Link to={`/blog/post/${bl._id}`}>המשך קריאה...</Link>
+                                <Link 
+                                className='blog-section__article--link'
+                                to={`/blog/post/${bl._id}`}>המשך קריאה {">"}</Link>
                             </article>
                         ))}
                     </section>
                 </Await>
-
             </Suspense>
         </main>
     )

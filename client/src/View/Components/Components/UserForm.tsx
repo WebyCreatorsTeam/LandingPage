@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Form, useActionData, useNavigation } from 'react-router-dom';
+import { Form
+    // , useActionData, useNavigation
+ } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import Women from "../../../images/callus/women.webp";
 import { inputs, options } from '../Form/inputsList';
@@ -60,7 +62,6 @@ interface IUser {
     userName: string, userEmail: string, userPhone: string, userHelp: string
 }
 const hendleSendDetails = async ({ userName, userEmail, userPhone, userHelp }: IUser) => {
-    // console.log(userName, userEmail, userPhone, userHelp)
     const { data } = await axios.post(`${API_ENDPOINT}/users/user-send-details`, { userName, userEmail, userPhone, userHelp })
     return data
 }

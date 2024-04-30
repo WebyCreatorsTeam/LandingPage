@@ -14,6 +14,36 @@
     font-size: 24px;
 }
 
+@mixin itemStyle($itemMargin: 10% 0%) {
+    background-color: white;
+    margin: $itemMargin;
+    max-width: 480px;
+    min-width: 250px;
+    border-radius: 20px;
+    box-shadow: $itemShadow;    
+    box-sizing: border-box;
+    padding: 5%;
+    text-align: center;
+}
+
+@mixin itemImageStyle {
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-sizing: border-box;
+    border-bottom: 5px solid $purpleColor;
+}
+
+@mixin itemHeaderStyle {
+    margin: 5% 0% 0% 0%;
+    font-size: 1.8rem;
+    color: $purpleColor;
+
+    @media screen and (min-width: 768px) {
+        font-size: 1.6rem;
+    }
+}
+
 // @mixin respond-to($breakpoint) {
 //     @if $breakpoint == mobile {
 //         @media (max-width: 767px) {

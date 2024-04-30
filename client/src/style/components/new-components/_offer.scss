@@ -31,32 +31,18 @@
         }
 
         &--window {
-            background-color: white;
-            margin: 10% 0%;
-            max-width: 480px;
-            min-width: 250px;
-            border-radius: 20px;
-            box-shadow: $itemShadow;
-            box-sizing: border-box;
-            padding: 5%;
-            text-align: center;
+            @include itemStyle;
 
             @media screen and (min-width: 768px) {
                 margin: 0% 10%;
             }
 
             img {
-                width: 100%;
-                border-top-right-radius: 20px;
-                border-top-left-radius: 20px;
-                box-sizing: border-box;
-                border-bottom: 5px solid $purpleColor;
+                @include itemImageStyle;
             }
 
             &__header {
-                margin: 5% 0% 1% 0%;
-                font-size: 1.5rem;
-                color: $purpleColor;
+                @include itemHeaderStyle;
             }
 
             &__header--en {

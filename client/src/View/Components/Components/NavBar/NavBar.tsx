@@ -29,7 +29,7 @@ const NavBar: FC = () => {
                   duration={500}
                 >{nav.title}</Scroll.Link>
             ))}
-            {/* <Link to="/blog">בלוג</Link> */}
+            <Link to="/blog">בלוג</Link>
           </div>
           <div className='navigation__contact'>
             <Scroll.Link
@@ -59,10 +59,10 @@ const NavBar: FC = () => {
                         onClick={() => setToggleMenu(!toggleMenu)}
                       >{nav.title}</Scroll.Link>
                   ))}
-                  {/* <Link
+                  <Link
                     to="/blog"
                     onClick={() => setToggleMenu(!toggleMenu)}
-                  >בלוג</Link> */}
+                  >בלוג</Link>
                 </div>
                 <div className='navigation__contact'>
                   <Scroll.Link
