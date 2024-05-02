@@ -24,7 +24,7 @@ const Header: FC = () => {
                 </button>
             </div>
             <div className='header__image'>
-                <img src={HeaderImage} alt="אישה יושבת" />
+                <img src={HeaderImage} alt="אישה יושבת" width={720} height={632} />
             </div>
         </header>
     )

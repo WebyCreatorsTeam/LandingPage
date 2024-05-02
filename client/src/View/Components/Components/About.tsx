@@ -1,14 +1,14 @@
 import { FC } from 'react'
 import { Element } from 'react-scroll';
-import AboutImage from '../../../images/whoAreWe/Component 21.webp';
+import AboutImage from '../../../images/whoAreWe/about.webp';
 import WebyLogo from '../../../images/logo2_without_bkgr.svg';
 
 const About: FC = () => {
     return (
         <Element name="about" id="about">
             <section className='about'>
+                <h2>מי אנחנו?</h2>
                 <div className='elementWidth about__info'>
-                    <h2>מי אנחנו?</h2>
                     <p className='about__info--text'>
                         <span>WEBY</span> היא בית תוכנה המתמקדת בפתרונות דיגיטליים מותאמים אישית לצרכי הלקוחות.
                         <br />
@@ -22,7 +22,7 @@ const About: FC = () => {
                         <img src={WebyLogo} alt="וובי לוגו" loading="lazy" />
                     </div>
                     <div className='about__info--image'>
-                        <img src={AboutImage} alt="שולחן עם מכשירים אלקטרוניים" loading="lazy" />
+                        <img src={AboutImage} alt="שולחן עם מכשירים אלקטרוניים" loading="lazy" width={617} height={523} />
                     </div>
                 </div>
             </section>
