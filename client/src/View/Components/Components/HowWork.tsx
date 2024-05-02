@@ -28,7 +28,7 @@ const HowWork: FC = () => {
                 <h3>
                     נתחיל בבניית האתר בהתמקדות בדרישות והצרכים של בעל העסק, נספק לו תמיכה מקצועית וזמינה לאורך כל התהליך.
                 </h3>
-                <ol className='how-work__info--more'>
+                <div className='how-work__info--more'>
                     {howWorkList.map((hwl, idx) => (
                         <div className='how-work__info--more__item' key={idx}>
                             <img src={hwl.img} alt={hwl.alt} width={160} height={160} loading="lazy" />
@@ -36,7 +36,7 @@ const HowWork: FC = () => {
                             <p>{hwl.text}</p>
                         </div>
                     ))}
-                </ol>
+                </div>
             </div>
         </section>
     )
