@@ -1,8 +1,10 @@
 .footer-container {
-    margin: 3% 0% 10% 0%;
+    padding: 10% 0%;
+    // margin-bottom: 10%;
+    // margin: 0% 0% 10% 0%;
 
     @media screen and (min-width: 768px) {
-        margin: 1% 0%;
+        // margin: 1% auto;
     }
 
     &>div {
@@ -11,13 +13,13 @@
         flex-direction: column;
         align-items: center;
         justify-items: center;
+        margin: 0 auto;
 
         @media screen and (min-width: 1120px) {
             flex-direction: row;
         }
 
         // @media screen and (min-width: 1440px) {
-        //     margin: 0 auto;
         // }
 
         .logo-url {

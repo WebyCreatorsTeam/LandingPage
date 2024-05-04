@@ -11,7 +11,7 @@ import YouTube from "../../../images/footer/yt icon.svg"
 
 const Footer: FC = () => {
     return (
-        <footer className="footer-container">
+        <footer className="elementWidth footer-container">
             <div>
                 <Logo />
                 <div className="footer-container__social">
