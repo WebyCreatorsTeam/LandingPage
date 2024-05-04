@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { Suspense } from 'react'
 import { API_ENDPOINT } from '../../utils/api-connect'
 import { Await, Link, defer, useLoaderData } from 'react-router-dom'
+import BlogMain from "../../images/blog/blog main.webp"
+import { useMediaQuery } from 'react-responsive'
 
 export interface IBlog {
     _id: string
@@ -12,13 +14,25 @@ export interface IBlog {
 
 const BlogPage = () => {
     const { blog } = useLoaderData() as { blog: Array<IBlog> }
+    const desktop = useMediaQuery({ query: '(min-width: 990px)' })
 
     return (
         <main className='elementWidth blog'>
-            <h1>בלוג</h1>
-            <p>
-                משתפים אתכם בתובנות והמידע שאספנו לאורך השנים, בבלוג שלנו נחקור את הכלים החדשים ונעזור לכם להבין כיצד ליישם את הידע בפרויקטים שלכם.
-            </p>
+            <div className='blog__header'>
+                <h1>
+                    הבלוג
+                    <br />
+                    שלנו
+                </h1>
+                <p>
+                    משתפים אתכם בתובנות והמידע שאספנו לאורך הזמן, בבלוג שלנו נחקור את הכלים השונים ונעזור לכם להבין כיצד ליישם את הידע בפרויקטים שלכם.
+                </p>
+                {desktop && (
+                    <div className='blog__header--img'>
+                        <img src={BlogMain} alt="איור עמוד בלוג" width={813} height={616} />
+                    </div>
+                )}
+            </div>
             <Suspense fallback={<h2>Loading...</h2>}>
                 <Await resolve={blog}>
                     <section className='blog-section'>

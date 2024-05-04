@@ -1,7 +1,4 @@
 import { FC } from "react";
-// import { footerlinks } from "./footerLinks";
-// import LogoImage from '../../../style/../images/footer/logo.png'
-// import { footerContactInfo } from './footerContactInfo'
 import Logo from "../../UI/Logo/Logo";
 import Phone from "../../../images/footer/phone.svg"
 import Mail from "../../../images/footer/email.svg"
