@@ -14,13 +14,13 @@
     font-size: 24px;
 }
 
-@mixin itemStyle($itemMarg: 10% 0%, $itemPadd: 5%, $maxWidth: 480px ) {
+@mixin itemStyle($itemMarg: 10% 0%, $itemPadd: 5%, $maxWidth: 480px) {
     background-color: white;
     margin: $itemMarg;
     max-width: $maxWidth;
     min-width: 250px;
     border-radius: 20px;
-    box-shadow: $itemShadow;    
+    box-shadow: $itemShadow;
     box-sizing: border-box;
     padding: $itemPadd;
     text-align: center;
@@ -45,6 +45,16 @@
     @media screen and (min-width: 768px) {
         font-size: 1.6rem;
     }
+}
+
+@mixin headersPurple($fontSizeHeader: 3.5rem) {
+    font-size: $fontSizeHeader;
+    font-family: $headerFontsFamily;
+    font-weight: 200;
+    background: $purpleColor;
+    background: -webkit-linear-gradient(0deg, rgba(209, 0, 246, 1) 0%, rgba(137, 2, 255, 1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 // @mixin respond-to($breakpoint) {

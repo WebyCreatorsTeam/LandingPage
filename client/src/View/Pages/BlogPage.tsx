@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { Suspense } from 'react'
 import { API_ENDPOINT } from '../../utils/api-connect'
 import { Await, Link, defer, useLoaderData } from 'react-router-dom'
-import BlogMain from "../../images/blog/blog main.webp"
+import BlogMain from "../../images/blog/blog_main.webp"
 import { useMediaQuery } from 'react-responsive'
 
 export interface IBlog {

@@ -21,7 +21,7 @@
         }
 
         p {
-            font-family: $headerFontsSize;
+            font-family: $headerFontsFamily;
             font-size: 2rem;
             color: #7D7D7D;
             text-align: center;
@@ -36,7 +36,7 @@
 
         h1 {
             font-size: 2.5rem;
-            font-family: $headerFontsSize;
+            font-family: $headerFontsFamily;
             font-weight: 200;
             text-align: center;
 
