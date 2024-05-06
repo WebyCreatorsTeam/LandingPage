@@ -1,7 +1,5 @@
-import React, { FC, useEffect, useRef, useState } from 'react'
+import  { FC, useEffect, useRef, useState } from 'react'
 import { IFAQ } from './FAQData';
-import AddIcon from '@mui/icons-material/Add';
-import { pink } from '@mui/material/colors';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 interface IQItem {

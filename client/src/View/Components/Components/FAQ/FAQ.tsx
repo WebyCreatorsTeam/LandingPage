@@ -2,7 +2,7 @@
 // import { useLocation } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import { FAQquestion } from './FAQData';
-import { useEffect, useRef, useState } from 'react';
+// import { useEffect, useRef, useState } from 'react';
 import QItem from './QItem';
 
 const FAQ = () => {
