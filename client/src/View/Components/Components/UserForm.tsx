@@ -6,11 +6,12 @@ import { inputs, options } from '../Form/inputsList';
 import Input from '../../UI/Input';
 import axios from 'axios';
 import { API_ENDPOINT } from '../../../utils/api-connect';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const UserForm = () => {
     const [submitting, setSubmitting] = useState<boolean>(true);
     const [userDetails, setUserDetails] = useState({ userName: "", userEmail: "", userPhone: "", userHelp: "" })
-    // const navigation = useNavigation();
+    const navigation = useNavigation();
     // console.log(navigation)
 
     useEffect(() => {
@@ -19,6 +20,7 @@ const UserForm = () => {
         })()
     }, [userDetails]);
 
+    console.log(navigation.state)
     return (
         <Element name="contact">
             <section className="contact-form">
@@ -37,12 +39,21 @@ const UserForm = () => {
                                     <option key={idx} value={opt.value} selected={opt.value === ""} disabled={opt.value === ""}>{opt.text}</option>
                                 ))}
                             </select>
-                            <button disabled={!submitting
-                                // || navigation.state === "submitting"
-                            }
-                                className={!submitting ? "form-btn_disable" : "form-btn_active"}
-                                title="שלח"
-                            >שלח</button>
+                            <button disabled={!submitting === true ? true : navigation.state === "submitting" ? true : false}
+                                style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center" }}
+                                className={!submitting === true ? "form-btn_disable" : navigation.state === "submitting" ? "form-btn_disable" : "form-btn_active"}
+                                title={!submitting === true ? "לשליחה נא למלא את כל הפרטים" : navigation.state === "submitting" ? "פרטים נשלחים" : "שלח"}
+                            >
+                                {navigation.state === "submitting" ?
+                                    <>
+                                        הפרטים נשלחים
+                                        <CircularProgress size={30} style={{}} color="inherit" />
+                                    </>
+                                    :
+                                    "שלח"
+                                }
+                                {/* שלח */}
+                            </button>
                         </Form>
                     </div>
                     <div className="contact-form__element--image">

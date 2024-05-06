@@ -105,8 +105,14 @@
       }
 
       .form-btn_disable {
-        @include btn;
-        // background: linear-gradient(90deg, #b6b6b6 0%, #505050 100%);
+        color: $purpleColor;
+        font-weight: bold;
+        width: 16vw;
+        min-width: 200px;
+        height: 53px;
+        border-radius: 8px;
+        border: 2px solid $purpleColor;
+        font-size: 1.5rem;
       }
 
       .form-btn_active {
