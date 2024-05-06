@@ -22,6 +22,8 @@ a {
 h2 {
     font-size: 2.5rem;
     color: $purpleColor;
+    font-family: $headerFontsSize;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -71,6 +73,7 @@ button {
 @import "./components/new-components/how-work";
 @import "./components/new-components/projects";
 @import "./components/new-components/feedbacks";
+@import "./components/new-components/FAQ";
 @import "./components/form/from";
 @import "./components/new-components/footer";
 @import "./components//new-components/blog";
