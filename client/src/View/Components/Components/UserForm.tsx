@@ -20,7 +20,6 @@ const UserForm = () => {
         })()
     }, [userDetails]);
 
-    console.log(navigation.state)
     return (
         <Element name="contact">
             <section className="contact-form">
@@ -39,10 +38,18 @@ const UserForm = () => {
                                     <option key={idx} value={opt.value} selected={opt.value === ""} disabled={opt.value === ""}>{opt.text}</option>
                                 ))}
                             </select>
-                            <button disabled={!submitting === true ? true : navigation.state === "submitting" ? true : false}
+
+                            <button id="sendBtnForm" disabled={!submitting === true ? true : navigation.state === "submitting" ? true : false}
                                 style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center" }}
                                 className={!submitting === true ? "form-btn_disable" : navigation.state === "submitting" ? "form-btn_disable" : "form-btn_active"}
-                                title={!submitting === true ? "לשליחה נא למלא את כל הפרטים" : navigation.state === "submitting" ? "פרטים נשלחים" : "שלח"}
+                                title={!submitting === true ? "על מנת להשאיר פרטים נא למלא את כל השדות" : navigation.state === "submitting" ? "פרטים נשלחים" : "שלח"}
+                                onClick={() => {
+                                    console.log(`ewe`)
+                                    const btn = document.getElementById('sendBtnForm') as HTMLButtonElement
+                                    if (btn.disabled) {
+                                        alert("נא למלא את כל הפרטים")
+                                    }
+                                }}
                             >
                                 {navigation.state === "submitting" ?
                                     <>

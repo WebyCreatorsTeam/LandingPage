@@ -98,9 +98,22 @@
 
       button {
         margin: 10% 2%;
+        position: relative;
 
         @media screen and (min-width: 768px) {
           margin: 5% 2%;
+        }
+
+        &:hover:after {
+          content: attr(title);
+          font-size: 14px;
+          background: #fff;
+          padding: 5px 12px;
+          border: 1px solid #b3b3b3;
+          position: absolute;
+          bottom: 100%;
+          left: 0%;
+          transform: translateX(-50%);
         }
       }
 
