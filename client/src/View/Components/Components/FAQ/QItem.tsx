@@ -5,6 +5,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 interface IQItem {
     faq: IFAQ
 }
+
 const QItem: FC<IQItem> = ({ faq }) => {
     const contentRef = useRef<any>(null);
     const [active, setActive] = useState(false);
