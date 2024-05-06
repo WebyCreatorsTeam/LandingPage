@@ -34,9 +34,7 @@ const FAQ = () => {
             <section className='elementWidth faq'>
                 <div className='faq__info'>
                     <h2>שאלות נפוצות</h2>
-
-                    <div>
-
+                    <div className='faq__quest'>
                         {FAQquestion.map((q, idx) => (
                             <QItem key={idx} faq={q} />
                         ))}

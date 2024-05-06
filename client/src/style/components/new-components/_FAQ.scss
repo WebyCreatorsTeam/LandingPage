@@ -13,19 +13,34 @@
             padding: 2% 0% 5%;
         }
     }
+
+    &__quest {
+        @media screen and (min-width: 768px) {
+            width: 80%;
+            margin: 0% auto;
+        }
+
+        @media screen and (min-width: 1000px) {
+            width: 60%;
+            margin: 0% auto;
+        }
+
+    }
 }
 
 .question-section {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background-color: white;
     margin: 3% 0%;
-    border: 1px solid lightgray;
+    border: 3px solid lightgray;
     border-radius: 25px;
     box-shadow: $itemShadow;
     cursor: pointer;
     width: 100%;
 
     @media screen and (min-width: 768px) {
-        margin: 1% 0%;
+        margin: 1.5% 0%;
     }
 }
 
@@ -33,13 +48,16 @@
     align-items: center;
     display: flex;
     min-height: 10px;
-    justify-content: space-between;
     text-align: right;
 }
 
 .question-align h3 {
     font-size: 20px;
-    margin-right: 1%;
+    margin-right: 3%;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 2%;
+    }
 }
 
 .question-icon {
@@ -47,6 +65,12 @@
     border: none;
     color: #1b6aae;
     cursor: pointer;
+    transform: rotate(180deg);
+    margin-right: 2%;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 5%;
+    }
 }
 
 .rotate {
