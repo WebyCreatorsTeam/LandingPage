@@ -58,6 +58,49 @@ button {
     background-image: url("./components/new-components/bkg/bck\ down.webp");
 }
 
+
+.notFound {
+    height: 100vh;
+}
+
+.errorFunc {
+    height: 75vh;
+}
+
+.errorsPages {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        margin-bottom: 20%;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 15%;
+        }
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 6rem;
+    }
+
+    p {
+        margin-bottom: 20%;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 5%;
+        }
+    }
+
+    &__btnBack {
+        @include btn;
+    }
+}
+
 @import "./components/new-components/navbar";
 @import "./components/new-components/header";
 @import "./components/new-components/about";
