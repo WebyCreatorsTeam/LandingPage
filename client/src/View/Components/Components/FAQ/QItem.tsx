@@ -24,12 +24,12 @@ const QItem: FC<IQItem> = ({ faq }) => {
         >
             <div>
                 <div className="question-align">
-                    <h3 className="question-style">
-                        {faq.quest}
-                    </h3>
                     <PlayArrowIcon sx={{ color: "#D447FD" }}
                         className={active ? `question-icon rotate` : `question-icon`}
                     />
+                    <h3 className="question-style">
+                        {faq.quest}
+                    </h3>
                 </div>
                 <div
                     ref={contentRef}

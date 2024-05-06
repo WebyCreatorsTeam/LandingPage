@@ -12,7 +12,6 @@ const Logo: FC = () => {
                 alt="Weby Logo"
                 width={230}
                 height={60}
-                loading="lazy"
             />
         </Link>
     );
