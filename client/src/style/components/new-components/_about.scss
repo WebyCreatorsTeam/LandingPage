@@ -5,14 +5,15 @@
         padding: 3% 0%;
     }
 
-    &__info {
+    h2 {
+        margin: 0%;
+    }
 
-        padding: 5% 0%;
+    &__info {
         display: grid;
         grid-template-columns: 1fr;
 
         @media screen and (min-width: 768px) {
-            padding: 3% 0%;
             align-items: center;
             grid-template-rows: 0.3fr 1fr 1fr;
             grid-template-columns: 1fr 1fr;
@@ -22,14 +23,9 @@
             grid-template-columns: 2fr 1.5fr;
         }
 
-        h2 {
-            @media screen and (min-width: 768px) {
-                grid-area: 1 / 1 / 2 / 3;
-            }
-        }
-
         &--text {
             text-align: center;
+            padding: 5% 0%;
 
             span {
                 font-weight: 600;
@@ -47,7 +43,9 @@
         }
 
         &--logo {
-            width: 50%;
+            width: 60%;
+            padding: 5% 0% 0% 0%;
+            margin: 0 auto;
 
             img {
                 width: 100%;
@@ -56,6 +54,8 @@
 
             @media screen and (min-width: 768px) {
                 grid-area: 3 / 1 / 4 / 2;
+                padding: 0;
+                margin: 0;
                 width: 40%;
             }
         }
@@ -63,15 +63,16 @@
         &--image {
             display: flex;
             justify-content: flex-end;
+            padding: 20% 0% 10% 0%;
 
             @media screen and (min-width: 768px) {
+                padding: 0;
                 grid-area: 1 / 2 / 4 /3;
                 width: 100%;
             }
 
             img {
                 width: 100%;
-                margin: 10% 0% 0% 0%;
                 height: 100%;
 
                 @media screen and (min-width: 786px) {
