@@ -28,7 +28,9 @@ h2 {
 }
 
 p {
-    font-size: 1.3rem;
+    // font-size: 1.3rem;
+    font-size: clamp(18px, 1vw, 24px);
+    // font-size: 18px;
 }
 
 button {
@@ -39,7 +41,6 @@ button {
     @include windowWidth($winwidth: 90%);
 
     @media screen and (min-width: 768px) {
-        // @include windowWidth;
         max-width: 1440px;
         margin: 0% 3%;
     }
@@ -48,8 +49,6 @@ button {
         margin: 0 auto;
     }
 }
-
-
 
 .top-elements-bkg,
 .bottom-elements-bkg {
@@ -108,39 +107,6 @@ button {
         @include btn;
     }
 }
-
-// .dontssss {
-
-// .slick-dots li.slick-active button:before {
-//     color: red;
-// }
-
-// color: red;
-// background-color: aqua;
-// color: blue !important;
-// li {
-//     margin: 0 0 3rem !important;
-//     // list-style: none;
-// }
-
-// button::after {
-
-//     color: red;
-// }
-
-// button::before {
-//     font-size: 2rem;
-//     color: orange;
-// }
-
-// width: 50%;
-// width: 15ch;
-// }
-
-
-// .slick-dots li.slick-active button:before {
-//     background-color: aquamarine;
-// }
 
 @import "./components/new-components/navbar";
 @import "./components/new-components/header";
