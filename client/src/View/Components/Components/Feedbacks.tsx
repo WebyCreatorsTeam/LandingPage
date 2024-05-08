@@ -36,7 +36,7 @@ const Feedbacks: FC = () => {
     };
 
     return (
-        <Element name="feedbacks">
+        <Element name="feedbacks" id="feedbacks">
             <section className='elementWidth feedbacks'>
                 <h2>מה לקוחות אומרים עלינו?</h2>
                 <Suspense>

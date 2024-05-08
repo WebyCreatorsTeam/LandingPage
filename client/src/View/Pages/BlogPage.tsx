@@ -4,6 +4,8 @@ import { API_ENDPOINT } from '../../utils/api-connect'
 import { Await, Link, defer, useLoaderData } from 'react-router-dom'
 import BlogMain from "../../images/blog/blog_main.webp"
 import { useMediaQuery } from 'react-responsive'
+import { NavHashLink } from 'react-router-hash-link';
+
 
 export interface IBlog {
     _id: string
@@ -45,9 +47,9 @@ const BlogPage = () => {
                                 </div>
                                 <h2>{bl.title}</h2>
                                 <p>{bl.content}...</p>
-                                <Link
+                                <NavHashLink
                                     className='blog-section__article--link'
-                                    to={`/blog/post/${bl._id}`}>המשך קריאה {">"}</Link>
+                                    to={`/blog/post/${bl._id}#`}>המשך קריאה {">"}</NavHashLink>
                             </article>
                         ))}
                     </section>

@@ -6,6 +6,7 @@ import Scroll from 'react-scroll';
 import { useMediaQuery } from 'react-responsive'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { NavHashLink } from 'react-router-hash-link';
 
 const NavBar: FC = () => {
   const desktop = useMediaQuery({ query: '(min-width: 768px)' })
@@ -20,26 +21,21 @@ const NavBar: FC = () => {
           </div>
           <div className='navigation__links'>
             {navigationLinks.map((nav, ind) => (
-              nav.link.includes("/") ? <Link to={nav.link}>{nav.title}</Link> :
-                <Scroll.Link
-                  key={ind}
-                  to={nav.link}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >{nav.title}</Scroll.Link>
+              <NavHashLink
+                key={ind}
+                smooth
+                to={`/#${nav.link}`}
+              >{nav.title}</NavHashLink>
             ))}
-            <Link to="/blog">בלוג</Link>
+            <NavHashLink to="/blog#">בלוג</NavHashLink>
           </div>
           <div className='navigation__contact'>
-            <Scroll.Link
-              to="contact"
-              smooth={true}
-              offset={50}
-              duration={500}
+            <NavHashLink
+              to="/#contact"
+              smooth
             >
               דברו איתנו
-            </Scroll.Link>
+            </NavHashLink>
           </div>
         </>
           :
@@ -49,31 +45,31 @@ const NavBar: FC = () => {
               <div className='navigation__menu'>
                 <div className='navigation__links'>
                   {navigationLinks.map((nav, ind) => (
-                    nav.link.includes("/") ? <Link to={nav.link}>{nav.title}</Link> :
-                      <Scroll.Link
-                        key={ind}
-                        to={nav.link}
-                        smooth={true}
-                        offset={50}
-                        duration={500}
-                        onClick={() => setToggleMenu(!toggleMenu)}
-                      >{nav.title}</Scroll.Link>
+                    <NavHashLink
+                      key={ind}
+                      smooth
+                      to={`/#${nav.link}`}
+                      onClick={() => {
+                        setToggleMenu(!toggleMenu)
+                      }}
+                    >{nav.title}</NavHashLink>
                   ))}
-                  <Link
-                    to="/blog"
-                    onClick={() => setToggleMenu(!toggleMenu)}
-                  >בלוג</Link>
+                  <NavHashLink
+                    to="/blog#"
+
+                    onClick={() => {
+                      setToggleMenu(!toggleMenu)
+                    }}
+                  >בלוג</NavHashLink>
                 </div>
                 <div className='navigation__contact'>
-                  <Scroll.Link
-                    to="contact"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
+                  <NavHashLink
+                    to="#contact"
+                    smooth
                     onClick={() => setToggleMenu(!toggleMenu)}
                   >
                     דברו איתנו
-                  </Scroll.Link>
+                  </NavHashLink>
                 </div>
               </div>)}
             <div className='navigation__logo' onClick={() => setToggleMenu(false)}>

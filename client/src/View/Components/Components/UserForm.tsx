@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Form, useNavigation
+import {
+    Form, useNavigation
     // , useActionData, useNavigation
- } from 'react-router-dom';
+} from 'react-router-dom';
 import { Element } from 'react-scroll';
 import Women from "../../../images/callus/women.webp";
 import { inputs, options } from '../Form/inputsList';
@@ -14,7 +15,6 @@ const UserForm = () => {
     const [submitting, setSubmitting] = useState<boolean>(true);
     const [userDetails, setUserDetails] = useState({ userName: "", userEmail: "", userPhone: "", userHelp: "" })
     const navigation = useNavigation();
-    // console.log(navigation)
 
     useEffect(() => {
         (() => {
@@ -23,7 +23,7 @@ const UserForm = () => {
     }, [userDetails]);
 
     return (
-        <Element name="contact">
+        <Element name="contact" id="contact">
             <section className="contact-form">
                 <div className="elementWidth contact-form__element">
                     <div className="contact-form__element--form">
