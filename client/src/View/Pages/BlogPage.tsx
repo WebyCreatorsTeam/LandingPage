@@ -21,7 +21,12 @@ const BlogPage: FC = () => {
 
     return (
         <main className='elementWidth blog'>
-            <SEO title="Weby | בלוג" imageAlt="בלוג וובי" url="https://weby.team/blog" />
+            <SEO
+                title="Weby | בלוג"
+                description="בלוג של וובי (WEBY) אשר משפתף אותכם בתובנות וידע שנאסף במהלך השנים"
+                imageAlt="בלוג וובי"
+                url="https://weby.team/blog"
+            />
             <div className='blog__header'>
                 <h1>
                     הבלוג

@@ -19,7 +19,16 @@ const PostPage: FC = () => {
     const { post } = useLoaderData() as { post: IPost }
     return (
         <main className='elementWidth'>
-            <SEO title={post.title} image={post.coverImg} imageAlt={`איור פוסט בנושא ${post.title}`} url={`https://weby.team/blog/post/${post._id}`} />
+            <SEO
+                title={post.title}
+                description={post.tldr}
+                image={post.coverImg}
+                imageAlt={`איור פוסט בנושא ${post.title}`}
+                url={`https://weby.team/blog/post/${post._id}`}
+                article={true}
+                articlePublish={post.createdAt.slice(0, 10)}
+                articleAuthor={"קטיה רוקוסוייב"}
+            />
             <Suspense fallback={<h2>Loading...</h2>}>
                 <Await resolve={post}>
                     <article className='post'>
