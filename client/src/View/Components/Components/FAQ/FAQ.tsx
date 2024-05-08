@@ -1,21 +1,19 @@
-import { Element } from 'react-scroll';
 import { FAQquestion } from './FAQData';
 import QItem from './QItem';
+import { FC } from 'react';
 
-const FAQ = () => {
+const FAQ: FC = () => {
     return (
-        <Element name="faq" id="faq">
-            <section className='elementWidth faq'>
-                <div className='faq__info'>
-                    <h2>שאלות נפוצות</h2>
-                    <div className='faq__quest'>
-                        {FAQquestion.map((q, idx) => (
-                            <QItem key={idx} faq={q} />
-                        ))}
-                    </div>
+        <section className='elementWidth faq' id="faq">
+            <div className='faq__info'>
+                <h2>שאלות נפוצות</h2>
+                <div className='faq__quest'>
+                    {FAQquestion.map((q, idx) => (
+                        <QItem key={idx} faq={q} />
+                    ))}
                 </div>
-            </section>
-        </Element >
+            </div>
+        </section>
     )
 }
 

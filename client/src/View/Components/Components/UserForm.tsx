@@ -1,9 +1,5 @@
-import { useEffect, useState } from 'react'
-import {
-    Form, useNavigation
-    // , useActionData, useNavigation
-} from 'react-router-dom';
-import { Element } from 'react-scroll';
+import { FC, useEffect, useState } from 'react'
+import { Form, useNavigation } from 'react-router-dom';
 import Women from "../../../images/callus/women.webp";
 import { inputs, options } from '../Form/inputsList';
 import Input from '../../UI/Input';
@@ -11,7 +7,7 @@ import axios from 'axios';
 import { API_ENDPOINT } from '../../../utils/api-connect';
 import CircularProgress from '@mui/material/CircularProgress';
 
-const UserForm = () => {
+const UserForm: FC = () => {
     const [submitting, setSubmitting] = useState<boolean>(true);
     const [userDetails, setUserDetails] = useState({ userName: "", userEmail: "", userPhone: "", userHelp: "" })
     const navigation = useNavigation();
@@ -23,54 +19,52 @@ const UserForm = () => {
     }, [userDetails]);
 
     return (
-        <Element name="contact" id="contact">
-            <section className="contact-form">
-                <div className="elementWidth contact-form__element">
-                    <div className="contact-form__element--form">
-                        <h2>מוכנים לקדם את העסק שלכם?</h2>
-                        <p>השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
-                        <Form action='/' method='post'>
-                            {inputs.map((int, idx) => (
-                                <Input key={idx} {...int} setUserDetails={setUserDetails} />
+        <section className="contact-form" id="contact">
+            <div className="elementWidth contact-form__element">
+                <div className="contact-form__element--form">
+                    <h2>מוכנים לקדם את העסק שלכם?</h2>
+                    <p>השאירו פרטים ונחזור אליכם הכי מהר שאפשר</p>
+                    <Form action='/' method='post'>
+                        {inputs.map((int, idx) => (
+                            <Input key={idx} {...int} setUserDetails={setUserDetails} />
+                        ))}
+                        <select name="userHelp" aria-label="במה אנחנו יכולים לעזור" required onChange={(ev: any) =>
+                            setUserDetails((user: any) => { return { ...user, [ev.target.name]: ev.target.value } })
+                        }>
+                            {options.map((opt, idx) => (
+                                <option key={idx} value={opt.value} selected={opt.value === ""} disabled={opt.value === ""}>{opt.text}</option>
                             ))}
-                            <select name="userHelp" aria-label="במה אנחנו יכולים לעזור" required onChange={(ev: any) =>
-                                setUserDetails((user: any) => { return { ...user, [ev.target.name]: ev.target.value } })
-                            }>
-                                {options.map((opt, idx) => (
-                                    <option key={idx} value={opt.value} selected={opt.value === ""} disabled={opt.value === ""}>{opt.text}</option>
-                                ))}
-                            </select>
+                        </select>
 
-                            <button id="sendBtnForm" disabled={!submitting === true ? true : navigation.state === "submitting" ? true : false}
-                                style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center" }}
-                                className={!submitting === true ? "form-btn_disable" : navigation.state === "submitting" ? "form-btn_disable" : "form-btn_active"}
-                                title={!submitting === true ? "על מנת להשאיר פרטים נא למלא את כל השדות" : navigation.state === "submitting" ? "פרטים נשלחים" : "שלח"}
-                                onClick={() => {
-                                    console.log(`ewe`)
-                                    const btn = document.getElementById('sendBtnForm') as HTMLButtonElement
-                                    if (btn.disabled) {
-                                        alert("נא למלא את כל הפרטים")
-                                    }
-                                }}
-                            >
-                                {navigation.state === "submitting" ?
-                                    <>
-                                        הפרטים נשלחים
-                                        <CircularProgress size={30} style={{}} color="inherit" />
-                                    </>
-                                    :
-                                    "שלח"
+                        <button id="sendBtnForm" disabled={!submitting === true ? true : navigation.state === "submitting" ? true : false}
+                            style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center" }}
+                            className={!submitting === true ? "form-btn_disable" : navigation.state === "submitting" ? "form-btn_disable" : "form-btn_active"}
+                            title={!submitting === true ? "על מנת להשאיר פרטים נא למלא את כל השדות" : navigation.state === "submitting" ? "פרטים נשלחים" : "שלח"}
+                            onClick={() => {
+                                console.log(`ewe`)
+                                const btn = document.getElementById('sendBtnForm') as HTMLButtonElement
+                                if (btn.disabled) {
+                                    alert("נא למלא את כל הפרטים")
                                 }
-                                {/* שלח */}
-                            </button>
-                        </Form>
-                    </div>
-                    <div className="contact-form__element--image">
-                        <img src={Women} alt="אישה עם טלפון" width={672} height={704} loading="lazy" />
-                    </div>
+                            }}
+                        >
+                            {navigation.state === "submitting" ?
+                                <>
+                                    הפרטים נשלחים
+                                    <CircularProgress size={30} style={{}} color="inherit" />
+                                </>
+                                :
+                                "שלח"
+                            }
+                            {/* שלח */}
+                        </button>
+                    </Form>
                 </div>
-            </section>
-        </Element >
+                <div className="contact-form__element--image">
+                    <img src={Women} alt="אישה עם טלפון" width={672} height={704} loading="lazy" />
+                </div>
+            </div>
+        </section>
     )
 }
 

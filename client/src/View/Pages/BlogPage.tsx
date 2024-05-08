@@ -1,7 +1,7 @@
 import axios from 'axios'
-import React, { Suspense } from 'react'
+import { FC, Suspense } from 'react'
 import { API_ENDPOINT } from '../../utils/api-connect'
-import { Await, Link, defer, useLoaderData } from 'react-router-dom'
+import { Await, defer, useLoaderData } from 'react-router-dom'
 import BlogMain from "../../images/blog/blog_main.webp"
 import { useMediaQuery } from 'react-responsive'
 import { NavHashLink } from 'react-router-hash-link';
@@ -14,7 +14,7 @@ export interface IBlog {
     smallImg: string
 }
 
-const BlogPage = () => {
+const BlogPage: FC = () => {
     const { blog } = useLoaderData() as { blog: Array<IBlog> }
     const desktop = useMediaQuery({ query: '(min-width: 990px)' })
 

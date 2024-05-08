@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { FC, Suspense } from 'react'
-import { Element } from 'react-scroll';
 import { API_ENDPOINT } from '../../../utils/api-connect';
 import { Await, useLoaderData } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive'
@@ -36,31 +35,29 @@ const Feedbacks: FC = () => {
     };
 
     return (
-        <Element name="feedbacks" id="feedbacks">
-            <section className='elementWidth feedbacks'>
-                <h2>מה לקוחות אומרים עלינו?</h2>
-                <Suspense>
-                    <Await resolve={feedbacks}>
-                        <div className='feedbacks__main'>
-                            <SliderWrapper>
-                                <Slider {...settings}>
-                                    {feedbacks.map(fdb => (
-                                        <article key={fdb._id} dir='rtl'>
-                                            <div className='feedbacks__main--feedback'>
-                                                <h3>{fdb.customerName},
-                                                    <br /> "{fdb.webSiteName}"</h3>
-                                                <img src={Stars} alt="חמש כוכבים" loading="lazy" />
-                                                <p>"{fdb.customerFeedback}"</p>
-                                            </div>
-                                        </article>
-                                    ))}
-                                </Slider>
-                            </SliderWrapper>
-                        </div>
-                    </Await>
-                </Suspense>
-            </section>
-        </Element>
+        <section className='elementWidth feedbacks' id="feedbacks">
+            <h2>מה לקוחות אומרים עלינו?</h2>
+            <Suspense>
+                <Await resolve={feedbacks}>
+                    <div className='feedbacks__main'>
+                        <SliderWrapper>
+                            <Slider {...settings}>
+                                {feedbacks.map(fdb => (
+                                    <article key={fdb._id} dir='rtl'>
+                                        <div className='feedbacks__main--feedback'>
+                                            <h3>{fdb.customerName},
+                                                <br /> "{fdb.webSiteName}"</h3>
+                                            <img src={Stars} alt="חמש כוכבים" loading="lazy" />
+                                            <p>"{fdb.customerFeedback}"</p>
+                                        </div>
+                                    </article>
+                                ))}
+                            </Slider>
+                        </SliderWrapper>
+                    </div>
+                </Await>
+            </Suspense>
+        </section>
     )
 }
 

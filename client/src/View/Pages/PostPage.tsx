@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { Suspense } from 'react'
+import { FC, Suspense } from 'react'
 import {
     Await, defer, useLoaderData
     // , Link
@@ -16,7 +16,7 @@ interface IPost extends IBlog {
 
 }
 
-const PostPage = () => {
+const PostPage: FC = () => {
     const { post } = useLoaderData() as { post: IPost }
     return (
         <main className='elementWidth'>

@@ -1,8 +1,6 @@
 import { FC, useState } from 'react'
 import Logo from '../../../UI/Logo/Logo'
 import { navigationLinks } from './navigationLinks'
-import { Link } from 'react-router-dom'
-import Scroll from 'react-scroll';
 import { useMediaQuery } from 'react-responsive'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
