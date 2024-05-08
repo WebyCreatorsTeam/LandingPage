@@ -28,7 +28,7 @@ const SEO: FC<ISEO> = ({
             <title>{title ? `${title}` : "Weby"}</title>
             <meta name="keywords" content={keywords ? keywords : "פיתוח אתר, עיצוב אתר, בניית אתרים, אתר לעסק, פתרונות דיגיטליים, בית תוכנה"} />
             <meta name="description"
-                content={description!.length > 0 ? description : "שירותי4444 פיתוח אתרים מתקדמים. מומחים בבניית אתרים מותאמים אישית עבור העסק, מספקים פתרונות דיגיטליים מקצה לקצה ברמה הגבוהה ביותר."} />
+                content={description ? description : "שירותי4444 פיתוח אתרים מתקדמים. מומחים בבניית אתרים מותאמים אישית עבור העסק, מספקים פתרונות דיגיטליים מקצה לקצה ברמה הגבוהה ביותר."} />
             <meta property="og:type" content="website" />
             <meta property="og:image" content={image ? image : "https://weby.team/logo_white_bkgr.png"} />
             <meta property="og:image:alt" content={imageAlt ? imageAlt : "לוגו של וובי"} />
