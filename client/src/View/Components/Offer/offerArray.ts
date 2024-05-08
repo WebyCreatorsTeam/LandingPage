@@ -1,6 +1,6 @@
-import Landing from '../../../../images/offer/image 5.webp'
-import Corporate from '../../../../images/offer/image 6.webp'
-import Commerce from '../../../../images/offer/image 7.webp'
+import Landing from '../../../images/offer/image 5.webp'
+import Corporate from '../../../images/offer/image 6.webp'
+import Commerce from '../../../images/offer/image 7.webp'
 
 export const offerArray: Array<IOffer> = [
     { img: Landing, siteTypeHe: "דף נחיתה", siteTypeEn: "Landing Page", siteDesc: "עמוד אינטרנט שמיועד למשוך משתמשים לפעולה מסוימת, כגון רכישת מוצר, מילוי טופס וכד'." },

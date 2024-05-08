@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { FC, Suspense } from 'react'
-import { API_ENDPOINT } from '../../../utils/api-connect';
+import { API_ENDPOINT } from '../../utils/api-connect';
 import { Await, useLoaderData } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive'
 import Slider from "react-slick";
-import Stars from '../../../images/feedbacks/stars.svg'
+import Stars from '../../images/feedbacks/stars.svg'
 import SliderWrapper from './_SlideSliderStyle';
 
 interface IFeedback {

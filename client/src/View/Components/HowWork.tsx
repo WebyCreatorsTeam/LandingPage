@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import Meet from "../../../images/howworks/new-how-work/meet.svg"
-import Efiun from "../../../images/howworks/new-how-work/efiun.svg"
-import Bnia from "../../../images/howworks/new-how-work/bnia.svg"
-import Support from "../../../images/howworks/new-how-work/support.svg"
+import Meet from "../../images/howworks/new-how-work/meet.svg"
+import Efiun from "../../images/howworks/new-how-work/efiun.svg"
+import Bnia from "../../images/howworks/new-how-work/bnia.svg"
+import Support from "../../images/howworks/new-how-work/support.svg"
 
 interface IHowWorkList {
     img: string

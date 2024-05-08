@@ -1,6 +1,8 @@
 import { FC } from 'react'
-import AboutImage from '../../../images/whoAreWe/about.webp';
-import WebyLogo from '../../../images/logo2_without_bkgr.svg';
+// import AboutImage from '../../../images/whoAreWe/about.webp';
+import AboutImage from '../../images/whoAreWe/about.webp';
+// import WebyLogo from '../../../images/logo2_without_bkgr.svg';
+import WebyLogo from '../../images/logo2_without_bkgr.svg';
 
 const About: FC = () => {
     return (

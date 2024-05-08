@@ -5,6 +5,7 @@ import { Await, defer, useLoaderData } from 'react-router-dom'
 import BlogMain from "../../images/blog/blog_main.webp"
 import { useMediaQuery } from 'react-responsive'
 import { NavHashLink } from 'react-router-hash-link';
+import SEO from '../../SEO/SEO'
 
 
 export interface IBlog {
@@ -20,6 +21,7 @@ const BlogPage: FC = () => {
 
     return (
         <main className='elementWidth blog'>
+            <SEO title="Weby | בלוג" imageAlt="בלוג וובי" url="https://weby.team/blog" />
             <div className='blog__header'>
                 <h1>
                     הבלוג

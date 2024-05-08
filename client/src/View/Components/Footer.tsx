@@ -1,10 +1,10 @@
 import { FC } from "react";
-import Logo from "../../UI/Logo/Logo";
-import Phone from "../../../images/footer/phone.svg"
-import Mail from "../../../images/footer/email.svg"
-import Linkedin from "../../../images/footer/linkedin.svg"
-import Facebook from "../../../images/footer/facebook.svg"
-import YouTube from "../../../images/footer/yt icon.svg"
+import Logo from "../UI/Logo/Logo";
+import Phone from "../../images/footer/phone.svg"
+import Mail from "../../images/footer/email.svg"
+import Linkedin from "../../images/footer/linkedin.svg"
+import Facebook from "../../images/footer/facebook.svg"
+import YouTube from "../../images/footer/yt icon.svg"
 
 const Footer: FC = () => {
     return (

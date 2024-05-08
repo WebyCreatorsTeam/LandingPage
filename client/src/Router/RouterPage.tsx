@@ -4,12 +4,12 @@ import {
     createBrowserRouter,
     createRoutesFromElements,
 } from "react-router-dom";
-import Layout from "../View/Components/Layout/Layout";
+import Layout from "../View/Layout/Layout";
 import HomePage from "../View/Pages/HomePage";
-import { webyLoader } from "../View/Components/Components/loader";
+import { formAction } from "../View/Components/Form/UserForm";
+import { webyLoader } from "../View/Components/loader";
 import BlogPage, { blogLoader } from "../View/Pages/BlogPage";
 import PostPage, { postLoader } from "../View/Pages/PostPage";
-import { formAction } from "../View/Components/Components/UserForm";
 import Page404 from "./Page404";
 import PageError from "./PageError";
 

@@ -1,5 +1,5 @@
 import { FC, useState } from 'react'
-import Logo from '../../../UI/Logo/Logo'
+import Logo from '../../UI/Logo/Logo'
 import { navigationLinks } from './navigationLinks'
 import { useMediaQuery } from 'react-responsive'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -54,7 +54,6 @@ const NavBar: FC = () => {
                   ))}
                   <NavHashLink
                     to="/blog#"
-
                     onClick={() => {
                       setToggleMenu(!toggleMenu)
                     }}

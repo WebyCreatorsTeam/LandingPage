@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { FC, Suspense, useState } from 'react'
 import { Await, useLoaderData } from 'react-router-dom';
-import { Element } from 'react-scroll';
-import { API_ENDPOINT } from '../../../../utils/api-connect';
+import { API_ENDPOINT } from '../../../utils/api-connect';
 import Filter from './Filter';
 
 interface IProject {

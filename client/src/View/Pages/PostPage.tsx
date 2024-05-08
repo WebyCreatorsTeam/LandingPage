@@ -2,11 +2,10 @@ import axios from 'axios'
 import { FC, Suspense } from 'react'
 import {
     Await, defer, useLoaderData
-    // , Link
 } from 'react-router-dom'
 import { API_ENDPOINT } from '../../utils/api-connect'
 import { IBlog } from './BlogPage'
-// import Vector from '../../images/post/Vector.png'
+import SEO from '../../SEO/SEO'
 
 interface IPost extends IBlog {
     createdAt: string
@@ -20,6 +19,7 @@ const PostPage: FC = () => {
     const { post } = useLoaderData() as { post: IPost }
     return (
         <main className='elementWidth'>
+            <SEO title={post.title} image={post.coverImg} imageAlt={`איור פוסט בנושא ${post.title}`} url={`https://weby.team/blog/post/${post._id}`} />
             <Suspense fallback={<h2>Loading...</h2>}>
                 <Await resolve={post}>
                     <article className='post'>

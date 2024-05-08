@@ -1,5 +1,5 @@
 import { FC, useState } from 'react'
-import { validateValues } from '../Components/Form/fornValidation'
+import { validateValues } from './fornValidation'
 interface I_Input {
     type: string, name: string, placeholder: string, autoComp: string
     setUserDetails: Function

@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react'
 import { Form, useNavigation } from 'react-router-dom';
 import Women from "../../../images/callus/women.webp";
-import { inputs, options } from '../Form/inputsList';
+import { inputs, options } from './inputsList';
 import Input from '../../UI/Input';
 import axios from 'axios';
 import { API_ENDPOINT } from '../../../utils/api-connect';
@@ -56,7 +56,6 @@ const UserForm: FC = () => {
                                 :
                                 "שלח"
                             }
-                            {/* שלח */}
                         </button>
                     </Form>
                 </div>
