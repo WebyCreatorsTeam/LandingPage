@@ -6,6 +6,7 @@ import { Await, useLoaderData } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive'
 import Slider from "react-slick";
 import Stars from '../../../images/feedbacks/stars.svg'
+import SliderWrapper from './_SlideSliderStyle';
 
 interface IFeedback {
     customerFeedback: string
@@ -26,12 +27,12 @@ const Feedbacks: FC = () => {
         speed: 500,
         slidesToShow: desktop ? 2 : 1,
         slidesToScroll: 1,
-        // appendDots: (dots: any) => <ul>{dots}</ul>,
-        // customPaging: (i: any) => (
-        //     <div className="ft-slick__dots--custom">
-        //         <div className="loading" />
-        //     </div>
-        // )
+        appendDots: (dots: any) => <ul>{dots}</ul>,
+        customPaging: (i: any) => (
+            <div className="ft-slick__dots--custom">
+                <div className="loading" />
+            </div>
+        )
     };
 
     return (
@@ -41,18 +42,20 @@ const Feedbacks: FC = () => {
                 <Suspense>
                     <Await resolve={feedbacks}>
                         <div className='feedbacks__main'>
-                            <Slider {...settings}>
-                                {feedbacks.map(fdb => (
-                                    <article key={fdb._id} dir='rtl'>
-                                        <div className='feedbacks__main--feedback'>
-                                            <h3>{fdb.customerName},
-                                                <br /> "{fdb.webSiteName}"</h3>
-                                            <img src={Stars} alt="חמש כוכבים" loading="lazy" />
-                                            <p>"{fdb.customerFeedback}"</p>
-                                        </div>
-                                    </article>
-                                ))}
-                            </Slider>
+                            <SliderWrapper>
+                                <Slider {...settings}>
+                                    {feedbacks.map(fdb => (
+                                        <article key={fdb._id} dir='rtl'>
+                                            <div className='feedbacks__main--feedback'>
+                                                <h3>{fdb.customerName},
+                                                    <br /> "{fdb.webSiteName}"</h3>
+                                                <img src={Stars} alt="חמש כוכבים" loading="lazy" />
+                                                <p>"{fdb.customerFeedback}"</p>
+                                            </div>
+                                        </article>
+                                    ))}
+                                </Slider>
+                            </SliderWrapper>
                         </div>
                     </Await>
                 </Suspense>
