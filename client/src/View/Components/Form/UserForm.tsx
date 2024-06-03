@@ -41,7 +41,6 @@ const UserForm: FC = () => {
                             className={!submitting === true ? "form-btn_disable" : navigation.state === "submitting" ? "form-btn_disable" : "form-btn_active"}
                             title={!submitting === true ? "על מנת להשאיר פרטים נא למלא את כל השדות" : navigation.state === "submitting" ? "פרטים נשלחים" : "שלח"}
                             onClick={() => {
-                                console.log(`ewe`)
                                 const btn = document.getElementById('sendBtnForm') as HTMLButtonElement
                                 if (btn.disabled) {
                                     alert("נא למלא את כל הפרטים")

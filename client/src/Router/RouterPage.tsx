@@ -27,18 +27,19 @@ const RouterPage = () => {
                         index
                         element={<HomePage />}
                         loader={webyLoader}
-                        errorElement={<PageError />}
+                        // errorElement={<PageError />}
                     />
                     <Route path="blog"
                         element={<BlogPage />}
                         loader={blogLoader}
-                        errorElement={<PageError />}
+                        // errorElement={<PageError />}
                     />
 
                     <Route path="blog/post/:id"
                         element={<PostPage />}
                         loader={postLoader}
-                        errorElement={<PageError />} />
+                        // errorElement={<PageError />} 
+                        />
                 </Route>
                 <Route
                     path="*"
