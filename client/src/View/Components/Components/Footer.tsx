@@ -24,7 +24,7 @@ const Footer: FC = () => {
                 </div>
                 <div className="footer-container__phone">
                     <div className="footer-container__phone--deal">
-                        <a href="tel:+972547991963" title="התקשר לראות לפרטים">ראות 054-799-1963</a>
+                        <a href="tel:+972523690866" title="התקשר לראות לפרטים">ראות 052-369-0866</a>
                         <a href="tel:+972526299431" title="התקשר לקטיה לפרטים">קטיה 052-629-9431</a>
                     </div>
                     <img src={Phone} alt="אייקון טלפון" width={25} height={40} loading="lazy" />
