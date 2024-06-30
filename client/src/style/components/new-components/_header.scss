@@ -3,9 +3,9 @@
     flex-direction: column;
 
     @media screen and (min-width: 768px) {
-        flex-direction: row;
-        align-items: flex-end;
-        height: 750px;
+        // flex-direction: row;
+        // align-items: flex-end;
+        // height: 750px;
     }
 
     &__text {
@@ -15,9 +15,9 @@
         justify-content: space-evenly;
 
         @media screen and (min-width: 768px) {
-            width: 50%;
-            height: 100%;
-            align-items: flex-start;
+            // width: 50%;
+            // height: 100%;
+            // align-items: flex-start;
         }
 
         p {
@@ -27,8 +27,8 @@
             text-align: center;
 
             @media screen and (min-width: 768px) {
-                text-align: start;
-                font-size: 3rem;
+                // text-align: start;
+                // font-size: 3rem;
             }
 
             @media screen and (min-width: 1300px) {}
@@ -41,8 +41,8 @@
             text-align: center;
 
             @media screen and (min-width: 768px) {
-                text-align: start;
-                font-size: 3.5rem;
+                // text-align: start;
+                // font-size: 3.5rem;
             }
 
             @media screen and (min-width: 1300px) {}
@@ -53,7 +53,7 @@
             @include btn;
 
             @media screen and (min-width: 500px) {
-                margin: 10% 0% 10% 0%;
+                // margin: 10% 0% 10% 0%;
             }
 
             a {

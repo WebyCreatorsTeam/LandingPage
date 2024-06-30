@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import HeaderImage from '../../../images/header/header-img/header-image.webp'
+import HeaderImage from '../../../images/main 2.svg'
 import Scroll from 'react-scroll';;
 
 const Header: FC = () => {
