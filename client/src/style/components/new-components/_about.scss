@@ -2,7 +2,7 @@
     padding: 5% 0%;
 
     @media screen and (min-width: 768px) {
-        padding: 3% 0%;
+        padding: 2% 0%;
     }
 
     h2 {
@@ -15,12 +15,7 @@
 
         @media screen and (min-width: 768px) {
             align-items: center;
-            grid-template-rows: 0.3fr 1fr 1fr;
             grid-template-columns: 1fr 1fr;
-        }
-
-        @media screen and (min-width: 1200px) {
-            grid-template-columns: 2fr 1.5fr;
         }
 
         &--text {
@@ -32,12 +27,10 @@
             }
 
             @media screen and (min-width: 768px) {
-                grid-area: 2/1/3/2;
                 text-align: start;
             }
 
             @media screen and (min-width: 1200px) {
-                grid-area: 2/1/3/2;
                 font-size: 1.5rem;
             }
         }
@@ -53,7 +46,7 @@
             }
 
             @media screen and (min-width: 768px) {
-                grid-area: 3 / 1 / 4 / 2;
+                grid-area: 2 / 1 / 3 / 2;
                 padding: 0;
                 margin: 0;
                 width: 40%;
@@ -66,9 +59,8 @@
             padding: 20% 0% 10% 0%;
 
             @media screen and (min-width: 768px) {
-                padding: 0;
-                grid-area: 1 / 2 / 4 /3;
-                width: 100%;
+                padding: initial;
+                grid-area: 1 / 2 / 3 / 3;
             }
 
             img {
@@ -77,6 +69,8 @@
 
                 @media screen and (min-width: 786px) {
                     margin: 0% 0% 0% 0%;
+                    width: 90%;
+                    margin: 0 auto;
                 }
             }
         }
