@@ -30,7 +30,7 @@ const Projects: FC = () => {
                 </p>
                 <Suspense fallback={<h2>Loading...</h2>}>
                     <Await resolve={projects}>
-                        <Filter setUserChoose={setUserChoose} userChoose={userChoose} />
+                        {/* <Filter setUserChoose={setUserChoose} userChoose={userChoose} /> */}
                         <div className='projects__main--projects'>
                             {
                                 filteredProjects.length > 0 ?
