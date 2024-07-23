@@ -16,6 +16,7 @@ interface IPost extends IBlog {
 
 const PostPage: FC = () => {
     const { post } = useLoaderData() as { post: IPost }
+
     return (
         <main className='elementWidth'>
             <SEO
@@ -72,15 +73,29 @@ const hendleGetPost = async (title: string) => {
     }
 }
 
+const handleGetPostTitle = async (id: string) => {
+    try {
+        const { data: { continueWork, post } } = await axios.post(`${API_ENDPOINT}/blog/get-post-title`, { id })
+        if (continueWork) return post
+    } catch (error) {
+        alert(error)
+    }
+}
+
 export const postLoader = async ({ params }: any) => {
     const { title } = params
 
     const regex = /^[a-z0-9]+$/i
-    const notIdPost = regex.test(title)
-    console.log(notIdPost)
+    const idPost = regex.test(title)
 
-    if (notIdPost) {
-        return redirect("/blog")
+    if (idPost) {
+        if (title.length !== 24) return redirect("/blog")
+
+        const post = await handleGetPostTitle(title)
+        if (!post) return redirect("/blog")
+        return defer({
+            post
+        })
     }
 
     return defer({

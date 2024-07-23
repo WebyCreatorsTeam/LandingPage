@@ -25,3 +25,16 @@ exports.getOnePost = async (req, res) => {
         return res.status(httpCodes.SERVER_ERROR).json({ continueWork: false, message: "שגיא בסרבר, נא לנסות שנית" })
     }
 };
+
+exports.getPostTitle = async (req, res) => {
+    try {
+        const { id } = req.body;
+        const post = await Post.findById(id)
+        return res.status(httpCodes.OK).json({ continueWork: true, post })
+    } catch (error) {
+        // next()
+        console.log(`blog cont error addNewPost`)
+        console.error(error);
+        return res.status(httpCodes.SERVER_ERROR).json({ continueWork: false, message: "שגיא בסרבר, נא לנסות שנית" })
+    }
+}
