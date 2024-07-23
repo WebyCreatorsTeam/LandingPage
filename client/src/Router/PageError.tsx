@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import  { FC } from 'react'
 import { useNavigate, useNavigation, useRouteError } from 'react-router-dom';
 import Logo from '../View/UI/Logo/Logo';
 
@@ -6,7 +6,7 @@ const PageError: FC = () => {
     const navigate = useNavigate();
     const navigation: any = useNavigation();
     const error: unknown = useRouteError()
-    console.error(error);
+
     return (
         <div className='elementWidth errorFunc errorsPages'>
             <Logo />
