@@ -56,7 +56,7 @@ const BlogPage: FC = () => {
                                 <p>{bl.content}...</p>
                                 <NavHashLink
                                     className='blog-section__article--link'
-                                    to={`/blog/post/${bl._id}#`}>המשך קריאה {">"}</NavHashLink>
+                                    to={`/blog/post/${bl.title.replace(/ /g, "-")}#`}>המשך קריאה {">"}</NavHashLink>
                             </article>
                         ))}
                     </section>

@@ -33,7 +33,7 @@ const RouterPage = () => {
                         loader={blogLoader}
                     />
 
-                    <Route path="blog/post/:id"
+                    <Route path="blog/post/:title"
                         element={<PostPage />}
                         loader={postLoader} />
                 </Route>

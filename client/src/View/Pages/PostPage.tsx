@@ -12,7 +12,6 @@ interface IPost extends IBlog {
     updatedAt: string
     coverImg: string
     tldr: string
-
 }
 
 const PostPage: FC = () => {
@@ -43,7 +42,7 @@ const PostPage: FC = () => {
                             {/* <p>
                                 מאת: {" "}
                                 קטיה רוקוסוייב
-                            </p> */}
+                            </p>
                             {/* <a href="">LinkedIn</a>
                             <a href="">העתק קישור</a> */}
                             {/* <a href="">Face</a> */}
@@ -64,9 +63,9 @@ const PostPage: FC = () => {
 
 export default PostPage
 
-const hendleGetPost = async (id: string) => {
+const hendleGetPost = async (title: string) => {
     try {
-        const { data: { continueWork, post } } = await axios.post(`${API_ENDPOINT}/blog/get-one-post`, { id })
+        const { data: { continueWork, post } } = await axios.post(`${API_ENDPOINT}/blog/get-one-post`, { title })
         if (continueWork) return post
     } catch (error) {
         alert(error)
@@ -74,10 +73,10 @@ const hendleGetPost = async (id: string) => {
 }
 
 export const postLoader = async ({ params }: any) => {
-    const { id } = params
+    const { title } = params
 
     return defer({
-        post: await hendleGetPost(id)
+        post: await hendleGetPost(title)
     })
 }
 

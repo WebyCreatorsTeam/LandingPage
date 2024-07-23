@@ -15,8 +15,9 @@ exports.getBlog = async (req, res) => {
 
 exports.getOnePost = async (req, res) => {
     try {
-        const { id } = req.body;
-        const post = await Post.findOne({ _id: id }).select(['-draft'])
+        const { title } = req.body;
+        const regex = new RegExp(title.replaceAll("-", " "), 'i')
+        const post = await Post.findOne({ title: { $regex: regex } }).select(['-draft'])
         return res.status(httpCodes.OK).json({ continueWork: true, post })
     } catch (error) {
         console.log(`blog cont error addNewPost`)
