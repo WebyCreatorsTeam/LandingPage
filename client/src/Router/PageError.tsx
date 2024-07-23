@@ -10,11 +10,11 @@ const PageError: FC = () => {
     return (
         <div className='elementWidth errorFunc errorsPages'>
             <Logo />
-            <h1>שגיאה</h1>
-            {/* <p>נראה שהיית שגיאה</p> */}
-            <p>
-                {(error as Error)?.message ||
-                    (error as { statusText?: string })?.statusText}
+            <h1>סליחה אבל יש שגיאה</h1>
+            <p> {(!process.env.NODE_ENV || process.env.NODE_ENV === 'development') && (
+                (error as Error)?.message ||
+                (error as { statusText?: string })?.statusText
+            )}
             </p>
             <button
                 className='errorsPages__btnBack'
