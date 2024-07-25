@@ -28,12 +28,10 @@ const NavBar: FC = () => {
             <NavHashLink to="/blog#">בלוג</NavHashLink>
           </div>
           <div className='navigation__contact'>
-            <NavHashLink
-              to="/#contact"
-              smooth
+            <a
+              href="tel:+972515183320"
             >
-              דברו איתנו
-            </NavHashLink>
+              051-518-3320</a>
           </div>
         </>
           :
