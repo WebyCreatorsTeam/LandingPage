@@ -87,7 +87,7 @@
                 }
 
                 h3 {
-                    font-family: $headerFontsFamily;
+                    // font-family: $textFontFamily;
                     font-weight: 400;
                     margin: 0%;
                 }
@@ -103,13 +103,14 @@
                 }
 
                 a {
-                    border: 1px solid #B865FF;
+                    border: 2px solid #8626d9;
                     border-radius: 8px;
                     padding: 1% 2%;
                     margin: 1%;
-                    color: #B865FF;
+                    color: #8626d9;
                     font-size: 1.2rem;
-                    font-family: $headerFontsFamily;
+                    font-weight: 600;
+                    // font-family: $textFontFamily;
 
                     @media screen and (min-width: 1000px) {
                         padding: 0% 10%;

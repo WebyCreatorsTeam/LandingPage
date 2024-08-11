@@ -1,13 +1,18 @@
 import { FC, useEffect, useState } from 'react'
 import { Form, useNavigation } from 'react-router-dom';
-import Women from "../../../images/callus/women.webp";
+import callUsDesc from "../../../images/callus/call-us-desc.webp";
+import callUsMob from "../../../images/callus/call-us-mob.webp";
+// import Women from "../../../images/callus/call-us.webp";
 import { inputs, options } from './inputsList';
 import Input from '../../UI/Input';
 import axios from 'axios';
 import { API_ENDPOINT } from '../../../utils/api-connect';
 import CircularProgress from '@mui/material/CircularProgress';
+import { useMediaQuery } from 'react-responsive';
 
 const UserForm: FC = () => {
+    const desktop = useMediaQuery({ query: '(min-width: 768px)' })
+
     const [submitting, setSubmitting] = useState<boolean>(true);
     const [userDetails, setUserDetails] = useState({ userName: "", userEmail: "", userPhone: "", userHelp: "" })
     const navigation = useNavigation();
@@ -59,7 +64,7 @@ const UserForm: FC = () => {
                     </Form>
                 </div>
                 <div className="contact-form__element--image">
-                    <img src={Women} alt="אישה עם טלפון" width={672} height={704} loading="lazy" />
+                    <img src={desktop ? callUsDesc : callUsMob} alt="אישה עם טלפון" width={desktop ? 700: 300} height={desktop ? 394: 169 } loading="lazy" />
                 </div>
             </div>
         </section>

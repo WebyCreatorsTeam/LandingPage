@@ -1,18 +1,21 @@
 .header {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
-        align-items: flex-end;
-        height: 750px;
+        // align-items: center;
+        // align-items: flex-end;
+        min-height: 600px;
     }
 
     &__text {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        //     justify-content: space-evenly;
 
         @media screen and (min-width: 768px) {
             width: 50%;
@@ -20,32 +23,32 @@
             align-items: flex-start;
         }
 
-        p {
-            font-family: $headerFontsFamily;
-            font-size: 2rem;
-            color: #7D7D7D;
-            text-align: center;
+        //     p {
+        //         font-family: $textFontFamily;
+        //         font-size: 2rem;
+        //         color: #7D7D7D;
+        //         text-align: center;
 
-            @media screen and (min-width: 768px) {
-                text-align: start;
-                font-size: 3rem;
-            }
+        //         @media screen and (min-width: 768px) {
+        //             text-align: start;
+        //             font-size: 3rem;
+        //         }
 
-            @media screen and (min-width: 1300px) {}
-        }
+        //         @media screen and (min-width: 1300px) {}
+        //     }
 
         h1 {
-            font-size: 2.5rem;
-            font-family: $headerFontsFamily;
-            font-weight: 200;
+            font-size: clamp(1.875rem, 2.321vw + 1.411rem, 3.5rem);
+            // font-family: $textFontFamily;
+            font-weight: 700;
             text-align: center;
 
             @media screen and (min-width: 768px) {
                 text-align: start;
-                font-size: 3.5rem;
+                // font-size: 3.5rem;
             }
 
-            @media screen and (min-width: 1300px) {}
+            // @media screen and (min-width: 1300px) {}
         }
 
         button {

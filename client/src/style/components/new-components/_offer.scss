@@ -1,70 +1,133 @@
-.offer {
-    padding: 0% 0% 5% 0%;
+.services {
+    // padding: 5% 0%;
 
-    @media screen and (min-width: 768px) {
-        padding: 0% 0% 0.5% 0%;
+    @media screen and (max-width: 768px) {
+        // margin: 10% 0%;
     }
 
-    &__info {
-        h2 {
-            text-align: center;
-        }
+    &__list {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        margin: 5% 0%;
 
-        &>p {
-            text-align: center;
-            margin: 5%;
-
-            & a {
-                color: $purpleColor;
-            }
-        }
-
-        &--grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            justify-items: center;
-
-            @media screen and (min-width: 768px) {
-                grid-template-columns: repeat(3, 1fr);
-
-            }
-        }
-
-        &--window {
-            background-color: white;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
             margin: 10% 0%;
-            max-width: 480px;
-            min-width: 250px;
-            border-radius: 20px;
-            box-shadow: $itemShadow;
-            box-sizing: border-box;
-            padding: 5%;
-            text-align: center;
+        }
+
+        &>div {
+            background-color: rgb(255, 255, 255);
+            width: 250px;
+            height: 320px;
+            border-radius: 15px;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            box-shadow: 0 5px 10px 1px #b3b3b3;
 
-            @media screen and (min-width: 768px) {
-                margin: 0% 10%;
+            @media screen and (max-width: 768px) {
+                margin: 5% 0%;
+            }
+
+            h3 {
+                color: #8902ff;
+                margin: 0;
+            }
+
+            h4 {
+                margin-bottom: 15px;
             }
 
             img {
-                width: 100%;
-                height: 100%;
-                border-top-right-radius: 20px;
-                border-top-left-radius: 20px;
-                box-sizing: border-box;
-                border-bottom: 5px solid $purpleColor;
+                width: 60px;
+                margin: 15px 0;
             }
 
-            &__header {
-                margin: 5% 0% 1% 0%;
-                font-size: 1.5rem;
-                color: $purpleColor;
-            }
-
-            &__header--en {
-                margin: 0%
+            p {
+                width: 90%;
+                margin: 2% auto;
+                text-align: center;
+                font-size: 16px;
             }
         }
+
+    }
+    
+    .contact-us-if-need-more {
+        font-size: 14px;
     }
 }
+// .offer {
+//     padding: 0% 0% 5% 0%;
+
+//     @media screen and (min-width: 768px) {
+//         padding: 0% 0% 0.5% 0%;
+//     }
+
+//     &__info {
+//         h2 {
+//             text-align: center;
+//         }
+
+//         &>p {
+//             text-align: center;
+//             margin: 5%;
+
+//             & a {
+//                 color: $purpleColor;
+//             }
+//         }
+
+//         &--grid {
+//             display: grid;
+//             grid-template-columns: 1fr;
+//             justify-items: center;
+
+//             @media screen and (min-width: 768px) {
+//                 grid-template-columns: repeat(3, 1fr);
+
+//             }
+//         }
+
+//         &--window {
+//             background-color: white;
+//             margin: 10% 0%;
+//             max-width: 480px;
+//             min-width: 250px;
+//             border-radius: 20px;
+//             box-shadow: $itemShadow;
+//             box-sizing: border-box;
+//             padding: 5%;
+//             text-align: center;
+//             display: flex;
+//             flex-direction: column;
+
+//             @media screen and (min-width: 768px) {
+//                 margin: 0% 10%;
+//             }
+
+//             img {
+//                 width: 100%;
+//                 height: 100%;
+//                 border-top-right-radius: 20px;
+//                 border-top-left-radius: 20px;
+//                 box-sizing: border-box;
+//                 border-bottom: 5px solid $purpleColor;
+//             }
+
+//             &__header {
+//                 margin: 5% 0% 1% 0%;
+//                 font-size: 1.5rem;
+//                 color: $purpleColor;
+//             }
+
+//             &__header--en {
+//                 margin: 0%
+//             }
+//         }
+//     }
+// }

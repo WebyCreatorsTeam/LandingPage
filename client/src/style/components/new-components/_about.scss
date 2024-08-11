@@ -35,23 +35,23 @@
             }
         }
 
-        &--logo {
-            width: 60%;
-            padding: 5% 0% 0% 0%;
-            margin: 0 auto;
+        // &--logo {
+        //     width: 60%;
+        //     padding: 5% 0% 0% 0%;
+        //     margin: 0 auto;
 
-            img {
-                width: 100%;
-                height: 100%;
-            }
+        //     img {
+        //         width: 100%;
+        //         height: 100%;
+        //     }
 
-            @media screen and (min-width: 768px) {
-                grid-area: 2 / 1 / 3 / 2;
-                padding: 0;
-                margin: 0;
-                width: 40%;
-            }
-        }
+        //     @media screen and (min-width: 768px) {
+        //         grid-area: 2 / 1 / 3 / 2;
+        //         padding: 0;
+        //         margin: 0;
+        //         width: 40%;
+        //     }
+        // }
 
         &--image {
             display: flex;

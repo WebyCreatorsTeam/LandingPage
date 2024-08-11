@@ -18,7 +18,7 @@ const HomePage: FC = () => {
                 <div className='top-elements-bkg'>
                     <About />
                     <Offer />
-                    <HowWork />
+                    {/* <HowWork /> */}
                 </div>
                 <Projects />
                 <div className='bottom-elements-bkg'>

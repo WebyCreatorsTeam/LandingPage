@@ -13,6 +13,7 @@
 
     h1 {
         @include headersPurple($fontSizeHeader: 3rem);
+        font-weight: 700;
     }
 
     &__details {

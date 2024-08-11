@@ -49,7 +49,7 @@
 
 @mixin headersPurple($fontSizeHeader: 3.5rem) {
     font-size: $fontSizeHeader;
-    font-family: $headerFontsFamily;
+    font-family: $textFontFamily;
     font-weight: 200;
     background: $purpleColor;
     background: -webkit-linear-gradient(0deg, rgba(209, 0, 246, 1) 0%, rgba(137, 2, 255, 1) 100%);

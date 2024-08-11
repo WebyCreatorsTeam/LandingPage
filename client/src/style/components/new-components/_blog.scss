@@ -17,8 +17,8 @@
         h1 {
             @include headersPurple;
             // font-size: 3.5rem;
-            // font-family: $headerFontsFamily;
-            // font-weight: 200;
+            // font-family: $textFontFamily;
+            font-weight: 700;
             // background: $purpleColor;
             // background: -webkit-linear-gradient(0deg, rgba(209, 0, 246, 1) 0%, rgba(137, 2, 255, 1) 100%);
             // background-clip: text;

@@ -1,10 +1,19 @@
 import { FC } from 'react'
 // import AboutImage from '../../../images/whoAreWe/about.webp';
-import AboutImage from '../../images/whoAreWe/about.webp';
+// import AboutImage from '../../images/whoAreWe/about.webp';
+import AboutDesc from '../../images/header/header-img/hero-web.webp'
+import AboutMob from '../../images/header/header-img/hero-mobile.webp'
+
+// import HeaderImageDesc from '../../../images/header/header-img/hero-web.webp'
+// import HeaderImageMob from '../../../images/header/header-img/hero-mobile.webp' 
+//
 // import WebyLogo from '../../../images/logo2_without_bkgr.svg';
 import WebyLogo from '../../images/logo2_without_bkgr.svg';
+import { useMediaQuery } from 'react-responsive';
+
 
 const About: FC = () => {
+    const desktop = useMediaQuery({ query: '(min-width: 768px)' })
     return (
         <section className='about' id="about">
             <h2>מי אנחנו?</h2>
@@ -12,10 +21,10 @@ const About: FC = () => {
                 <p className='about__info--text'>
                     {/* <h3>ברוכים הבאים לאתר של WEBY!</h3> */}
                     <p>
-                    אנחנו <span>Weby</span>, צוות מפתחים ומעצבים שמתמחה בבניית אתרים. כל אחד מאנשי הצוות שלנו מביא ניסיון וידע עשיר בתחומו. אנחנו עובדים בשיתוף פעולה עם הלקוח על מנת להעניק ללקוחותינו את השירות הטוב ביותר.
+                        אנחנו <span>Weby</span>, צוות מפתחים ומעצבים שמתמחה בבניית אתרים. כל אחד מאנשי הצוות שלנו מביא ניסיון וידע עשיר בתחומו. אנחנו עובדים בשיתוף פעולה עם הלקוח על מנת להעניק ללקוחותינו את השירות הטוב ביותר.
                     </p>
                     <p>
-                    החזון שלנו הוא לפתח ולבנות אתרים מותאמים אישית עבור עסקים, שיביאו לידי ביטוי את הייחודיות והצרכים של כל לקוח. אנחנו מאמינים כי לכל עסק מגיע אתר המשקף את זהות שלו באופן האותנטי והמרשים ביותר, ומספק חוויית משתמש בלתי נשכחת.
+                        החזון שלנו הוא לפתח ולבנות אתרים מותאמים אישית עבור עסקים, שיביאו לידי ביטוי את הייחודיות והצרכים של כל לקוח. אנחנו מאמינים כי לכל עסק מגיע אתר המשקף את זהות שלו באופן האותנטי והמרשים ביותר, ומספק חוויית משתמש בלתי נשכחת.
                     </p>
                     <p>
                         ב-<span>Weby</span>,
@@ -28,11 +37,11 @@ const About: FC = () => {
                         </span>
                     </p>
                 </p>
-                <div className='about__info--logo'>
+                {/* <div className='about__info--logo'>
                     <img src={WebyLogo} alt="וובי לוגו" loading="lazy" width={288} height={72} />
-                </div>
+                </div> */}
                 <div className='about__info--image'>
-                    <img src={AboutImage} alt="שולחן עם מכשירים אלקטרוניים" loading="lazy" width={617} height={523} />
+                    <img src={desktop ? AboutDesc : AboutMob} alt="קבוצה של אנשים שעובדת יחד" loading="lazy" width={desktop ? 720 : 360} height={desktop ? 370 : 185} />
                 </div>
             </div>
         </section>

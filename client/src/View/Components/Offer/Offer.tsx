@@ -1,31 +1,36 @@
 import { FC } from 'react'
-import { offerArray } from './offerArray';
+// import { offerArray } from './offerArray';
 import Scroll from 'react-scroll';
+import { servicesArr } from './offerArray';
 
 const Offer: FC = () => {
     return (
         <section className='offer'>
-            <div className='elementWidth offer__info'>
-                <h2>מה אנחנו מציעים?</h2>
-                <div className='offer__info--grid'>
-                    {offerArray.map((ofr, idx) => (
-                        <div className='offer__info--window' key={idx}>
-                            <img src={ofr.img} alt={`איור של ${ofr.siteTypeHe}`} loading="lazy" width={336} height={226} />
-                            <h3 className='offer__info--window__header'>{ofr.siteTypeHe}</h3>
-                            <h3 className='offer__info--window__header--en'>{ofr.siteTypeEn}</h3>
-                            <p>{ofr.siteDesc}</p>
+            <section className='elementWidth services'>
+                <h2>השירותים שלנו</h2>
+                <section className='services__list'>
+                    {servicesArr.map((service, index) => (
+                        <div key={index}>
+                            <img src={service.icon} alt={service.title} width={64} height={64} />
+                            <h3>{service.title}</h3>
+                            <h4>{service.titleEn}</h4>
+                            <p>{service.text}</p>
                         </div>
                     ))}
-                </div>
-                <p>*יש לכם משהו נוסף שאתם רוצים לפתח? תרגישו בנוח {" "}
-                    <Scroll.Link to="contact"
+                </section>
+                <p className='contact-us-if-need-more'>*צריכים משהו נוסף?
+                    <Scroll.Link
+                        to="contact"
                         smooth={true}
                         offset={50}
-                        duration={500}>
-                        ליצור קשר
+                        duration={500}
+                        style={{color: "purple", fontWeight: "bold"}}
+                        >
+                        {" "}דברו איתנו.
                     </Scroll.Link>
-                    {" "} איתנו.</p>
-            </div>
+                </p>
+                {/* <Link href="/how-it-works">איך זה עובד?</Link> */}
+            </section>
         </section>
     )
 }
