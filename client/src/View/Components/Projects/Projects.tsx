@@ -34,7 +34,7 @@ const Projects: FC = () => {
                         <div className='projects__main--projects'>
                             {
                                 filteredProjects.length > 0 ?
-                                    filteredProjects.map(pro => (
+                                    [...filteredProjects].reverse().map(pro => (
                                         <article key={pro._id} className='projects__main--project'>
                                             <img src={pro.urlImage} alt={pro.name} loading="lazy" />
                                             <div className='projects__main--project__text'>

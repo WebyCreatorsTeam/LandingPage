@@ -42,7 +42,7 @@ const Feedbacks: FC = () => {
                     <div className='feedbacks__main'>
                         <SliderWrapper>
                             <Slider {...settings}>
-                                {feedbacks.map(fdb => (
+                                {[...feedbacks].reverse().map(fdb => (
                                     <article key={fdb._id} dir='rtl'>
                                         <div className='feedbacks__main--feedback'>
                                             <h3>{fdb.customerName},
